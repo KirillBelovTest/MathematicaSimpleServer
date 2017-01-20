@@ -10,65 +10,35 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6046,        190]
-NotebookOptionsPosition[      5280,        158]
-NotebookOutlinePosition[      5785,        179]
-CellTagsIndexPosition[      5699,        174]
+NotebookDataLength[     19225,        542]
+NotebookOptionsPosition[     17684,        484]
+NotebookOutlinePosition[     18032,        499]
+CellTagsIndexPosition[     17989,        496]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
- RowBox[{"<<", "MathematicaSimpleServer`"}]], "Input",
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Code",
+ CellChangeTimes->{{3.693884044565951*^9, 3.693884047330986*^9}}],
+
+Cell[BoxData["\<\"E:\\\\Test Items\\\\Wolfram \
+Language\\\\Mathematica\\\\Projects\\\\MathematicaSimpleServer\"\>"], "Output",
+ CellChangeTimes->{3.6938863815689445`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
  CellChangeTimes->{{3.69385438428188*^9, 3.6938543972640886`*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"server", " ", "=", " ", 
-  RowBox[{"ServerCreate", "[", 
-   RowBox[{"8888", ",", " ", 
-    RowBox[{"ServerHandler", "[", 
-     RowBox[{
-      RowBox[{"#", "&"}], ",", " ", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{
-        "#", ";", 
-         "\"\<HTTP/1.1 200 OK\nContent-Length: 1024\nConnection: close\n\n\
-<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv=\\\"Content-Type\\\" \
-content=\\\"text/html; charset=utf-8\\\" />\n\
-<title>MathematicaSimpleServer</title>\n</head>\n<body>\nHello from \
-mathematica simple server!\n</body>\n</html>\>\""}], ")"}], "&"}]}], "]"}]}], 
-   "]"}]}]], "Input",
- CellChangeTimes->{{3.6938544245774293`*^9, 3.6938544872337694`*^9}, {
-  3.6938545207454967`*^9, 3.693854559542972*^9}}],
-
-Cell[BoxData[
- RowBox[{"MathematicaSimpleServer", "[", 
-  RowBox[{
-   RowBox[{"Socket", "[", "1208", "]"}], ",", 
-   InterpretationBox[
-    RowBox[{
-    "AsynchronousTaskObject", "[", "\<\"SocketServer-1208\"\>", ",", "1", ",", 
-     RowBox[{" ", "<>"}], "]"}],
-    AsynchronousTaskObject["SocketServer-1208", 1, 32407409170575473212]]}], 
-  "]"}]], "Output",
- CellChangeTimes->{3.6938545244571276`*^9, 3.6938545602214746`*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"ServerClose", "[", "server", "]"}]], "Input",
- CellChangeTimes->{{3.6938545983664813`*^9, 3.6938546036622243`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"?", "SocketLink`Sockets`*"}]], "Input",
- CellChangeTimes->{{3.6938546927853355`*^9, 3.693854710147646*^9}, 
-   3.693854783946888*^9}],
-
-Cell[CellGroupData[{
+ RowBox[{"?", "MathematicaSimpleServer`*"}]], "Code",
+ CellChangeTimes->{{3.69388177386963*^9, 3.6938817800514154`*^9}}],
 
 Cell[BoxData[
  DynamicModuleBox[{Typeset`open$$ = True}, 
@@ -76,84 +46,440 @@ Cell[BoxData[
    RowBox[{
     OpenerBox[Dynamic[Typeset`open$$],
      ImageSize->Small], 
-    StyleBox["SocketLink`Sockets`", "InfoHeading"]}], True->GridBox[{
+    StyleBox["MathematicaSimpleServer`", "InfoHeading"]}], True->GridBox[{
      {
       RowBox[{
        OpenerBox[Dynamic[Typeset`open$$],
         ImageSize->Small], 
-       StyleBox["SocketLink`Sockets`", "InfoHeading"]}]},
+       StyleBox["MathematicaSimpleServer`", "InfoHeading"]}]},
      {GridBox[{
         {
-         ButtonBox["CloseSocket",
+         ButtonBox["HandlerCreate",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {"CloseSocket", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"], 
-         ButtonBox["CreateDatagramSocket",
+           "Info93693900785-3660365", {
+            "HandlerCreate", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"], 
+         ButtonBox["ResponseGenerator",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {
-            "CreateDatagramSocket", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"], 
-         ButtonBox["NewSocket",
+           "Info93693900785-3660365", {
+            "ResponseGenerator", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"], 
+         ButtonBox["ServerHandler",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {"NewSocket", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"], 
-         ButtonBox["SocketBind",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info133693869184-7828403", {"SocketBind", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"]},
+           "Info93693900785-3660365", {
+            "ServerHandler", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"]},
         {
-         ButtonBox["ConnectSocket",
+         ButtonBox["MathematicaSimpleServer",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {
-            "ConnectSocket", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"], 
-         ButtonBox["CreateStreamSocket",
+           "Info93693900785-3660365", {
+            "MathematicaSimpleServer", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"], 
+         ButtonBox["ServerClose",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {
-            "CreateStreamSocket", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"], 
-         ButtonBox["SocketAccept",
+           "Info93693900785-3660365", {
+            "ServerClose", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"], 
+         ButtonBox["SetGenerator",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {
-            "SocketAccept", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"], 
-         ButtonBox["SocketListen",
+           "Info93693900785-3660365", {
+            "SetGenerator", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"]},
+        {
+         ButtonBox["RequestParser",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info133693869184-7828403", {
-            "SocketListen", "SocketLink`Sockets`"}},
-          ButtonNote->"SocketLink`Sockets`"]}
+           "Info93693900785-3660365", {
+            "RequestParser", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"], 
+         ButtonBox["ServerCreate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info93693900785-3660365", {
+            "ServerCreate", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"], 
+         ButtonBox["SetParser",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info93693900785-3660365", {
+            "SetParser", "MathematicaSimpleServer`"}},
+          ButtonNote->"MathematicaSimpleServer`"]}
        },
        DefaultBaseStyle->"InfoGrid",
        GridBoxItemSize->{"Columns" -> {{
-            Scaled[0.2375]}}}]}
+            Scaled[0.31666666666666665`]}}}]}
     },
     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
    Dynamic[Typeset`open$$],
    ImageSize->Automatic]]], "Print", "InfoCell",
- CellChangeTimes->{3.693854784607357*^9}],
+ CellChangeTimes->{3.6938863850444937`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- StyleBox["\<\"SocketAccept[s] waits for an incoming connection and a new \
-socket connection to the client is returned when one arrives, or one is \
-already in the queue.\"\>", "MSG"]], "Print", "PrintUsage",
- CellTags->"Info133693869184-7828403"]
-}, Open  ]]
+ RowBox[{"handler", " ", "=", " ", 
+  RowBox[{"HandlerCreate", "[", 
+   RowBox[{"ServerHandler", "[", "]"}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.6938817844572134`*^9, 3.6938817988234777`*^9}, {
+  3.69388184770407*^9, 3.6938818524270253`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ServerHandler", "[", "$3", "]"}]], "Output",
+ CellChangeTimes->{3.6938818108639603`*^9, 3.693881853059472*^9, 
+  3.693882847387038*^9, 3.6938845967828274`*^9, 3.693886386044102*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddressParser", " ", "=", " ", 
+  RowBox[{"Function", "[", "\n", "\t\t", 
+   RowBox[{"request", ",", " ", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"\"\<ADDRESS\>\"", " ", "->", " ", "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"\"\</\>\"", " ", "<>", " ", 
+      RowBox[{"First", "[", 
+       RowBox[{"StringCases", "[", "\n", "\t\t\t", 
+        RowBox[{"request", ",", " ", "\n", "\t\t\t", 
+         RowBox[{
+          RowBox[{
+          "\"\<GET /\>\"", " ", "~~", " ", "address___", " ", "~~", " ", 
+           "\"\< HTTP/1.\>\""}], " ", "->", " ", "address"}]}], "\n", "\t\t", 
+        "]"}], "]"}]}]}]}], "\[IndentingNewLine]", "\t", "]"}]}]], "Code",
+ CellChangeTimes->{3.6938855229099483`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Function", "[", 
+  RowBox[{"request", ",", 
+   RowBox[{"\<\"ADDRESS\"\>", "\[Rule]", 
+    RowBox[{"\<\"/\"\>", "<>", 
+     RowBox[{"First", "[", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"request", ",", 
+        RowBox[{
+         RowBox[{"\<\"GET /\"\>", "~~", "address___", 
+          "~~", "\<\" HTTP/1.\"\>"}], "\[Rule]", "address"}]}], "]"}], 
+      "]"}]}]}]}], "]"}]], "Output",
+ CellChangeTimes->{3.6938855244887285`*^9, 3.6938863874754066`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetParser", "[", "\n", "\t", 
+  RowBox[{"handler", ",", " ", "\n", "\t", "AddressParser"}], "\n", 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.693881858188543*^9, 3.6938820168200207`*^9}, 
+   3.6938820604552994`*^9, {3.693882141716508*^9, 3.693882210765501*^9}, {
+   3.6938854900345116`*^9, 3.693885519976905*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Function", "[", 
+  RowBox[{"request", ",", 
+   RowBox[{"\<\"ADDRESS\"\>", "\[Rule]", 
+    RowBox[{"\<\"/\"\>", "<>", 
+     RowBox[{"First", "[", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"request", ",", 
+        RowBox[{
+         RowBox[{"\<\"GET /\"\>", "~~", "address___", 
+          "~~", "\<\" HTTP/1.\"\>"}], "\[Rule]", "address"}]}], "]"}], 
+      "]"}]}]}]}], "]"}]], "Output",
+ CellChangeTimes->{3.6938820212387285`*^9, 3.693882061038802*^9, 
+  3.693882222986498*^9, 3.693882848348201*^9, 3.693884598041773*^9, 
+  3.693885525974264*^9, 3.6938863894040956`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IndexPage", "[", "]"}], " ", ":=", " ", "\n", 
+  RowBox[{
+  "\"\<<!DOCTYPE html>\n<html>\n<body>\n\n<h1>List of pages in this site</h1>\
+\n\n<p>\>\"", " ", "<>", " ", "\n", 
+   RowBox[{"StringJoin", "[", "\n", "\t", 
+    RowBox[{"StringReplace", "[", 
+     RowBox[{
+      RowBox[{"Map", "[", "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"Function", "[", 
+         RowBox[{"fileName", ",", " ", "\n", "\t\t\t", 
+          RowBox[{"\"\<<a href=\\\"\>\"", " ", "<>", " ", "\n", "\t\t\t", 
+           RowBox[{"StringDrop", "[", 
+            RowBox[{"fileName", ",", " ", 
+             RowBox[{"StringLength", "[", 
+              RowBox[{"Directory", "[", "]"}], "]"}]}], "]"}], " ", "<>", " ",
+            "\n", "\t\t\t", "\"\<\\\" >\>\"", " ", "<>", " ", 
+           RowBox[{"StringDrop", "[", 
+            RowBox[{
+             RowBox[{"Last", "[", 
+              RowBox[{"FileNameSplit", "[", "fileName", "]"}], "]"}], ",", 
+             " ", 
+             RowBox[{"-", "5"}]}], "]"}], " ", "<>", " ", "\n", "\t\t\t", 
+           "\"\<</a></br>\>\""}]}], "\n", "\t\t", "]"}], ",", " ", "\n", 
+        "\t\t", 
+        RowBox[{"FileNames", "[", 
+         RowBox[{"\"\<*.html\>\"", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"Directory", "[", "]"}], "}"}], ",", " ", "Infinity"}], 
+         "]"}]}], "]"}], ",", " ", "\n", "\t", 
+      RowBox[{"\"\<\\\\\>\"", " ", "->", " ", "\"\</\>\""}]}], "]"}], "]"}], 
+   " ", "<>", "  ", "\n", "\"\<</p>\n</body>\n</html>\>\""}]}]], "Code",
+ CellChangeTimes->{{3.693883294755299*^9, 3.6938833035559096`*^9}, {
+   3.693883424827902*^9, 3.6938836033363905`*^9}, {3.6938836426407433`*^9, 
+   3.693883769343836*^9}, {3.693884072644402*^9, 3.6938841385255303`*^9}, {
+   3.693885906214138*^9, 3.6938859311182957`*^9}, 3.693885977223528*^9, {
+   3.6938860247849226`*^9, 3.6938861301422896`*^9}, {3.6938863195423346`*^9, 
+   3.693886320980082*^9}, 3.693886497966626*^9, {3.6938872132939825`*^9, 
+   3.6938872453283243`*^9}, {3.6938873224054747`*^9, 
+   3.6938874025976954`*^9}, {3.6938874489432993`*^9, 
+   3.6938874555998707`*^9}, {3.6938874984063683`*^9, 
+   3.6938875141669607`*^9}, {3.6938875688236046`*^9, 3.6938875803586826`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PageNotFound", "[", "]"}], " ", ":=", " ", 
+  "\"\<Page not found\>\""}]], "Code",
+ CellChangeTimes->{{3.693882082473958*^9, 3.693882085925438*^9}, {
+  3.6938822377958975`*^9, 3.6938822380276203`*^9}, {3.6938823517967196`*^9, 
+  3.6938823523554144`*^9}, {3.6938830885653505`*^9, 3.6938831062837753`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"HTTPPageResponser", "[", 
+      RowBox[{"\"\<ADDRESS\>\"", " ", "->", " ", "address_String"}], "]"}], 
+     " ", "/;", " ", "\n", 
+     RowBox[{
+      RowBox[{"FileExistsQ", "[", 
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directory", "[", "]"}], ",", " ", "address"}], "}"}], 
+        "]"}], "]"}], " ", "&&", " ", "\n", 
+      RowBox[{"address", " ", "!=", " ", "\"\</\>\""}], " ", "&&", " ", 
+      RowBox[{"address", " ", "!=", " ", "\"\</index\>\""}]}]}], " ", ":=", 
+    " ", "\n", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringTemplate", "[", 
+         RowBox[{"ResponseString", "[", "]"}], "]"}], "[", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<code\>\"", " ", "->", " ", "\"\<200\>\""}], "|>"}], 
+        "]"}], " ", "<>", " ", "\n", 
+       RowBox[{
+        RowBox[{"StringTemplate", "[", 
+         RowBox[{"Headers", "[", "]"}], "]"}], "[", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<length\>\"", " ", "->", " ", 
+          RowBox[{"StringLength", "[", "#", "]"}]}], "|>"}], "]"}], " ", "<>",
+        " ", "#"}], "&"}], " ", "[", "\n", "\t", 
+     RowBox[{"ReadString", "[", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Directory", "[", "]"}], ",", " ", "address"}], "}"}], "]"}],
+       "]"}], "\n", "]"}]}], ";"}], " ", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"HTTPPageResponser", "[", 
+      RowBox[{"\"\<ADDRESS\>\"", " ", "->", " ", "address_String"}], "]"}], 
+     " ", "/;", " ", "\n", 
+     RowBox[{
+      RowBox[{"address", " ", "==", " ", "\"\</index\>\""}], " ", "||", " ", 
+      RowBox[{"address", " ", "==", " ", "\"\</\>\""}]}]}], " ", ":=", " ", 
+    "\n", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringTemplate", "[", 
+         RowBox[{"ResponseString", "[", "]"}], "]"}], "[", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<code\>\"", " ", "->", " ", "\"\<200\>\""}], "|>"}], 
+        "]"}], " ", "<>", " ", "\n", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringTemplate", "[", 
+           RowBox[{"Headers", "[", "]"}], "]"}], "[", 
+          RowBox[{"<|", 
+           RowBox[{"\"\<length\>\"", " ", "->", " ", 
+            RowBox[{"StringLength", "[", "#", "]"}]}], "|>"}], "]"}], " ", "<>",
+          " ", "#"}], ")"}]}], "&"}], " ", "@", " ", 
+     RowBox[{"IndexPage", "[", "]"}]}]}], ";"}], " ", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"HTTPPageResponser", "[", 
+      RowBox[{"\"\<ADDRESS\>\"", " ", "->", " ", "address_String"}], "]"}], 
+     " ", "/;", " ", "\n", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Not", "[", 
+        RowBox[{"FileExistsQ", "[", 
+         RowBox[{"FileNameJoin", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Directory", "[", "]"}], ",", " ", "address"}], "}"}], 
+          "]"}], "]"}], "]"}], " ", "&&", " ", "\n", 
+       RowBox[{"address", " ", "!=", " ", "\"\</index\>\""}]}], " ", "||", 
+      " ", 
+      RowBox[{"address", " ", "!=", " ", "\"\</\>\""}]}]}], " ", ":=", " ", 
+    "\n", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringTemplate", "[", 
+         RowBox[{"ResponseString", "[", "]"}], "]"}], "[", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<code\>\"", " ", "->", " ", "\"\<404\>\""}], "|>"}], 
+        "]"}], " ", "<>", " ", "\n", 
+       RowBox[{
+        RowBox[{"StringTemplate", "[", 
+         RowBox[{"Headers", "[", "]"}], "]"}], "[", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<length\>\"", " ", "->", " ", 
+          RowBox[{"StringLength", "[", "#", "]"}]}], "|>"}], "]"}], " ", "<>",
+        " ", "#"}], "&"}], " ", "[", "\n", "\t", 
+     RowBox[{"PageNotFound", "[", "]"}], "\n", "]"}]}], ";"}], " "}]}], "Code",
+ CellChangeTimes->{{3.693882999652932*^9, 3.693883082171071*^9}, {
+  3.693883144563801*^9, 3.6938832112291203`*^9}, {3.693883244116435*^9, 
+  3.693883282476039*^9}, {3.693884200996341*^9, 3.6938842379723167`*^9}, {
+  3.693884290134343*^9, 3.6938844372949314`*^9}, {3.693884467748601*^9, 
+  3.6938845315906677`*^9}, {3.693885327895571*^9, 3.693885364895713*^9}, {
+  3.6938855759014378`*^9, 3.69388561592934*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Headers", "[", "]"}], " ", ":=", " ", "\n", 
+    RowBox[{
+    "\"\<Content-Length: `length`\\r\\n\>\"", " ", "<>", "\n", 
+     "\"\<Connection: close\\r\\n\\r\\n\>\""}]}], ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.6938823384282913`*^9, 3.693882429549331*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ResponseString", "[", "]"}], " ", ":=", " ", "\n", 
+    "\"\<HTTP/1.1 `code` OK\\r\\n\>\""}], ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.693882443814253*^9, 3.693882478606884*^9}, {
+  3.6938829190940895`*^9, 3.6938829210596104`*^9}, {3.693883122326318*^9, 
+  3.6938831239105463`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetGenerator", "[", "\[IndentingNewLine]", "\t", 
+  RowBox[{
+  "handler", ",", " ", "\[IndentingNewLine]", "\t", "HTTPPageResponser"}], 
+  "\[IndentingNewLine]", "]"}]], "Code",
+ CellChangeTimes->{{3.693882070858568*^9, 3.693882076497712*^9}, {
+   3.6938822498441057`*^9, 3.6938823108833137`*^9}, {3.693882498247115*^9, 
+   3.693882570007265*^9}, 3.6938829950644426`*^9, {3.6938845605806904`*^9, 
+   3.693884575854161*^9}}],
+
+Cell[BoxData["HTTPPageResponser"], "Output",
+ CellChangeTimes->{3.6938864095615664`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ServerCreate", "[", 
+  RowBox[{"8888", ",", " ", "handler"}], "]"}]], "Code",
+ CellChangeTimes->{{3.693882585449144*^9, 3.693882608664042*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MathematicaSimpleServer", "[", 
+  RowBox[{
+   RowBox[{"Socket", "[", "1300", "]"}], ",", 
+   InterpretationBox[
+    RowBox[{
+    "AsynchronousTaskObject", "[", "\<\"SocketServer-1300\"\>", ",", "1", ",", 
+     RowBox[{" ", "<>"}], "]"}],
+    AsynchronousTaskObject["SocketServer-1300", 1, 32407618860197900670]]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.6938864106623983`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringReplace", "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{"Function", "[", 
+      RowBox[{"fileName", ",", " ", 
+       RowBox[{"StringDrop", "[", 
+        RowBox[{"fileName", ",", " ", 
+         RowBox[{"StringLength", "[", 
+          RowBox[{"Directory", "[", "]"}], "]"}]}], "]"}]}], "]"}], ",", " ", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{"\"\<*.html\>\"", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"Directory", "[", "]"}], "}"}], ",", " ", "Infinity"}], 
+      "]"}]}], "]"}], ",", " ", 
+   RowBox[{"\"\<\\\\\>\"", " ", "->", " ", "\"\</\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6938869200281887`*^9, 3.6938869469543524`*^9}, {
+  3.6938869998300357`*^9, 3.69388700166335*^9}, {3.693887082677266*^9, 
+  3.693887179520592*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/HTMLDocuments/ExampleOfUse.html\"\>", 
+   ",", "\<\"/HTMLExample.html\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.6938869428106747`*^9, 3.693886947581421*^9}, 
+   3.693887001948807*^9, 3.6938871491760745`*^9, 3.6938871806216307`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Directory", "[", "]"}]], "Input"],
+
+Cell[BoxData["\<\"E:\\\\Test Items\\\\Wolfram \
+Language\\\\Mathematica\\\\Projects\\\\MathematicaSimpleServer\"\>"], "Output",
+ CellChangeTimes->{3.6938869834637237`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IndexPage", "[", "]"}]], "Input"],
+
+Cell[BoxData["\<\"<!DOCTYPE html>\\n<html>\\n<body>\\n\\n<h1>List of pages in \
+this site</h1>\\n\\n<p><a \
+href=\\\"/HTMLDocuments/ExampleOfUse.html>ExampleOfUse.html</a>\\n<a \
+href=\\\"/HTMLExample.html>HTMLExample.html</a>\\n</p>\\n</body>\\n</html>\"\>\
+"], "Output",
+ CellChangeTimes->{3.693887479960549*^9}]
 }, Open  ]]
 },
 WindowSize->{775, 872},
@@ -165,32 +491,58 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{
- "Info133693869184-7828403"->{
-  Cell[4990, 150, 262, 4, 58, "Print",
-   CellTags->"Info133693869184-7828403"]}
- }
+CellTagsIndex->{}
 *)
 (*CellTagsIndex
-CellTagsIndex->{
- {"Info133693869184-7828403", 5594, 168}
- }
+CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 135, 2, 30, "Input"],
 Cell[CellGroupData[{
-Cell[718, 26, 756, 18, 278, "Input"],
-Cell[1477, 46, 427, 10, 30, "Output"]
+Cell[580, 22, 169, 3, 50, "Code"],
+Cell[752, 27, 171, 2, 30, "Output"]
 }, Open  ]],
-Cell[1919, 59, 139, 2, 30, "Input"],
+Cell[938, 32, 134, 2, 50, "Code"],
 Cell[CellGroupData[{
-Cell[2083, 65, 157, 3, 30, "Input"],
+Cell[1097, 38, 134, 2, 50, "Code"],
+Cell[1234, 42, 3141, 87, 101, "Print"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[2265, 72, 2722, 76, 79, "Print"],
-Cell[4990, 150, 262, 4, 58, "Print",
- CellTags->"Info133693869184-7828403"]
-}, Open  ]]
+Cell[4412, 134, 260, 5, 50, "Code"],
+Cell[4675, 141, 205, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4917, 149, 727, 14, 177, "Code"],
+Cell[5647, 165, 485, 12, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6169, 182, 334, 6, 105, "Code"],
+Cell[6506, 190, 601, 14, 50, "Output"]
+}, Open  ]],
+Cell[7122, 207, 2213, 43, 411, "Code"],
+Cell[9338, 252, 339, 6, 50, "Code"],
+Cell[9680, 260, 4339, 112, 393, "Code"],
+Cell[14022, 374, 322, 8, 87, "Code"],
+Cell[14347, 384, 346, 8, 69, "Code"],
+Cell[CellGroupData[{
+Cell[14718, 396, 447, 8, 105, "Code"],
+Cell[15168, 406, 88, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15293, 412, 167, 3, 50, "Code"],
+Cell[15463, 417, 403, 10, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15903, 432, 801, 19, 50, "Input"],
+Cell[16707, 453, 282, 5, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17026, 463, 57, 1, 30, "Input"],
+Cell[17086, 466, 171, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17294, 473, 57, 1, 30, "Input"],
+Cell[17354, 476, 314, 5, 221, "Output"]
 }, Open  ]]
 }
 ]

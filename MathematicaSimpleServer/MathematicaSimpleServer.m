@@ -32,6 +32,12 @@ SetParser::usage =
 SetGenerator::usage = 
 "SetGenerator[]"; 
 
+RequestParser::usage = 
+"RequestParser[]"; 
+
+ResponseGenerator::usage = 
+"ResponseGenerator[]"; 
+
 Begin["`Private`"]; 
 
 (* server constructors/destructors *)
@@ -50,52 +56,78 @@ MathematicaSimpleServer /:
 ServerClose[MathematicaSimpleServer[socket_Socket, asyncServer_AsynchronousTaskObject]] := 
 (SocketLink`Sockets`CloseSocket[socket]; StopAsynchronousTask[asyncServer];); 
 
-(* server handler *)
+RequestParser[_] := Nothing; 
+ResponseGenerator[_] := Nothing; 
+	
+ServerHandler /:
+HandlerCreate[ServerHandler[]] := 
+ServerHandler[Unique[]];
+	
+ServerHandler /: 
+HandlerCreate[ServerHandler[
+	Parser: (_Symbol|_Function), 
+	Generator: (_Symbol|_Function)
+]] := 
+Module[{tag = Unique[]}, 
+	RequestParser[tag] = Parser;
+	ResponseGenerator[tag] = Generator;
+	ServerHandler[tag]
+]; 
+	
+ServerHandler /: 
+RequestParser[ServerHandler[tag_]] := 
+RequestParser[tag]; 
 
-Module[{RequestParser, ResponseGenerator}, 
-	RequestParser[_] := Null; 
-	ResponseGenerator[_] := Null; 
+ServerHandler /: 
+ResponseGenerator[ServerHandler[tag_]] := 
+ResponseGenerator[tag]; 
 	
-	ServerHandler /:
-	HandlerCreate[ServerHandler[]] := 
-	ServerHandler[Unique[]];
+ServerHandler /: 
+SetParser[ServerHandler[tag_], Parser: (_Symbol|_Function)] := 
+RequestParser[tag] = Parser; 
 	
-	ServerHandler /:
-	HandlerCreate[
-		ServerHandler[Parser: (_Symbol|_Function), Generator: (_Symbol|_Function)]
-	] := Module[{tag = Unique[]}, 
-		RequestParser[tag] = Parser;
-		ResponseGenerator[tag] = Generator;
-		ServerHandler[tag]
+ServerHandler /: 
+SetGenerator[ServerHandler[tag_], Generator: (_Symbol|_Function)] := 
+ResponseGenerator[tag] = Generator; 
+	
+serverHandler_ServerHandler[{input_InputStream, output_OutputStream}] := 
+Module[
+	{
+		request, requestString, 
+		requestParser = RequestParser[serverHandler], 
+		responseGenerator = ResponseGenerator[serverHandler], 
+		responseString, response
+	}, 
+	
+	(* reading the request *)
+	request = 
+		Flatten[Last[Reap[
+			While[True, 
+				TimeConstrained[
+					Sow[BinaryRead[input]], 0.01, Break[]
+				]
+			]
+		]]];
+	
+	Close[input]; 
+	
+	requestString = FromCharacterCode[request]; 
+	
+	Print[DateString[], "\r\n", "Request:\r\n", requestString]; 
+	
+	If[
+		Not[StringMatchQ[requestString, __ ~~ " /" ~~ ___ ~~ "HTTP/1." ~~ __]], 
+		Return[]
 	]; 
 	
-	ServerHandler /: 
-	RequestParser[ServerHandler[tag_]] := 
-	RequestParser[tag]; 
+	responseString = responseGenerator[requestParser[requestString]]; 
 	
-	ServerHandler /: 
-	ResponseGenerator[ServerHandler[tag_]] := 
-	ResponseGenerator[tag]; 
+	Print[DateString[], "\r\n", "Response:\r\n", responseString]; 
 	
-	ServerHandler /: 
-	SetParser[ServerHandler[tag_], Parser: (_Symbol|_Function)] := 
-	RequestParser[tag] = Parser; 
-	
-	ServerHandler /: 
-	SetGenerator[ServerHandler[tag_], Generator: (_Symbol|_Function)] := 
-	ResponseGenerator[tag] = Generator; 
-	
-	serverHandler_ServerHandler[{input_InputStream, output_OutputStream}] := 
-	Module[{request, response}, 
-		
-		Close[input]; 
-		response = "HTTP/1.1 200 OK\r\nContent-Length: 10\r\n\r\ntest"; 
-		BinaryWrite[output, ToCharacterCode[response]]; 
-		Close[output];
-		
-	];
-	
-]; 
+	response = ToCharacterCode[responseString]; 
+	BinaryWrite[output, response]; 
+	Close[output];		
+];
 
 End[]; (*`Private`*)
 
