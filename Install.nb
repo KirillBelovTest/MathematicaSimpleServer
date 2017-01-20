@@ -1,0 +1,150 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5261,        142]
+NotebookOptionsPosition[      4579,        114]
+NotebookOutlinePosition[      4927,        129]
+CellTagsIndexPosition[      4884,        126]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6939088426377397`*^9, 3.6939088489292965`*^9}}],
+
+Cell[BoxData["\<\"E:\\\\Test Items\\\\Wolfram \
+Language\\\\Mathematica\\\\Projects\\\\MathematicaSimpleServer\"\>"], "Output",
+ CellChangeTimes->{
+  3.6939088491995707`*^9, 3.693909010413254*^9, 3.693909221640709*^9, 
+   3.6939092670801916`*^9, 3.6939093528025064`*^9, 3.6939094190308647`*^9, 
+   3.693909611716793*^9, 3.69390981308141*^9, {3.69390984374936*^9, 
+   3.6939098629233418`*^9}, {3.6939100307988014`*^9, 3.693910048468541*^9}, {
+   3.693910230434672*^9, 3.6939102581718245`*^9}, 3.6939103708132544`*^9, 
+   3.6939104329467793`*^9, 3.6939105228922267`*^9, 3.69391059290764*^9, 
+   3.6939110014898095`*^9, 3.6939110327861757`*^9, 3.6939111025596557`*^9, {
+   3.6939111526994514`*^9, 3.6939111585506353`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<Installer.m\>\""}]], "Input",
+ CellChangeTimes->{{3.693908416604258*^9, 3.6939084225075865`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Quit", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.693908461196871*^9, 3.693908462760779*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Input",
+ CellChangeTimes->{{3.6939088574379425`*^9, 3.693908866026039*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$Path"], "Input",
+ CellChangeTimes->{{3.693909278917199*^9, 3.6939092802665725`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"E:\\\\Test Items\\\\Wolfram \
+Language\\\\Mathematica\\\\Projects\\\\MathematicaSimpleServer\\\\\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Links\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Kirill Belov\\\\AppData\\\\Roaming\\\\Mathematica\
+\\\\Kernel\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Kirill Belov\\\\AppData\\\\Roaming\\\\Mathematica\
+\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Kirill Belov\\\\AppData\\\\Roaming\\\\Mathematica\
+\\\\Applications\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Kernel\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Applications\"\>", 
+   ",", "\<\".\"\>", ",", "\<\"C:\\\\Users\\\\Kirill Belov\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\Packages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\Applications\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\ExtraPackages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Kernel\\\\Packages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\Documentation\\\\English\\\\System\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Data\\\\ICC\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6939092806212482`*^9, 3.6939093572913904`*^9, 3.6939094317700434`*^9, 
+   3.693910381840098*^9, {3.6939104389999027`*^9, 3.693910462710024*^9}, 
+   3.6939105315468855`*^9, {3.693910607606094*^9, 3.693910618135953*^9}, 
+   3.6939110135661354`*^9, 3.6939111630588446`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"handler", " ", "=", " ", 
+  RowBox[{"HandlerCreate", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.693911204135831*^9, 3.69391120565479*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"server", " ", "=", " ", 
+  RowBox[{"ServerCreate", "[", 
+   RowBox[{"8888", ","}], " ", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6939111646824102`*^9, 3.6939112090239735`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ServerCreate", "[", "]"}]], "Output",
+ CellChangeTimes->{3.6939111850662484`*^9}]
+}, Open  ]]
+},
+WindowSize->{775, 872},
+WindowMargins->{{331, Automatic}, {40, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 174, 3, 30, "Input"],
+Cell[757, 27, 719, 10, 30, "Output"]
+}, Open  ]],
+Cell[1491, 40, 131, 2, 30, "Input"],
+Cell[1625, 44, 118, 2, 30, "Input"],
+Cell[1746, 48, 136, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[1907, 54, 99, 1, 30, "Input"],
+Cell[2009, 57, 2041, 36, 297, "Output"]
+}, Open  ]],
+Cell[4065, 96, 165, 3, 30, "Input"],
+Cell[CellGroupData[{
+Cell[4255, 103, 200, 4, 30, "Input"],
+Cell[4458, 109, 105, 2, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
