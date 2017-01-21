@@ -9,20 +9,23 @@
 BeginPackage["SimplePlotServer`", {"MathematicaSimpleServer`"}]; 
 
 SimplePlotServerStart::usage = 
-"SimplePlotServerStart[] >> SimpleMathematicaServer"; 
+"SimplePlotServerStart[port] >> SimpleMathematicaServer"; 
 
 PlotRequest::usage = 
 "PlotRequest[requestString] >> parserAssociation"; 
+
+PlotRequest::errreq = 
+"Error during parsing of the request"; 
 
 PlotResponse::usage = 
 "PlotRequest[parserAssociation] >> responseString"; 
 
 Begin["`Private`"]; 
 
-(**)
-SimplePlotServerStart[] := 
+(*  *)
+SimplePlotServerStart[port_Integer] := 
 MathematicaSimpleServer`ServerCreate[
-	8888, 
+	port, 
 	HandlerCreate[ServerHandler[
 		PlotRequest, 
 		PlotResponse
@@ -38,14 +41,14 @@ PlotRequest[requestString_String] :=
 
 PlotResponse[parsedRequest_Association] := 
 	Check[
-		PlotResponseImage[parsedRequest], 
-		PlotErrorResponse["Error during the plotting"]
+		PlotResponseText[PlotResponseImage[parsedRequest]], 
+		PlotResponseError["Error during the plotting"]
 	]; 
 
 (* private definitions *)
 
 PlotRequestQ[requestString_String] := 
-	StringContainsQ["get /plotserver?"][
+	StringContainsQ["get /simpleplotserver?"][
 		First[StringSplit[ToLowerCase[requestString], "\r\n"]]
 	]; 
 
@@ -56,7 +59,8 @@ TakeAddress[requestString_String] :=
 		"GET /" ~~ address___ ~~ " HTTP/1." :> "/" <> address
 	]]; 
 
-SplitAddress["Address" -> address_String] := 
+SplitAddress["Address" -> address_String] /; 
+	PlotResponseQ["get " <> address] := 
 	Association[MapThread[
    		Rule[#1, If[
    			#1 == "Range", 
@@ -64,9 +68,14 @@ SplitAddress["Address" -> address_String] :=
    		] &, 
    		{
    			{"Function", "Range"}, 
-   			First[StringSplit[StringSplit[address, "/plotserver?"], "@"]]
+   			First[StringSplit[StringSplit[address, "/simpleplotserver?"], "@"]]
    		}
     ]]; 
+    
+SplitAddress["Address" -> address_String] /; 
+	address == "/" || ToLowerCase[address] == "/index" || 
+	ToLowerCase[address] == "/simpleplotserver" := 
+	<|"Address" -> address|>; 
 
 PlotResponseImage[$Failed] := 
 	"Error address"; 
@@ -103,17 +112,19 @@ Keys[parsedRequest] == {"Address"} :=
 	</body> 
 </html>"
 
-PlotImageResponse[responseBody_String] := 
+(*image/svg+xml; *)
+(*text/html; charset=utf-8*)
+PlotResponseText[responseBody_String] := 
 	"HTTP/1.1 200 OK\r\n" <> 
-	"Content-Type: image/svg+xml\r\n" <> 
+	"Content-Type: image/svg+xml;\r\n" <> 
 	"Content-Length: " <> ToString[StringLength[responseBody]] <> 
-	"Connection: close\r\n\r\n" <> responseBody; 
+	"\r\nConnection: close\r\n\r\n" <> responseBody; 
 
-PlotErrorResponse[message_String] := 
+PlotResponseError[message_String] := 
 	"HTTP/1.1 400 OK\r\n" <> 
-	"Content-Type: image/svg+xml\r\n" <> 
-	"Content-Length: " <> ToString[StringLength[responseBody]] <> 
-	"Connection: close\r\n\r\n" <> 
+	"Content-Type: text/html; charset=utf-8\r\n" <> 
+	"Content-Length: " <> ToString[StringLength[message]] <> 
+	"\r\nConnection: close\r\n\r\n" <> 
 	"Error during plotting\n" <> 
 	"\t" <> message; 
 	
