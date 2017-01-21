@@ -59,7 +59,7 @@ ServerClose[MathematicaSimpleServer[socket_Socket, asyncServer_AsynchronousTaskO
 RequestParser[_] := Nothing; 
 ResponseGenerator[_] := Nothing; 
 	
-ServerHandler /:
+ServerHandler /: 
 HandlerCreate[ServerHandler[]] := 
 ServerHandler[Unique[]];
 	

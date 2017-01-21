@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1229699,      20532]
+NotebookDataLength[   1229700,      20532]
 NotebookOptionsPosition[   1225707,      20423]
-NotebookOutlinePosition[   1226054,      20438]
-CellTagsIndexPosition[   1226011,      20435]
+NotebookOutlinePosition[   1226055,      20438]
+CellTagsIndexPosition[   1226012,      20435]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -16994,27 +16994,27 @@ Cell[BoxData[
           BaseStyle->"InformationLinkLF",
           
           ButtonData:>{
-           "Info23693769314-7273106", {
+           "Info23693990021-9683410", {
             "CreateAsynchronousServer", "SocketLink`"}},
           ButtonNote->"SocketLink`"], 
          ButtonBox["CreateServerSocket",
           BaseStyle->"InformationLinkLF",
           
           ButtonData:>{
-           "Info23693769314-7273106", {"CreateServerSocket", "SocketLink`"}},
+           "Info23693990021-9683410", {"CreateServerSocket", "SocketLink`"}},
           ButtonNote->"SocketLink`"]},
         {
          ButtonBox["CreateClientSocket",
           BaseStyle->"InformationLinkLF",
           
           ButtonData:>{
-           "Info23693769314-7273106", {"CreateClientSocket", "SocketLink`"}},
+           "Info23693990021-9683410", {"CreateClientSocket", "SocketLink`"}},
           ButtonNote->"SocketLink`"], 
          ButtonBox["OpenSocketStreams",
           BaseStyle->"InformationLinkLF",
           
           ButtonData:>{
-           "Info23693769314-7273106", {"OpenSocketStreams", "SocketLink`"}},
+           "Info23693990021-9683410", {"OpenSocketStreams", "SocketLink`"}},
           ButtonNote->"SocketLink`"]}
        },
        DefaultBaseStyle->"InfoGrid",
@@ -17024,7 +17024,7 @@ Cell[BoxData[
     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
    Dynamic[Typeset`open$$],
    ImageSize->Automatic]]], "Print", "InfoCell",
- CellChangeTimes->{3.6937549144465275`*^9}]
+ CellChangeTimes->{3.6939756215609665`*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -20422,7 +20422,7 @@ Cell[TextData[{
 }, Open  ]]
 },
 WindowSize->{775, 872},
-WindowMargins->{{Automatic, -2}, {23, Automatic}},
+WindowMargins->{{115, Automatic}, {49, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
