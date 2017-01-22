@@ -6,7 +6,7 @@
 (* :Author: Kirill Belov *)
 (* :Email: KirillBelovTest@gmail.com *)
 
-BeginPackage["SimplePlotServer`", {"MathematicaSimpleServer`"}]; 
+BeginPackage["MathematicaSimpleServer`SimplePlotServer`", {"MathematicaSimpleServer`"}]; 
 
 SimplePlotServerStart::usage = 
 "SimplePlotServerStart[port] >> SimpleMathematicaServer"; 
@@ -130,4 +130,4 @@ PlotResponseError[message_String] :=
 	
 End[] (*`Private`*)
 
-EndPackage[]; (* SimplePlotServer` *)
+EndPackage[]; (* MathematicaSimpleServer`SimplePlotServer` *)

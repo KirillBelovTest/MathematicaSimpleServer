@@ -10,61 +10,46 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2659,         83]
-NotebookOptionsPosition[      2272,         65]
-NotebookOutlinePosition[      2619,         80]
-CellTagsIndexPosition[      2576,         77]
+NotebookDataLength[      1894,         67]
+NotebookOptionsPosition[      1546,         50]
+NotebookOutlinePosition[      1894,         65]
+CellTagsIndexPosition[      1851,         62]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Installer", "Chapter",
+ CellChangeTimes->{{3.694099102696683*^9, 3.6940991060248404`*^9}}],
+
+Cell["\<\
+If you want to use the project without installation - run the following code:\
+\>", "Text",
+ CellChangeTimes->{{3.69409907965711*^9, 3.6940990961028695`*^9}, {
+  3.694099327691598*^9, 3.6940993602493877`*^9}, {3.6940993987865067`*^9, 
+  3.6940994052553177`*^9}}],
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{"SetDirectory", "[", 
-   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"$Path", "=", 
+  RowBox[{"$Path", " ", "=", " ", 
    RowBox[{"Append", "[", 
     RowBox[{"$Path", ",", " ", 
-     RowBox[{"Directory", "[", "]"}]}], "]"}]}], ";"}]}], "Code",
- CellChangeTimes->{{3.6939088426377397`*^9, 3.6939088489292965`*^9}, {
-  3.6939271289014373`*^9, 3.6939271292598624`*^9}, {3.69392718884231*^9, 
-  3.6939271910956755`*^9}, {3.6939781611553664`*^9, 3.6939781828858004`*^9}, {
-  3.693979699601549*^9, 3.693979701726085*^9}}],
-
-Cell[BoxData[{
- RowBox[{"<<", "MathematicaSimpleServer`"}], "\n", 
- RowBox[{"<<", "SimplePlotServer`"}]}], "Code",
- CellChangeTimes->{{3.6939088574379425`*^9, 3.693908866026039*^9}, {
-  3.6939271483425384`*^9, 3.693927171452222*^9}, {3.69397820369858*^9, 
-  3.6939782117232733`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SimplePlotServerStart", "[", "8888", "]"}]], "Input",
- CellChangeTimes->{{3.693978217695281*^9, 3.6939782252614594`*^9}}],
-
-Cell[BoxData[
- RowBox[{"MathematicaSimpleServer", "[", 
+     RowBox[{"Directory", "[", "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
   RowBox[{
-   RowBox[{"Socket", "[", "448", "]"}], ",", 
-   InterpretationBox[
-    RowBox[{
-    "AsynchronousTaskObject", "[", "\<\"SocketServer-448\"\>", ",", "1", ",", 
-     RowBox[{" ", "<>"}], "]"}],
-    AsynchronousTaskObject["SocketServer-448", 1, 32408232492782674659]]}], 
-  "]"}]], "Output",
- CellChangeTimes->{3.6939782260109625`*^9, 3.6939783586551175`*^9, 
-  3.693978704826485*^9, 3.6939790926878085`*^9, 3.6939792210689116`*^9, 
-  3.6939793647879305`*^9, 3.69397941283902*^9, 3.69397946066698*^9, 
-  3.6939795647458477`*^9, 3.6939797075201936`*^9, 3.6939798303999166`*^9, 
-  3.693980011826683*^9}]
+   RowBox[{"Get", "[", "\"\<MathematicaSimpleServer`\>\"", "]"}], ";"}], 
+  " "}]}], "Code",
+ CellChangeTimes->{{3.6940991139695826`*^9, 3.6940991665697927`*^9}, {
+  3.6940992408943405`*^9, 3.694099241066218*^9}, {3.6940994154116263`*^9, 
+  3.6940994399323044`*^9}}]
 }, Open  ]]
 },
 WindowSize->{775, 872},
-WindowMargins->{{51, Automatic}, {28, Automatic}},
+WindowMargins->{{Automatic, 142}, {25, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -79,11 +64,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 573, 13, 69, "Code"],
-Cell[1134, 35, 283, 5, 69, "Code"],
 Cell[CellGroupData[{
-Cell[1442, 44, 145, 2, 30, "Input"],
-Cell[1590, 48, 666, 14, 30, "Output"]
+Cell[580, 22, 96, 1, 72, "Chapter"],
+Cell[679, 25, 272, 5, 30, "Text"],
+Cell[954, 32, 576, 15, 87, "Code"]
 }, Open  ]]
 }
 ]
