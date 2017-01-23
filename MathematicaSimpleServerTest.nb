@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18062,        550]
-NotebookOptionsPosition[     15867,        473]
-NotebookOutlinePosition[     16215,        488]
-CellTagsIndexPosition[     16172,        485]
+NotebookDataLength[      5830,        171]
+NotebookOptionsPosition[      5258,        147]
+NotebookOutlinePosition[      5605,        162]
+CellTagsIndexPosition[      5562,        159]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,11 +25,39 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"server", "=", 
+ RowBox[{"handler", " ", "=", " ", 
+  RowBox[{"ConnectionHandlerCreate", "[", 
+   RowBox[{
+    RowBox[{"RequestParser", "[", "]"}], ",", " ", 
+    RowBox[{"ServerBean", "[", "]"}], ",", " ", 
+    RowBox[{"ResponseGenerator", "[", "]"}]}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.694162181840615*^9, 3.6941622169162545`*^9}, {
+  3.6941641210666604`*^9, 3.6941641231223783`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ConnectionHandler", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\<\"Tag\"\>", "\[Rule]", "$3"}], ",", 
+    RowBox[{"\<\"RequestParser\"\>", "\[Rule]", 
+     RowBox[{"RequestParser", "[", "]"}]}], ",", 
+    RowBox[{"\<\"ServerBean\"\>", "\[Rule]", 
+     RowBox[{"ServerBean", "[", "]"}]}], ",", 
+    RowBox[{"\<\"ResponseGenerator\"\>", "\[Rule]", 
+     RowBox[{"ResponseGenerator", "[", "]"}]}]}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.6941640370162306`*^9, 3.6941641282361937`*^9, 3.6941642766564584`*^9, {
+   3.694164329617633*^9, 3.694164344149685*^9}, 3.694165282534487*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"server", " ", "=", " ", 
   RowBox[{"MathematicaSimpleServerCreate", "[", 
-   RowBox[{"8888", ",", " ", 
-    RowBox[{"ServerHandler", "[", "]"}]}], "]"}]}]], "Code",
- CellChangeTimes->{{3.6941049501748004`*^9, 3.6941049712925467`*^9}}],
+   RowBox[{"8888", ",", " ", "handler"}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.694164117294715*^9, 3.6941641383986235`*^9}, {
+  3.69416528752075*^9, 3.6941652888317704`*^9}}],
 
 Cell[BoxData[
  RowBox[{"\<\"Server\"\>", "[", 
@@ -47,432 +75,78 @@ Cell[BoxData[
     ButtonNote->"http://localhost:8888/"],
    Annotation[#, "http://localhost:8888/", "Hyperlink"]& ], "]"}]], "Output",
  CellChangeTimes->{
-  3.6941049718801637`*^9, 3.69410522596461*^9, {3.6941053634835477`*^9, 
-   3.6941053764271035`*^9}, 3.694105700928212*^9, 3.69410585849018*^9, 
-   3.6941067758210363`*^9}]
+  3.694164138703706*^9, 3.6941642784053416`*^9, {3.694164330467597*^9, 
+   3.6941643507054157`*^9}, 3.694165289662694*^9}]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{"ResponseString", "[", "body_String", "]"}], " ", ":=", " ", "\n", 
     RowBox[{
-    "\"\<HTTP/1.1 200 OK\\r\\n\>\"", " ", "<>", " ", "\n", 
-     "\"\<Content-Type: text/html\\r\\n\>\"", " ", "<>", " ", "\n", 
-     "\"\<Content-Length: \>\"", " ", "<>", " ", 
-     RowBox[{"ToString", "[", 
-      RowBox[{"StringLength", "[", "body", "]"}], "]"}], " ", "<>", " ", 
-     "\"\<\\r\\n\>\"", " ", "<>", "\n", 
-     "\"\<Connection: close\\r\\n\\r\\n\>\"", " ", "<>", " ", "body"}]}], 
-   ";"}], " "}]], "Code",
- CellChangeTimes->{{3.6941061063336363`*^9, 3.6941062830879965`*^9}, {
-  3.6941063727594814`*^9, 3.6941063773753977`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"IndexPage", "[", "]"}], " ", ":=", " ", "\n", 
-   "\"\<<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Mathematica Simple \
-Server</title>\n\t</head>\n\t<body>\n\t\t<h1>Example Page</h1>\n\t</body>\n\
-</html>\n\>\""}], ";"}]], "Code",
- CellChangeTimes->{{3.694105910943286*^9, 3.694106011611069*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{"ServerHandler", "[", "]"}], "[", 
-    RowBox[{"{", 
-     RowBox[{"in_", ",", "out_"}], "}"}], "]"}], ":=", "\n", "\t", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"request", ",", "response"}], "}"}], ",", "\n", "\t\t", 
-     RowBox[{
-      RowBox[{"request", " ", "=", " ", "\n", "\t\t\t", 
-       RowBox[{"Flatten", "[", 
-        RowBox[{"Last", "[", 
-         RowBox[{"Reap", "[", "\n", "\t\t\t\t", 
-          RowBox[{"While", "[", 
-           RowBox[{"True", ",", " ", "\n", "\t\t\t\t\t", 
-            RowBox[{"TimeConstrained", "[", "\n", "\t\t\t\t\t\t", 
-             RowBox[{
-              RowBox[{"Sow", "[", 
-               RowBox[{"BinaryRead", "[", "in", "]"}], "]"}], ",", " ", "\n", 
-              "\t\t\t\t\t\t", "0.01", ",", " ", 
-              RowBox[{"Break", "[", "]"}]}], "\n", "\t\t\t\t\t", "]"}]}], 
-           "\n", "\t\t\t\t", "]"}], "\n", "\t\t\t", "]"}], "]"}], "]"}]}], 
-      ";", "\n", "\t\t", 
-      RowBox[{"Print", "[", 
-       RowBox[{"FromCharacterCode", "[", "request", "]"}], "]"}], ";", "\n", 
-      "\t\t", 
-      RowBox[{"Close", "[", "in", "]"}], ";", "\n", "\t\t", 
-      RowBox[{"response", " ", "=", " ", 
-       RowBox[{"ResponseString", "[", 
-        RowBox[{"IndexPage", "[", "]"}], "]"}]}], ";", " ", "\n", "\t\t", 
-      RowBox[{"Print", "[", "response", "]"}], ";", "\n", "\t\t", 
-      RowBox[{"Write", "[", 
-       RowBox[{"out", ",", "response"}], "]"}], ";", "\n", "\t\t", 
-      RowBox[{"Close", "[", "out", "]"}], ";"}]}], "\n", "\t", "]"}]}], 
-  ";"}]], "Code",
- CellChangeTimes->{{3.6941053849360266`*^9, 3.6941054419049945`*^9}, {
-  3.694105508209652*^9, 3.6941056706134815`*^9}, {3.6941057289334984`*^9, 
-  3.694105744277589*^9}, {3.694105870986965*^9, 3.694105905403263*^9}, {
-  3.694106067821403*^9, 3.6941060760824723`*^9}, {3.6941062892030787`*^9, 
-  3.694106324720026*^9}, {3.6941064143857536`*^9, 3.694106522543782*^9}, {
-  3.694106590916165*^9, 3.6941065955930786`*^9}, {3.6941067179385786`*^9, 
-  3.6941067230384154`*^9}}],
-
-Cell[BoxData[
- RowBox[{"MathematicaSimpleServerClose", "[", "server", "]"}]], "Code",
- CellChangeTimes->{{3.694104974364113*^9, 3.694104981110212*^9}}],
-
-Cell[BoxData["Check"], "Input",
- CellChangeTimes->{{3.6941434519529495`*^9, 3.6941434585826373`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"a", "=", 
-  RowBox[{"f", "[", "x", "]"}]}]], "Input",
- CellChangeTimes->{{3.694147312279728*^9, 3.694147324087576*^9}}],
-
-Cell[BoxData[
- RowBox[{"f", "[", "x", "]"}]], "Output",
- CellChangeTimes->{3.6941473261941485`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"f", "[", "x", "]"}], "=", 
-  RowBox[{"f", "[", 
-   RowBox[{"x", ",", "y"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.6941473276188555`*^9, 3.694147332055182*^9}}],
-
-Cell[BoxData[
- RowBox[{"f", "[", 
-  RowBox[{"x", ",", "y"}], "]"}]], "Output",
- CellChangeTimes->{3.6941473328781867`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"Head", "[", "a", "]"}], "[", "x", "]"}], "=", 
-  RowBox[{"f", "[", 
-   RowBox[{"x", ",", "z"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.694147336530959*^9, 3.6941473541512747`*^9}}],
-
-Cell[BoxData[
- RowBox[{"f", "[", 
-  RowBox[{"x", ",", "z"}], "]"}]], "Output",
- CellChangeTimes->{{3.694147339954255*^9, 3.69414735452345*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"f", "[", "x", "]"}]], "Input",
- CellChangeTimes->{{3.694147356752037*^9, 3.694147357368021*^9}}],
-
-Cell[BoxData[
- RowBox[{"f", "[", 
-  RowBox[{"x", ",", "z"}], "]"}]], "Output",
- CellChangeTimes->{3.6941473578544827`*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{"ConnectionHandlerReplace", "[", 
-     RowBox[{"handler_ConnectionHandler", ",", "rules__Rule"}], "]"}], "/;", 
-    RowBox[{
-     RowBox[{"Length", "[", 
-      RowBox[{"{", "rules", "}"}], "]"}], ">", "1"}]}], ":=", 
-   RowBox[{"Apply", "[", 
-    RowBox[{"Composition", ",", 
-     RowBox[{"Append", "[", 
-      RowBox[{
-       RowBox[{"Table", "[", 
-        RowBox[{
-         RowBox[{"Function", "[", 
-          RowBox[{"hanlerIter", ",", 
-           RowBox[{"ConnectionHandlerReplace", "[", 
-            RowBox[{"handler", ",", "rule"}], "]"}]}], "]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"rule", ",", "rules"}], "}"}]}], "]"}], ",", "handler"}], 
-      "]"}]}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.694148167306692*^9, 3.6941481907119184`*^9}, {
-  3.694148276670622*^9, 3.694148278827866*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ConnectionHandlerReplace", "[", 
-  RowBox[{
-   RowBox[{"ConnectionHandler", "[", "]"}], ",", 
-   RowBox[{"\"\<a\>\"", "\[Rule]", "1"}], ",", 
-   RowBox[{"\"\<b\>\"", "\[Rule]", "2"}], ",", 
-   RowBox[{"\"\<c\>\"", "\[Rule]", "3"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.6941482162967215`*^9, 3.694148256504223*^9}, {
-  3.694148293624756*^9, 3.694148302718795*^9}}],
-
-Cell[BoxData[
- TemplateBox[{
-  "Table","iterb",
-   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"rule\\\", \\\",\\\", \
-RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"b\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"c\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"3\\\"}]}], \
-\\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,2,
-   32409334748967951483,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.69414830300091*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "Table","iterb",
-   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"rule\\\", \\\",\\\", \
-RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"b\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"c\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"3\\\"}]}], \
-\\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,3,
-   32409334748967951483,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6941483030196996`*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "Table","iterb",
-   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"rule\\\", \\\",\\\", \
-RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"b\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"c\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"3\\\"}]}], \
-\\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,4,
-   32409334748967951483,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6941483030337243`*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Table\\\", \\\"::\\\", \
-\\\"iterb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,12,5,32409334748967951483,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6941483030482197`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"Function", "[", 
-   RowBox[{"hanlerIter$", ",", 
-    RowBox[{"ConnectionHandlerReplace", "[", 
-     RowBox[{
-      RowBox[{"ConnectionHandler", "[", "]"}], ",", "rule"}], "]"}]}], "]"}], 
-  "@*", 
-  RowBox[{"{", 
-   RowBox[{"rule", ",", 
-    RowBox[{"\<\"a\"\>", "\[Rule]", "1"}], ",", 
-    RowBox[{"\<\"b\"\>", "\[Rule]", "2"}], ",", 
-    RowBox[{"\<\"c\"\>", "\[Rule]", "3"}]}], "}"}], "@*", 
-  RowBox[{"{", 
-   RowBox[{"ConnectionHandler", "[", "]"}], "}"}]}]], "Output",
- CellChangeTimes->{{3.6941482521670313`*^9, 3.6941483030637307`*^9}}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"f", "[", 
-   RowBox[{"rules", ":", 
-    RowBox[{"(", 
-     RowBox[{"__Rule", "|", 
-      RowBox[{"__List", "?", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"And", "@@", 
-           RowBox[{"Map", "[", 
-            RowBox[{
-             RowBox[{"Function", "[", 
-              RowBox[{"r", ",", 
-               RowBox[{
-                RowBox[{"Head", "[", "r", "]"}], "\[Equal]", "Rule"}]}], 
-              "]"}], ",", 
-             RowBox[{"Flatten", "[", "#", "]"}]}], "]"}]}], ")"}], "&"}], 
-        ")"}]}]}], ")"}]}], "]"}], ":=", 
-  RowBox[{"Flatten", "[", "rules", "]"}]}]], "Input",
- CellChangeTimes->{{3.694149883413727*^9, 3.694149979082788*^9}, {
-  3.694150011226396*^9, 3.694150023610479*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"f", "[", 
-  RowBox[{"{", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"1", "\[Rule]", "2"}], ",", " ", "1", ",", 
-     RowBox[{"{", 
-      RowBox[{"4", "\[Rule]", "2"}], "}"}]}], "}"}], "}"}], "]"}]], "Input",
- CellChangeTimes->{{3.694149981208007*^9, 3.6941500034511557`*^9}, {
-  3.6941500357224483`*^9, 3.6941500375223155`*^9}, {3.6941501563624687`*^9, 
-  3.6941501566021132`*^9}}],
-
-Cell[BoxData[
- RowBox[{"f", "[", 
-  RowBox[{"{", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"1", "\[Rule]", "2"}], ",", "1", ",", 
-     RowBox[{"{", 
-      RowBox[{"4", "\[Rule]", "2"}], "}"}]}], "}"}], "}"}], "]"}]], "Output",
- CellChangeTimes->{{3.694149984156784*^9, 3.6941500379046154`*^9}, 
-   3.694150157218684*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"__List", "?", "Function"}], "[", 
-  RowBox[{"ruleList", ",", 
-   RowBox[{"Apply", "[", 
-    RowBox[{"And", ",", 
-     RowBox[{"Map", "[", 
-      RowBox[{
+     RowBox[{"RequestParser", "[", "]"}], "[", "request_String", "]"}], " ", ":=",
+     " ", "\n", 
+    RowBox[{"\"\<Address\>\"", " ", "->", " ", 
+     RowBox[{"First", "[", 
+      RowBox[{"StringCases", "[", "\n", "\t", 
        RowBox[{
-        RowBox[{"(", 
+        RowBox[{"First", "[", 
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"request", ",", " ", "\"\<\\r\\n\>\""}], "]"}], "]"}], ",", 
+        " ", "\n", "\t", 
+        RowBox[{
          RowBox[{
-          RowBox[{"Head", "[", "#", "]"}], "\[Equal]", "Rule"}], ")"}], "&"}],
-        ",", "ruleList"}], "]"}]}], "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.694150172713055*^9, 3.694150172714056*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"RequestParser", "::", "nodef"}], "=", 
-   "\"\<RequestParser[`1`] is not defined\>\""}], 
-  "\n"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"RequestParser", "[", "tag_", "]"}], ":=", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"Message", "[", 
-      RowBox[{
-       RowBox[{"RequestParser", "::", "nodef"}], ",", "tag"}], "]"}], ";", 
-     "Null"}], ")"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.69415066681184*^9, 3.6941506668128405`*^9}}],
-
-Cell[BoxData["\<\"RequestParser[`1`] is not defined\"\>"], "Output",
- CellChangeTimes->{3.6941506682968264`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"RequestParser", "[", "1", "]"}]], "Input",
- CellChangeTimes->{{3.69415067172022*^9, 3.6941506738651776`*^9}}],
-
-Cell[BoxData[
- TemplateBox[{
-  "RequestParser","nodef",
-   "\"RequestParser[\\!\\(\\*RowBox[{\\\"1\\\"}]\\)] is not defined\"",2,25,4,
-   32409345746211159843,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6941506996455793`*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"RequestParser", "[", "1", "]"}], ":=", "1"}]], "Input",
- CellChangeTimes->{{3.694150682601039*^9, 3.6941506840479965`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"RequestParser", "[", "1", "]"}], "=."}]], "Input",
- CellChangeTimes->{{3.694150693039991*^9, 3.694150696121729*^9}}],
-
-Cell[BoxData[".."], "Input",
- CellChangeTimes->{{3.694150977586255*^9, 3.694150977737009*^9}}],
+         "\"\<GET /\>\"", " ", "~~", " ", "address___", " ", "~~", " ", 
+          "\"\< HTTP/1.\>\"", " ", "~~", " ", "_"}], " ", ":>", " ", 
+         RowBox[{"\"\</\>\"", " ", "<>", " ", "address"}]}]}], "\n", "]"}], 
+      "]"}]}]}], ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.6941643717373624`*^9, 3.69416443910036*^9}, {
+  3.6941645015872974`*^9, 3.6941645667132425`*^9}, {3.694165043451681*^9, 
+  3.6941650437789507`*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"RequestParser", "[", "parsingRules_List", "]"}], "/;", 
-   RowBox[{"MatchQ", "[", 
-    RowBox[{"parsingRules", ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"Rule", "[", 
-        RowBox[{"_String", ",", 
-         RowBox[{"Rule", "[", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"_Symbol", "|", "_Function"}], ")"}], ",", 
-           RowBox[{"(", 
-            RowBox[{"_Symbol", "|", "_Function"}], ")"}]}], "]"}]}], "]"}], 
-       ".."}], "}"}]}], "]"}]}], ":=", "1"}]], "Input",
- CellChangeTimes->{{3.694151028482876*^9, 3.694151033892377*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"RequestParser", "[", 
-  RowBox[{"{", 
    RowBox[{
-    RowBox[{"\"\<\>\"", "\[Rule]", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{"#", "&"}], ")"}], "\[Rule]", "Sin"}]}], ",", " ", 
-    RowBox[{"\"\<\>\"", "\[Rule]", 
-     RowBox[{"Sin", "\[Rule]", 
-      RowBox[{"Function", "[", 
-       RowBox[{"x", ",", "x"}], "]"}]}]}], ",", " ", 
-    RowBox[{"\"\<\>\"", "\[Rule]", 
-     RowBox[{"Sin", "\[Rule]", 
-      RowBox[{"Function", "[", 
-       RowBox[{"x", ",", "x"}], "]"}]}]}]}], "}"}], "]"}]], "Input",
- CellChangeTimes->{{3.6941510419131565`*^9, 3.694151107912696*^9}}],
-
-Cell[BoxData["1"], "Output",
- CellChangeTimes->{{3.6941510974507313`*^9, 3.694151108803385*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
+    RowBox[{
+     RowBox[{"ServerBean", "[", "]"}], "[", 
+     RowBox[{"\"\<Address\>\"", " ", "->", " ", "address_String"}], "]"}], 
+    " ", ":=", " ", "\n", 
+    "\"\<<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Test</title>\n\t\t\
+<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; \
+charset=UTF8\\\"/>\n\t</head>\n\t<body>\n\t\t<h1>Hello!</h1>\n\t</body>\n\
+</html>\>\""}], ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.69416457317871*^9, 3.694164792624999*^9}, {
+  3.6941655646005783`*^9, 3.694165567535106*^9}}],
 
 Cell[BoxData[
- RowBox[{"Scan", "[", 
-  RowBox[{"Print", ",", " ", 
-   RowBox[{"f", "[", 
-    RowBox[{"{", 
-     RowBox[{"a", ",", "b", ",", "c"}], "}"}], "]"}], ",", " ", 
-   RowBox[{"{", "2", "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.694151207072803*^9, 3.694151208247387*^9}, {
-  3.694152273167684*^9, 3.694152379014451*^9}, {3.6941524193044095`*^9, 
-  3.6941524684793463`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData["a"], "Print",
- CellChangeTimes->{{3.694152432937003*^9, 3.6941524688129773`*^9}}],
-
-Cell[BoxData["b"], "Print",
- CellChangeTimes->{{3.694152432937003*^9, 3.6941524688149786`*^9}}],
-
-Cell[BoxData["c"], "Print",
- CellChangeTimes->{{3.694152432937003*^9, 3.69415246881748*^9}}]
-}, Open  ]]
-}, Open  ]]
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ResponseGenerator", "[", "]"}], "[", "content_String", "]"}], 
+    " ", ":=", " ", "\n", 
+    RowBox[{"\"\<HTTP/1.1 200 OK\\r\\n\>\"", " ", "<>", " ", "\n", 
+     RowBox[{
+      RowBox[{"StringTemplate", "[", "\"\<Date: `date`\\r\\n\>\"", "]"}], "[", 
+      RowBox[{"<|", 
+       RowBox[{"\"\<date\>\"", " ", "->", " ", 
+        RowBox[{"DateString", "[", "]"}]}], "|>"}], "]"}], " ", "<>", " ", 
+     "\n", 
+     RowBox[{
+      RowBox[{
+      "StringTemplate", "[", "\"\<Content-Length: `length`\\r\\n\>\"", "]"}], 
+      "[", 
+      RowBox[{"<|", 
+       RowBox[{"\"\<length\>\"", " ", "->", " ", 
+        RowBox[{"StringLength", "[", "content", "]"}]}], "|>"}], "]"}], " ", "<>",
+      " ", "\n", "\"\<Connection: close\\r\\n\\r\\n\>\"", " ", "<>", " ", 
+     "content"}]}], ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.6941647953423615`*^9, 3.694164979122441*^9}, {
+  3.694165506313241*^9, 3.694165556897031*^9}}]
 },
 WindowSize->{775, 872},
-WindowMargins->{{Automatic, 109}, {41, Automatic}},
+WindowMargins->{{Automatic, 77}, {45, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -489,69 +163,16 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 135, 2, 50, "Code"],
 Cell[CellGroupData[{
-Cell[718, 26, 248, 5, 50, "Code"],
-Cell[969, 33, 736, 18, 33, "Output"]
-}, Open  ]],
-Cell[1720, 54, 688, 15, 123, "Code"],
-Cell[2411, 71, 345, 7, 231, "Code"],
-Cell[2759, 80, 2077, 44, 357, "Code"],
-Cell[4839, 126, 151, 2, 50, "Code"],
-Cell[4993, 130, 101, 1, 30, "Input"],
-Cell[CellGroupData[{
-Cell[5119, 135, 143, 3, 30, "Input"],
-Cell[5265, 140, 99, 2, 30, "Output"]
+Cell[718, 26, 391, 8, 50, "Code"],
+Cell[1112, 36, 616, 13, 50, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5401, 147, 197, 5, 30, "Input"],
-Cell[5601, 154, 122, 3, 30, "Output"]
+Cell[1765, 54, 275, 5, 50, "Code"],
+Cell[2043, 61, 686, 17, 33, "Output"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[5760, 162, 229, 6, 30, "Input"],
-Cell[5992, 170, 143, 3, 30, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6172, 178, 120, 2, 30, "Input"],
-Cell[6295, 182, 122, 3, 30, "Output"]
-}, Open  ]],
-Cell[6432, 188, 877, 23, 88, "Input"],
-Cell[CellGroupData[{
-Cell[7334, 215, 391, 8, 30, "Input"],
-Cell[7728, 225, 526, 10, 21, "Message"],
-Cell[8257, 237, 529, 10, 21, "Message"],
-Cell[8789, 249, 529, 10, 21, "Message"],
-Cell[9321, 261, 340, 7, 21, "Message"],
-Cell[9664, 270, 579, 15, 50, "Output"]
-}, Open  ]],
-Cell[10258, 288, 776, 22, 51, "Input"],
-Cell[CellGroupData[{
-Cell[11059, 314, 406, 10, 30, "Input"],
-Cell[11468, 326, 322, 9, 30, "Output"]
-}, Open  ]],
-Cell[11805, 338, 451, 13, 30, "Input"],
-Cell[CellGroupData[{
-Cell[12281, 355, 507, 15, 88, "Input"],
-Cell[12791, 372, 112, 1, 30, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12940, 378, 133, 2, 30, "Input"],
-Cell[13076, 382, 253, 6, 21, "Message"]
-}, Open  ]],
-Cell[13344, 391, 158, 3, 30, "Input"],
-Cell[13505, 396, 151, 3, 30, "Input"],
-Cell[13659, 401, 94, 1, 30, "Input"],
-Cell[13756, 404, 622, 17, 70, "Input"],
-Cell[CellGroupData[{
-Cell[14403, 425, 601, 16, 30, "Input"],
-Cell[15007, 443, 96, 1, 30, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[15140, 449, 386, 9, 30, "Input"],
-Cell[CellGroupData[{
-Cell[15551, 462, 95, 1, 22, "Print"],
-Cell[15649, 465, 95, 1, 22, "Print"],
-Cell[15747, 468, 92, 1, 22, "Print"]
-}, Open  ]]
-}, Open  ]]
+Cell[2744, 81, 938, 23, 123, "Code"],
+Cell[3685, 106, 575, 13, 231, "Code"],
+Cell[4263, 121, 991, 24, 123, "Code"]
 }
 ]
 *)

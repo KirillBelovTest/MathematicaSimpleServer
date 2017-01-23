@@ -40,7 +40,7 @@ Part[
 ] ^:= component; 
 
 (* server constructors *)
-MathematicaSimpleServerCreate[port_Integer, handler_ServerHandler] := 
+MathematicaSimpleServerCreate[port_Integer, handler_ConnectionHandler] := 
 	Module[{tag, socket, asynchronousserver}, 
 		
 		tag = Unique[]; 
@@ -51,10 +51,10 @@ MathematicaSimpleServerCreate[port_Integer, handler_ServerHandler] :=
 		MathematicaSimpleServer[
 			{
 				"Tag" -> tag, 
-				"Port" -> port,  
-				"Socket" -> socket,
-				"ServerHandler" -> handler,   
-				"AsynchronousServer" -> asynchronousserver
+				"Port" -> port, 
+				"Socket" -> socket, 
+				"ServerHandler" -> handler, 
+				"AsynchronousServer" -> asynchronousserver 
 			}
 		] 
 	];
@@ -62,13 +62,13 @@ MathematicaSimpleServerCreate[port_Integer, handler_ServerHandler] :=
 (* server destructor *)
 MathematicaSimpleServerClose[server_MathematicaSimpleServer] := 
 	(
-		SocketLink`Sockets`CloseSocket[server[[ServerInformation["Socket"]]]]; 
-		StopAsynchronousTask[server[[ServerInformation["AsynchronousServer"]]]]; 
+		SocketLink`Sockets`CloseSocket[server[[Component["Socket"]]]]; 
+		StopAsynchronousTask[server[[Component["AsynchronousServer"]]]]; 
 	);
 
 (* define format *)
 Format[server_MathematicaSimpleServer] := 
-"Server"[Hyperlink["http://localhost:" <> ToString[server[[ServerInformation["Port"]]]] <> "/"]];
+"Server"[Hyperlink["http://localhost:" <> ToString[server[[Component["Port"]]]] <> "/"]];
 
 End[]; (*`Private`*)
 

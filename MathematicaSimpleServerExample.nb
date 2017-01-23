@@ -10,17 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       943,         37]
-NotebookOptionsPosition[       700,         24]
-NotebookOutlinePosition[      1048,         39]
-CellTagsIndexPosition[      1005,         36]
+NotebookDataLength[       769,         33]
+NotebookOptionsPosition[       561,         21]
+NotebookOutlinePosition[       909,         36]
+CellTagsIndexPosition[       866,         33]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
- RowBox[{"<<", "MathematicaSimpleServer`"}]], "Input",
- CellChangeTimes->{{3.6941037565828424`*^9, 3.6941037744898815`*^9}}]
 },
 WindowSize->{775, 872},
 WindowMargins->{{Automatic, 548}, {49, Automatic}},
@@ -38,7 +35,6 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 138, 2, 30, "Input"]
 }
 ]
 *)

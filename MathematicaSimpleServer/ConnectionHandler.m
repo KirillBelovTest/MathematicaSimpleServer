@@ -20,6 +20,9 @@ ConnectionHandlerReplace::usage =
 "ConnectionHandlerReplace[ConnectionHandler[..], \"ServerBean\" -> ServerBean[..]]; \n"  <> 
 "ConnectionHandlerReplace[ConnectionHandler[..], \"RequestParser\" -> ResponseGenerator[..]]; "; 
 
+ConnectionHandler::usage = 
+"ConnectionHandler[{}]"; 
+
 Begin["`Private`"]; (* Begin Private Context *) 
 
 Component::usage = 
@@ -34,10 +37,12 @@ ConnectionHandlerCreate[parser_RequestParser, bean_ServerBean, generator_Respons
 		
 		(* Return *)
 		ConnectionHandler[
-			"Name" -> tag, 
-			"RequestParser" -> RequestParser[tag], 
-			"ServerBean" -> ServerBean[tag], 
-			"ResponseGenerator" -> ResponseGenerator[tag]
+			{
+				"Tag" -> tag, 
+				"RequestParser" -> RequestParser[tag], 
+				"ServerBean" -> ServerBean[tag], 
+				"ResponseGenerator" -> ResponseGenerator[tag]
+			}
 		]
 	]; 
 
@@ -49,7 +54,7 @@ ConnectionHandlerReplace[
 		_ServerBean | 
 		_ResponseGenerator 
 	)
-] := Module[{tag = handler[[Component["Name"]]]}, 
+] := Module[{tag = handler[[Component["Tag"]]]}, 
 	Head[component][tag] := component; 
 	
 	(* Return *)
@@ -66,14 +71,19 @@ ConnectionHandlerReplace[handler_ConnectionHandler, rules:
 
 (* override [[]] on the ConnectionHandler *)
 Part[
-	ConnectionHandler[___, name_String -> component: 
-		(
-			_Symbol | 
-			_RequestParser | 
-			_ServerBean | 
-			_ResponseGenerator
-		), 
-	___], Component[name_String]
+	ConnectionHandler[
+		{
+			___Rule, 
+			name_String -> component: 
+				(
+					_Symbol | 
+					_RequestParser | 
+					_ServerBean | 
+					_ResponseGenerator
+				), 
+			___Rule
+		}
+	], Component[name_String]
 ] ^:= component; 
 
 (* basic functionality of the handler *)
@@ -107,8 +117,9 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 		If[Length[request] == 0, Print["Error:\r\nEmpty request"]; Return[]]; 
 		If[Length[request] < 16, Print["Error:\r\n", FromCharacterCode[request]]; Return[]]; 
 		
-		(* converting a binary data to string *)
+		(* converting a binary data to string and logging*)
 		requestString = FromCharacterCode[request]; 
+		Print[requestString]; 
 		
 		(* request verification *)
 		If[
