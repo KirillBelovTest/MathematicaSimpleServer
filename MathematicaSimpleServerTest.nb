@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17920,        548]
-NotebookOptionsPosition[     15725,        471]
-NotebookOutlinePosition[     16073,        486]
-CellTagsIndexPosition[     16030,        483]
+NotebookDataLength[     18062,        550]
+NotebookOptionsPosition[     15867,        473]
+NotebookOutlinePosition[     16215,        488]
+CellTagsIndexPosition[     16172,        485]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -451,21 +451,23 @@ Cell[BoxData[
  RowBox[{"Scan", "[", 
   RowBox[{"Print", ",", " ", 
    RowBox[{"f", "[", 
-    RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], "]"}]], "Input",
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}], "]"}], ",", " ", 
+   RowBox[{"{", "2", "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.694151207072803*^9, 3.694151208247387*^9}, {
   3.694152273167684*^9, 3.694152379014451*^9}, {3.6941524193044095`*^9, 
-  3.694152432658557*^9}}],
+  3.6941524684793463`*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["a"], "Print",
- CellChangeTimes->{3.694152432937003*^9}],
+ CellChangeTimes->{{3.694152432937003*^9, 3.6941524688129773`*^9}}],
 
 Cell[BoxData["b"], "Print",
- CellChangeTimes->{3.694152432938504*^9}],
+ CellChangeTimes->{{3.694152432937003*^9, 3.6941524688149786`*^9}}],
 
 Cell[BoxData["c"], "Print",
- CellChangeTimes->{3.694152432940505*^9}]
+ CellChangeTimes->{{3.694152432937003*^9, 3.69415246881748*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
@@ -543,11 +545,11 @@ Cell[14403, 425, 601, 16, 30, "Input"],
 Cell[15007, 443, 96, 1, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15140, 449, 319, 7, 30, "Input"],
+Cell[15140, 449, 386, 9, 30, "Input"],
 Cell[CellGroupData[{
-Cell[15484, 460, 69, 1, 22, "Print"],
-Cell[15556, 463, 69, 1, 22, "Print"],
-Cell[15628, 466, 69, 1, 22, "Print"]
+Cell[15551, 462, 95, 1, 22, "Print"],
+Cell[15649, 465, 95, 1, 22, "Print"],
+Cell[15747, 468, 92, 1, 22, "Print"]
 }, Open  ]]
 }, Open  ]]
 }
