@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1894,         67]
-NotebookOptionsPosition[      1546,         50]
-NotebookOutlinePosition[      1894,         65]
-CellTagsIndexPosition[      1851,         62]
+NotebookDataLength[      2566,         84]
+NotebookOptionsPosition[      2145,         65]
+NotebookOutlinePosition[      2493,         80]
+CellTagsIndexPosition[      2450,         77]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -45,7 +45,22 @@ Cell[BoxData[{
   " "}]}], "Code",
  CellChangeTimes->{{3.6940991139695826`*^9, 3.6940991665697927`*^9}, {
   3.6940992408943405`*^9, 3.694099241066218*^9}, {3.6940994154116263`*^9, 
-  3.6940994399323044`*^9}}]
+  3.6940994399323044`*^9}}],
+
+Cell["For the installation you can run the following: ", "Text",
+ CellChangeTimes->{{3.694160582937114*^9, 3.6941606188617954`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Get", "[", "\"\<Installer.m\>\"", "]"}], ";"}], " "}]}], "Code",
+ CellChangeTimes->{{3.6940991139695826`*^9, 3.6940991665697927`*^9}, {
+  3.6940992408943405`*^9, 3.694099241066218*^9}, {3.6940994154116263`*^9, 
+  3.6940994399323044`*^9}, {3.6941606285899353`*^9, 3.694160639221957*^9}}]
 }, Open  ]]
 },
 WindowSize->{775, 872},
@@ -67,7 +82,9 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 96, 1, 72, "Chapter"],
 Cell[679, 25, 272, 5, 30, "Text"],
-Cell[954, 32, 576, 15, 87, "Code"]
+Cell[954, 32, 576, 15, 87, "Code"],
+Cell[1533, 49, 132, 1, 30, "Text"],
+Cell[1668, 52, 461, 10, 69, "Code"]
 }, Open  ]]
 }
 ]

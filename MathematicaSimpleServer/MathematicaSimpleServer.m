@@ -6,7 +6,7 @@
 (* :Author: Kirill Belov *)
 (* :Email: KirillBelovTest@gmail.com *)
 
-(* :Keywords: Web Server; HTTP *)
+(* :Keywords: Web Server; HTTP; Sockets *)
 
 BeginPackage["MathematicaSimpleServer`", {"SocketLink`", "MathematicaSimpleServer`ConnectionHandler`"}]; 
 

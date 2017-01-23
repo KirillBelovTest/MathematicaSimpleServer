@@ -56,8 +56,12 @@ ConnectionHandlerReplace[
 	handler
 ]; 
 
-ConnectionHandlerReplace[handler_ConnectionHandler, rules__Rule] /; 
-Length[{rules}] > 1 := 
+ConnectionHandlerReplace[handler_ConnectionHandler, rules: 
+	(
+		__Rule | 
+		_List?Function[ruleList, Apply[And, Map[(Head[#] == Rule)&, ruleList]]]
+	)
+] /; Length[{rules}] > 1 := 
 (Do[ConnectionHandlerReplase[handler, rule], {rule, rules}]; handler); 
 
 (* override [[]] on the ConnectionHandler *)
@@ -122,6 +126,7 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 			serverBean = handler[[Component["ServerBean"]]]; 
 			responseGenerator = handler[[Component["ResponseGenerator"]]];, 
 			
+			(* error logging *)
 			Print["Error during getting handler components"]; Return[]; 
 		]; 
 		

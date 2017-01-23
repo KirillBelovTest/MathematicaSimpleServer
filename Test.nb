@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9535,        289]
-NotebookOptionsPosition[      8369,        245]
-NotebookOutlinePosition[      8717,        260]
-CellTagsIndexPosition[      8674,        257]
+NotebookDataLength[     17920,        548]
+NotebookOptionsPosition[     15725,        471]
+NotebookOutlinePosition[     16073,        486]
+CellTagsIndexPosition[     16030,        483]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -197,7 +197,7 @@ Cell[BoxData[
       RowBox[{"{", "rules", "}"}], "]"}], ">", "1"}]}], ":=", 
    RowBox[{"Apply", "[", 
     RowBox[{"Composition", ",", 
-     RowBox[{"Join", "[", 
+     RowBox[{"Append", "[", 
       RowBox[{
        RowBox[{"Table", "[", 
         RowBox[{
@@ -208,7 +208,8 @@ Cell[BoxData[
          RowBox[{"{", 
           RowBox[{"rule", ",", "rules"}], "}"}]}], "]"}], ",", "handler"}], 
       "]"}]}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.694148167306692*^9, 3.6941481907119184`*^9}}],
+ CellChangeTimes->{{3.694148167306692*^9, 3.6941481907119184`*^9}, {
+  3.694148276670622*^9, 3.694148278827866*^9}}],
 
 Cell[CellGroupData[{
 
@@ -216,31 +217,256 @@ Cell[BoxData[
  RowBox[{"ConnectionHandlerReplace", "[", 
   RowBox[{
    RowBox[{"ConnectionHandler", "[", "]"}], ",", 
-   RowBox[{"\"\<d\>\"", "\[Rule]", "1"}], ",", 
-   RowBox[{"\"\<d\>\"", "\[Rule]", "1"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.6941482162967215`*^9, 3.694148256504223*^9}}],
+   RowBox[{"\"\<a\>\"", "\[Rule]", "1"}], ",", 
+   RowBox[{"\"\<b\>\"", "\[Rule]", "2"}], ",", 
+   RowBox[{"\"\<c\>\"", "\[Rule]", "3"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6941482162967215`*^9, 3.694148256504223*^9}, {
+  3.694148293624756*^9, 3.694148302718795*^9}}],
 
 Cell[BoxData[
  TemplateBox[{
-  "Join","heads",
-   "\"Heads \\!\\(\\*RowBox[{\\\"List\\\"}]\\) and \
-\\!\\(\\*RowBox[{\\\"ConnectionHandler\\\"}]\\) at positions \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) and \\!\\(\\*RowBox[{\\\"2\\\"}]\\) are \
-expected to be the same.\"",2,9,1,32409334748967951483,"Local"},
+  "Table","iterb",
+   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"rule\\\", \\\",\\\", \
+RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"b\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"c\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"3\\\"}]}], \
+\\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,2,
+   32409334748967951483,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6941482571860437`*^9}],
+ CellChangeTimes->{3.69414830300091*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Table","iterb",
+   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"rule\\\", \\\",\\\", \
+RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"b\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"c\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"3\\\"}]}], \
+\\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,3,
+   32409334748967951483,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6941483030196996`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Table","iterb",
+   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"rule\\\", \\\",\\\", \
+RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"b\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"c\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"3\\\"}]}], \
+\\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,4,
+   32409334748967951483,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6941483030337243`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Table\\\", \\\"::\\\", \
+\\\"iterb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,12,5,32409334748967951483,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6941483030482197`*^9}],
 
 Cell[BoxData[
  RowBox[{
+  RowBox[{"Function", "[", 
+   RowBox[{"hanlerIter$", ",", 
+    RowBox[{"ConnectionHandlerReplace", "[", 
+     RowBox[{
+      RowBox[{"ConnectionHandler", "[", "]"}], ",", "rule"}], "]"}]}], "]"}], 
+  "@*", 
   RowBox[{"{", 
-   RowBox[{"Function", "[", 
-    RowBox[{"hanlerIter$", ",", 
-     RowBox[{"ConnectionHandlerReplace", "[", 
+   RowBox[{"rule", ",", 
+    RowBox[{"\<\"a\"\>", "\[Rule]", "1"}], ",", 
+    RowBox[{"\<\"b\"\>", "\[Rule]", "2"}], ",", 
+    RowBox[{"\<\"c\"\>", "\[Rule]", "3"}]}], "}"}], "@*", 
+  RowBox[{"{", 
+   RowBox[{"ConnectionHandler", "[", "]"}], "}"}]}]], "Output",
+ CellChangeTimes->{{3.6941482521670313`*^9, 3.6941483030637307`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"rules", ":", 
+    RowBox[{"(", 
+     RowBox[{"__Rule", "|", 
+      RowBox[{"__List", "?", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"And", "@@", 
+           RowBox[{"Map", "[", 
+            RowBox[{
+             RowBox[{"Function", "[", 
+              RowBox[{"r", ",", 
+               RowBox[{
+                RowBox[{"Head", "[", "r", "]"}], "\[Equal]", "Rule"}]}], 
+              "]"}], ",", 
+             RowBox[{"Flatten", "[", "#", "]"}]}], "]"}]}], ")"}], "&"}], 
+        ")"}]}]}], ")"}]}], "]"}], ":=", 
+  RowBox[{"Flatten", "[", "rules", "]"}]}]], "Input",
+ CellChangeTimes->{{3.694149883413727*^9, 3.694149979082788*^9}, {
+  3.694150011226396*^9, 3.694150023610479*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "2"}], ",", " ", "1", ",", 
+     RowBox[{"{", 
+      RowBox[{"4", "\[Rule]", "2"}], "}"}]}], "}"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.694149981208007*^9, 3.6941500034511557`*^9}, {
+  3.6941500357224483`*^9, 3.6941500375223155`*^9}, {3.6941501563624687`*^9, 
+  3.6941501566021132`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "2"}], ",", "1", ",", 
+     RowBox[{"{", 
+      RowBox[{"4", "\[Rule]", "2"}], "}"}]}], "}"}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{{3.694149984156784*^9, 3.6941500379046154`*^9}, 
+   3.694150157218684*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"__List", "?", "Function"}], "[", 
+  RowBox[{"ruleList", ",", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"And", ",", 
+     RowBox[{"Map", "[", 
       RowBox[{
-       RowBox[{"ConnectionHandler", "[", "]"}], ",", "rule"}], "]"}]}], "]"}],
-    "}"}], "@*", 
-  RowBox[{"ConnectionHandler", "[", "]"}]}]], "Output",
- CellChangeTimes->{{3.6941482521670313`*^9, 3.694148257190036*^9}}]
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Head", "[", "#", "]"}], "\[Equal]", "Rule"}], ")"}], "&"}],
+        ",", "ruleList"}], "]"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.694150172713055*^9, 3.694150172714056*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"RequestParser", "::", "nodef"}], "=", 
+   "\"\<RequestParser[`1`] is not defined\>\""}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RequestParser", "[", "tag_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Message", "[", 
+      RowBox[{
+       RowBox[{"RequestParser", "::", "nodef"}], ",", "tag"}], "]"}], ";", 
+     "Null"}], ")"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.69415066681184*^9, 3.6941506668128405`*^9}}],
+
+Cell[BoxData["\<\"RequestParser[`1`] is not defined\"\>"], "Output",
+ CellChangeTimes->{3.6941506682968264`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RequestParser", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.69415067172022*^9, 3.6941506738651776`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "RequestParser","nodef",
+   "\"RequestParser[\\!\\(\\*RowBox[{\\\"1\\\"}]\\)] is not defined\"",2,25,4,
+   32409345746211159843,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6941506996455793`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RequestParser", "[", "1", "]"}], ":=", "1"}]], "Input",
+ CellChangeTimes->{{3.694150682601039*^9, 3.6941506840479965`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RequestParser", "[", "1", "]"}], "=."}]], "Input",
+ CellChangeTimes->{{3.694150693039991*^9, 3.694150696121729*^9}}],
+
+Cell[BoxData[".."], "Input",
+ CellChangeTimes->{{3.694150977586255*^9, 3.694150977737009*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RequestParser", "[", "parsingRules_List", "]"}], "/;", 
+   RowBox[{"MatchQ", "[", 
+    RowBox[{"parsingRules", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Rule", "[", 
+        RowBox[{"_String", ",", 
+         RowBox[{"Rule", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"_Symbol", "|", "_Function"}], ")"}], ",", 
+           RowBox[{"(", 
+            RowBox[{"_Symbol", "|", "_Function"}], ")"}]}], "]"}]}], "]"}], 
+       ".."}], "}"}]}], "]"}]}], ":=", "1"}]], "Input",
+ CellChangeTimes->{{3.694151028482876*^9, 3.694151033892377*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RequestParser", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\"\<\>\"", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"#", "&"}], ")"}], "\[Rule]", "Sin"}]}], ",", " ", 
+    RowBox[{"\"\<\>\"", "\[Rule]", 
+     RowBox[{"Sin", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{"x", ",", "x"}], "]"}]}]}], ",", " ", 
+    RowBox[{"\"\<\>\"", "\[Rule]", 
+     RowBox[{"Sin", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{"x", ",", "x"}], "]"}]}]}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6941510419131565`*^9, 3.694151107912696*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.6941510974507313`*^9, 3.694151108803385*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Scan", "[", 
+  RowBox[{"Print", ",", " ", 
+   RowBox[{"f", "[", 
+    RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.694151207072803*^9, 3.694151208247387*^9}, {
+  3.694152273167684*^9, 3.694152379014451*^9}, {3.6941524193044095`*^9, 
+  3.694152432658557*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["a"], "Print",
+ CellChangeTimes->{3.694152432937003*^9}],
+
+Cell[BoxData["b"], "Print",
+ CellChangeTimes->{3.694152432938504*^9}],
+
+Cell[BoxData["c"], "Print",
+ CellChangeTimes->{3.694152432940505*^9}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{775, 872},
@@ -285,11 +511,44 @@ Cell[CellGroupData[{
 Cell[6172, 178, 120, 2, 30, "Input"],
 Cell[6295, 182, 122, 3, 30, "Output"]
 }, Open  ]],
-Cell[6432, 188, 826, 22, 88, "Input"],
+Cell[6432, 188, 877, 23, 88, "Input"],
 Cell[CellGroupData[{
-Cell[7283, 214, 294, 6, 30, "Input"],
-Cell[7580, 222, 386, 8, 21, "Message"],
-Cell[7969, 232, 384, 10, 50, "Output"]
+Cell[7334, 215, 391, 8, 30, "Input"],
+Cell[7728, 225, 526, 10, 21, "Message"],
+Cell[8257, 237, 529, 10, 21, "Message"],
+Cell[8789, 249, 529, 10, 21, "Message"],
+Cell[9321, 261, 340, 7, 21, "Message"],
+Cell[9664, 270, 579, 15, 50, "Output"]
+}, Open  ]],
+Cell[10258, 288, 776, 22, 51, "Input"],
+Cell[CellGroupData[{
+Cell[11059, 314, 406, 10, 30, "Input"],
+Cell[11468, 326, 322, 9, 30, "Output"]
+}, Open  ]],
+Cell[11805, 338, 451, 13, 30, "Input"],
+Cell[CellGroupData[{
+Cell[12281, 355, 507, 15, 88, "Input"],
+Cell[12791, 372, 112, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12940, 378, 133, 2, 30, "Input"],
+Cell[13076, 382, 253, 6, 21, "Message"]
+}, Open  ]],
+Cell[13344, 391, 158, 3, 30, "Input"],
+Cell[13505, 396, 151, 3, 30, "Input"],
+Cell[13659, 401, 94, 1, 30, "Input"],
+Cell[13756, 404, 622, 17, 70, "Input"],
+Cell[CellGroupData[{
+Cell[14403, 425, 601, 16, 30, "Input"],
+Cell[15007, 443, 96, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15140, 449, 319, 7, 30, "Input"],
+Cell[CellGroupData[{
+Cell[15484, 460, 69, 1, 22, "Print"],
+Cell[15556, 463, 69, 1, 22, "Print"],
+Cell[15628, 466, 69, 1, 22, "Print"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
