@@ -1,6 +1,6 @@
 (* Paclet Info File *)
 
-(* created 2017/01/19*)
+(* created 2017/01/23*)
 
 Paclet[
     Name -> "MathematicaSimpleServer",
@@ -10,7 +10,7 @@ Paclet[
     Creator -> "Kirill Belov",
     Extensions -> 
         {
-            {"Kernel", Root -> "MathematicaSimpleServer", Context -> "MathematicaSimpleServer`"}
+            {"Kernel", Root -> "/", Context -> "MathematicaSimpleServer`"}
         }
 ]
 

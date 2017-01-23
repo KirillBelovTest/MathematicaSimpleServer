@@ -1,0 +1,297 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9535,        289]
+NotebookOptionsPosition[      8369,        245]
+NotebookOutlinePosition[      8717,        260]
+CellTagsIndexPosition[      8674,        257]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
+ CellChangeTimes->{{3.6941046910034914`*^9, 3.694104702950652*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"server", "=", 
+  RowBox[{"MathematicaSimpleServerCreate", "[", 
+   RowBox[{"8888", ",", " ", 
+    RowBox[{"ServerHandler", "[", "]"}]}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.6941049501748004`*^9, 3.6941049712925467`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\<\"Server\"\>", "[", 
+  TagBox[
+   ButtonBox[
+    PaneSelectorBox[{False->"\<\"http://localhost:8888/\"\>", True->
+     StyleBox["\<\"http://localhost:8888/\"\>", "HyperlinkActive"]}, Dynamic[
+      CurrentValue["MouseOver"]],
+     BaseStyle->{"Hyperlink"},
+     FrameMargins->0,
+     ImageSize->Automatic],
+    BaseStyle->"Hyperlink",
+    ButtonData->{
+      URL["http://localhost:8888/"], None},
+    ButtonNote->"http://localhost:8888/"],
+   Annotation[#, "http://localhost:8888/", "Hyperlink"]& ], "]"}]], "Output",
+ CellChangeTimes->{
+  3.6941049718801637`*^9, 3.69410522596461*^9, {3.6941053634835477`*^9, 
+   3.6941053764271035`*^9}, 3.694105700928212*^9, 3.69410585849018*^9, 
+   3.6941067758210363`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ResponseString", "[", "body_String", "]"}], " ", ":=", " ", "\n", 
+    RowBox[{
+    "\"\<HTTP/1.1 200 OK\\r\\n\>\"", " ", "<>", " ", "\n", 
+     "\"\<Content-Type: text/html\\r\\n\>\"", " ", "<>", " ", "\n", 
+     "\"\<Content-Length: \>\"", " ", "<>", " ", 
+     RowBox[{"ToString", "[", 
+      RowBox[{"StringLength", "[", "body", "]"}], "]"}], " ", "<>", " ", 
+     "\"\<\\r\\n\>\"", " ", "<>", "\n", 
+     "\"\<Connection: close\\r\\n\\r\\n\>\"", " ", "<>", " ", "body"}]}], 
+   ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.6941061063336363`*^9, 3.6941062830879965`*^9}, {
+  3.6941063727594814`*^9, 3.6941063773753977`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IndexPage", "[", "]"}], " ", ":=", " ", "\n", 
+   "\"\<<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Mathematica Simple \
+Server</title>\n\t</head>\n\t<body>\n\t\t<h1>Example Page</h1>\n\t</body>\n\
+</html>\n\>\""}], ";"}]], "Code",
+ CellChangeTimes->{{3.694105910943286*^9, 3.694106011611069*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ServerHandler", "[", "]"}], "[", 
+    RowBox[{"{", 
+     RowBox[{"in_", ",", "out_"}], "}"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"request", ",", "response"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"request", " ", "=", " ", "\n", "\t\t\t", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Last", "[", 
+         RowBox[{"Reap", "[", "\n", "\t\t\t\t", 
+          RowBox[{"While", "[", 
+           RowBox[{"True", ",", " ", "\n", "\t\t\t\t\t", 
+            RowBox[{"TimeConstrained", "[", "\n", "\t\t\t\t\t\t", 
+             RowBox[{
+              RowBox[{"Sow", "[", 
+               RowBox[{"BinaryRead", "[", "in", "]"}], "]"}], ",", " ", "\n", 
+              "\t\t\t\t\t\t", "0.01", ",", " ", 
+              RowBox[{"Break", "[", "]"}]}], "\n", "\t\t\t\t\t", "]"}]}], 
+           "\n", "\t\t\t\t", "]"}], "\n", "\t\t\t", "]"}], "]"}], "]"}]}], 
+      ";", "\n", "\t\t", 
+      RowBox[{"Print", "[", 
+       RowBox[{"FromCharacterCode", "[", "request", "]"}], "]"}], ";", "\n", 
+      "\t\t", 
+      RowBox[{"Close", "[", "in", "]"}], ";", "\n", "\t\t", 
+      RowBox[{"response", " ", "=", " ", 
+       RowBox[{"ResponseString", "[", 
+        RowBox[{"IndexPage", "[", "]"}], "]"}]}], ";", " ", "\n", "\t\t", 
+      RowBox[{"Print", "[", "response", "]"}], ";", "\n", "\t\t", 
+      RowBox[{"Write", "[", 
+       RowBox[{"out", ",", "response"}], "]"}], ";", "\n", "\t\t", 
+      RowBox[{"Close", "[", "out", "]"}], ";"}]}], "\n", "\t", "]"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.6941053849360266`*^9, 3.6941054419049945`*^9}, {
+  3.694105508209652*^9, 3.6941056706134815`*^9}, {3.6941057289334984`*^9, 
+  3.694105744277589*^9}, {3.694105870986965*^9, 3.694105905403263*^9}, {
+  3.694106067821403*^9, 3.6941060760824723`*^9}, {3.6941062892030787`*^9, 
+  3.694106324720026*^9}, {3.6941064143857536`*^9, 3.694106522543782*^9}, {
+  3.694106590916165*^9, 3.6941065955930786`*^9}, {3.6941067179385786`*^9, 
+  3.6941067230384154`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MathematicaSimpleServerClose", "[", "server", "]"}]], "Code",
+ CellChangeTimes->{{3.694104974364113*^9, 3.694104981110212*^9}}],
+
+Cell[BoxData["Check"], "Input",
+ CellChangeTimes->{{3.6941434519529495`*^9, 3.6941434585826373`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", "=", 
+  RowBox[{"f", "[", "x", "]"}]}]], "Input",
+ CellChangeTimes->{{3.694147312279728*^9, 3.694147324087576*^9}}],
+
+Cell[BoxData[
+ RowBox[{"f", "[", "x", "]"}]], "Output",
+ CellChangeTimes->{3.6941473261941485`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x", "]"}], "=", 
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", "y"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6941473276188555`*^9, 3.694147332055182*^9}}],
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"x", ",", "y"}], "]"}]], "Output",
+ CellChangeTimes->{3.6941473328781867`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Head", "[", "a", "]"}], "[", "x", "]"}], "=", 
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", "z"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.694147336530959*^9, 3.6941473541512747`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"x", ",", "z"}], "]"}]], "Output",
+ CellChangeTimes->{{3.694147339954255*^9, 3.69414735452345*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", "x", "]"}]], "Input",
+ CellChangeTimes->{{3.694147356752037*^9, 3.694147357368021*^9}}],
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"x", ",", "z"}], "]"}]], "Output",
+ CellChangeTimes->{3.6941473578544827`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ConnectionHandlerReplace", "[", 
+     RowBox[{"handler_ConnectionHandler", ",", "rules__Rule"}], "]"}], "/;", 
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"{", "rules", "}"}], "]"}], ">", "1"}]}], ":=", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"Composition", ",", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Function", "[", 
+          RowBox[{"hanlerIter", ",", 
+           RowBox[{"ConnectionHandlerReplace", "[", 
+            RowBox[{"handler", ",", "rule"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"rule", ",", "rules"}], "}"}]}], "]"}], ",", "handler"}], 
+      "]"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.694148167306692*^9, 3.6941481907119184`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConnectionHandlerReplace", "[", 
+  RowBox[{
+   RowBox[{"ConnectionHandler", "[", "]"}], ",", 
+   RowBox[{"\"\<d\>\"", "\[Rule]", "1"}], ",", 
+   RowBox[{"\"\<d\>\"", "\[Rule]", "1"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6941482162967215`*^9, 3.694148256504223*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Join","heads",
+   "\"Heads \\!\\(\\*RowBox[{\\\"List\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"ConnectionHandler\\\"}]\\) at positions \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\) and \\!\\(\\*RowBox[{\\\"2\\\"}]\\) are \
+expected to be the same.\"",2,9,1,32409334748967951483,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6941482571860437`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"Function", "[", 
+    RowBox[{"hanlerIter$", ",", 
+     RowBox[{"ConnectionHandlerReplace", "[", 
+      RowBox[{
+       RowBox[{"ConnectionHandler", "[", "]"}], ",", "rule"}], "]"}]}], "]"}],
+    "}"}], "@*", 
+  RowBox[{"ConnectionHandler", "[", "]"}]}]], "Output",
+ CellChangeTimes->{{3.6941482521670313`*^9, 3.694148257190036*^9}}]
+}, Open  ]]
+},
+WindowSize->{775, 872},
+WindowMargins->{{Automatic, 109}, {41, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 135, 2, 50, "Code"],
+Cell[CellGroupData[{
+Cell[718, 26, 248, 5, 50, "Code"],
+Cell[969, 33, 736, 18, 33, "Output"]
+}, Open  ]],
+Cell[1720, 54, 688, 15, 123, "Code"],
+Cell[2411, 71, 345, 7, 231, "Code"],
+Cell[2759, 80, 2077, 44, 357, "Code"],
+Cell[4839, 126, 151, 2, 50, "Code"],
+Cell[4993, 130, 101, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[5119, 135, 143, 3, 30, "Input"],
+Cell[5265, 140, 99, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5401, 147, 197, 5, 30, "Input"],
+Cell[5601, 154, 122, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5760, 162, 229, 6, 30, "Input"],
+Cell[5992, 170, 143, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6172, 178, 120, 2, 30, "Input"],
+Cell[6295, 182, 122, 3, 30, "Output"]
+}, Open  ]],
+Cell[6432, 188, 826, 22, 88, "Input"],
+Cell[CellGroupData[{
+Cell[7283, 214, 294, 6, 30, "Input"],
+Cell[7580, 222, 386, 8, 21, "Message"],
+Cell[7969, 232, 384, 10, 50, "Output"]
+}, Open  ]]
+}
+]
+*)
+

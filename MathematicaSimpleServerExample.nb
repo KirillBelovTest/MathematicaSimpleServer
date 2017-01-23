@@ -10,53 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2192,         82]
-NotebookOptionsPosition[      1695,         60]
-NotebookOutlinePosition[      2043,         75]
-CellTagsIndexPosition[      2000,         72]
+NotebookDataLength[       943,         37]
+NotebookOptionsPosition[       700,         24]
+NotebookOutlinePosition[      1048,         39]
+CellTagsIndexPosition[      1005,         36]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
- RowBox[{
-  RowBox[{"(", 
-   RowBox[{"Association", " ", "@@", " ", 
-    RowBox[{"Get", "[", 
-     RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<PacletInfo.m\>\""}],
-      "]"}]}], ")"}], "[", 
-  RowBox[{"[", 
-   RowBox[{"Key", "[", "Name", "]"}], "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.6939035976729774`*^9, 3.6939037347934117`*^9}}],
-
-Cell[BoxData["\<\"MathematicaSimpleServer\"\>"], "Output",
- CellChangeTimes->{3.693903735158491*^9}]
-}, Open  ]],
-
-Cell[BoxData["WriteString"], "Input",
- CellChangeTimes->{{3.6939042191710978`*^9, 3.6939042223687663`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"<<", "SimplePlotServer`"}]], "Input",
- CellChangeTimes->{{3.6939753266399155`*^9, 3.693975333868617*^9}}],
-
-Cell[BoxData[
- TemplateBox[{
-  "Get","noopen",
-   "\"Cannot open \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"SimplePlotServer`\\\\\\\"\\\"}]\\).\"",2,7,1,
-   32408201677665958892,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6939753343690205`*^9}],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{3.6939753343690205`*^9}]
-}, Open  ]]
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Input",
+ CellChangeTimes->{{3.6941037565828424`*^9, 3.6941037744898815`*^9}}]
 },
 WindowSize->{775, 872},
 WindowMargins->{{Automatic, 548}, {49, Automatic}},
@@ -74,16 +38,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 376, 10, 30, "Input"],
-Cell[959, 34, 100, 1, 30, "Output"]
-}, Open  ]],
-Cell[1074, 38, 107, 1, 30, "Input"],
-Cell[CellGroupData[{
-Cell[1206, 43, 129, 2, 30, "Input"],
-Cell[1338, 47, 260, 7, 21, "Message"],
-Cell[1601, 56, 78, 1, 30, "Output"]
-}, Open  ]]
+Cell[558, 20, 138, 2, 30, "Input"]
 }
 ]
 *)
