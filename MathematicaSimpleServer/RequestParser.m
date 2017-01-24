@@ -47,6 +47,7 @@ MatchQ[
 	override Part on the request parser type and checker of the parser type
 	RequestParser[{key1 -> check1 -> component1, key2 -> ...}][[Component[key1]]] >> checker1
 *)
+RequestParser /: 
 Part[
 	RequestParser[
 		{
@@ -66,12 +67,13 @@ Part[
 		}
 	], 
 	Checker[key_String]
-] ^:= checker; 
+] := checker; 
 
 (* 
 	override Part on the request parser type and component of the parser type
 	RequestParser[{key1 -> check1 -> component1, key2 -> ...}][[Component[key1]]] >> component1
 *)
+RequestParser /: 
 Part[
 	RequestParser[
 		{
@@ -91,7 +93,7 @@ Part[
 		}
 	], 
 	Component[key_String]
-] ^:= component; 
+] := component; 
 
 (* main definition *)
 requestParser_RequestParser[request_String] := 
