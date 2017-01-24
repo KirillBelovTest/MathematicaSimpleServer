@@ -1,3 +1,3 @@
-(* Wolfram Language package *)
+(* ::Package:: *)
 
-Get["WebPages`WebPages`"]; 
+Get["SimpleWebPages`SimpleWebPages`"]; 
