@@ -38,10 +38,10 @@ ConnectionHandlerCreate[parser_RequestParser, bean_ServerBean, generator_Respons
 		(* Return *)
 		ConnectionHandler[
 			{
-				"Tag" -> tag, 
-				"RequestParser" -> RequestParser[tag], 
-				"ServerBean" -> ServerBean[tag], 
-				"ResponseGenerator" -> ResponseGenerator[tag]
+				"Tag" :> tag, 
+				"RequestParser" :> RequestParser[tag], 
+				"ServerBean" :> ServerBean[tag], 
+				"ResponseGenerator" :> ResponseGenerator[tag]
 			}
 		]
 	]; 
@@ -54,7 +54,12 @@ ConnectionHandlerReplace[
 		_ServerBean | 
 		_ResponseGenerator 
 	)
-] := Module[{tag = handler[[Component["Tag"]]]}, 
+] := 
+Module[
+	{
+		tag = handler[[Component["Tag"]]]
+	}, 
+
 	Head[component][tag] := component; 
 	
 	(* Return *)
@@ -67,21 +72,28 @@ ConnectionHandlerReplace[handler_ConnectionHandler, rules:
 		_List?Function[ruleList, Apply[And, Map[(Head[#] == Rule)&, ruleList]]]
 	)
 ] /; Length[{rules}] > 1 := 
-(Do[ConnectionHandlerReplase[handler, rule], {rule, rules}]; handler); 
+(
+	Do[ConnectionHandlerReplase[handler, rule], {rule, rules}]; 
+	
+	(* Return *)
+	handler
+); 
 
 (* override [[]] on the ConnectionHandler *)
 Part[
 	ConnectionHandler[
 		{
-			___Rule, 
-			name_String -> component: 
+			(___Rule | ___RuleDelayed), 
+			(Rule | RuleDelayed) [
+				name_String, component: 
 				(
 					_Symbol | 
 					_RequestParser | 
 					_ServerBean | 
 					_ResponseGenerator
-				), 
-			___Rule
+				)
+			], 
+			(___Rule | ___RuleDelayed)
 		}
 	], Component[name_String]
 ] ^:= component; 
