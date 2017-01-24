@@ -22,6 +22,9 @@ Checker::usage = "Checker[]";
 (* internal name *)
 Component::usage = "Component[]";
 
+RequestParser::empreq = 
+"Empty request or other error"; 
+
 (* 
 	override Keys on the request parser type 
 	Keys[RequestParser[{key1 -> check1 -> component1, key2 -> ...}]] >> {key1, key2, ...}
@@ -113,7 +116,8 @@ Check[
 		]; 
 	]]]], 
 
-	$Failed
+	(* Error return *)
+	Message[RequestParser::empreq]; $Failed
 ]; 
 
 End[]; (*`Private`*)

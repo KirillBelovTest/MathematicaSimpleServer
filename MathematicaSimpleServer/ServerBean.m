@@ -11,6 +11,9 @@ Begin["`Private`"]; (* Begin Private Context *)
 (* internal name *)
 Component::usage = "Internal symbol. Using: ServerBean[[Component[key]]]"; 
 
+ServerBean::srverr = 
+"Error in the server"; 
+
 (* 
 	override Keys on the request parser type 
 	Keys[ServerBean[{key1 -> component1, key2 -> ...}]] >> {key1, key2, ...}
@@ -55,7 +58,7 @@ Check[
 	$Failed	
 ]; 
 
-serverBean_ServerBean[$Failed] := $Failed; 
+serverBean_ServerBean[$Failed] := (Message[ServerBean::srverr]; $Failed); 
 
 End[]; (* End Private Context *)
 
