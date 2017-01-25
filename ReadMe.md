@@ -6,9 +6,9 @@ Simple http-server based on the Wolfram Language
 
 ## Installation
 
-- Standard installation: 
+#### Standard installation: 
 - 	Open `Installer.nb` file and run code
-- Using without installation
+#### Using without installation
 -	For current directory run code `$Path = Append[$Path, ]`
 
 ## Project overview
