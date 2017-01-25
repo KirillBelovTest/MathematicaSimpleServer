@@ -4,9 +4,9 @@
 ---
 ## Детали и опции
 
-- MathmeticaSimpleServerCreate[..] возвращает объект MathmeaticaSimpleServer[..]
+- `MathmeticaSimpleServerCreate[..]` возвращает объект `MathmeaticaSimpleServer[..]`
 - _port_ - целое числом больше 1024 и меньше 10000
-- _handler_ - обработчик соединения с сокетом, представляет собой объект типа ConnectionHandler[..]
+- _handler_ - обработчик соединения с сокетом, представляет собой объект типа `ConnectionHandler[..]`
 
 ## Примеры
 
@@ -41,6 +41,6 @@ ConnectionHndler[][{in_InputStream, out_OutputStream}] :=
 ```
 
 После выполнения кода выше можно открыть браузер по адресу  
-http://localhost:8888/ и окно браузера отобразит слово test
+[http://localhost:8888/](http://localhost:8888/) и окно браузера отобразит слово `test`
 
 ![](./Images/test.png)
