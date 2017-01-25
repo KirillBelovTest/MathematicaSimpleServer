@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17059,        463]
-NotebookOptionsPosition[     15357,        401]
-NotebookOutlinePosition[     15705,        416]
-CellTagsIndexPosition[     15662,        413]
+NotebookDataLength[     17190,        467]
+NotebookOptionsPosition[     15488,        405]
+NotebookOutlinePosition[     15836,        420]
+CellTagsIndexPosition[     15793,        417]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -274,7 +274,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.694275967949811*^9, 3.69427622457075*^9, 3.6942764515939693`*^9, 
    3.694276671797742*^9, 3.694276751458321*^9, 3.694277073618842*^9, 
-   3.6942771443505096`*^9, {3.694277757304564*^9, 3.6942777719470344`*^9}}],
+   3.6942771443505096`*^9, {3.694277757304564*^9, 3.6942777719470344`*^9}, 
+   3.6943676860674987`*^9}],
 
 Cell[BoxData[
  RowBox[{"ServerBean", "[", 
@@ -286,7 +287,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.694275967949811*^9, 3.69427622457075*^9, 3.6942764515939693`*^9, 
    3.694276671797742*^9, 3.694276751458321*^9, 3.694277073618842*^9, 
-   3.6942771443505096`*^9, {3.694277757304564*^9, 3.6942777719470344`*^9}}],
+   3.6942771443505096`*^9, {3.694277757304564*^9, 3.6942777719470344`*^9}, 
+   3.6943676860705147`*^9}],
 
 Cell[BoxData[
  RowBox[{"ResponseGenerator", "[", 
@@ -298,7 +300,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.694275967949811*^9, 3.69427622457075*^9, 3.6942764515939693`*^9, 
    3.694276671797742*^9, 3.694276751458321*^9, 3.694277073618842*^9, 
-   3.6942771443505096`*^9, {3.694277757304564*^9, 3.6942777719470344`*^9}}]
+   3.6942771443505096`*^9, {3.694277757304564*^9, 3.6942777719470344`*^9}, 
+   3.6943676860725026`*^9}]
 }, Open  ]],
 
 Cell["\:0421\:043e\:0437\:0434\:0430\:043d\:0438\:0435 \:0441\:0430\:043c\
@@ -320,26 +323,27 @@ Cell[BoxData[
   RowBox[{"{", 
    RowBox[{
     RowBox[{"\<\"Tag\"\>", "\[RuleDelayed]", 
-     "MathematicaSimpleServer`ConnectionHandler`Private`tag$590"}], ",", 
+     "MathematicaSimpleServer`ConnectionHandler`Private`tag$527"}], ",", 
     RowBox[{"\<\"RequestParser\"\>", "\[RuleDelayed]", 
      RowBox[{
      "RequestParser", "[", 
-      "MathematicaSimpleServer`ConnectionHandler`Private`tag$590", "]"}]}], 
+      "MathematicaSimpleServer`ConnectionHandler`Private`tag$527", "]"}]}], 
     ",", 
     RowBox[{"\<\"ServerBean\"\>", "\[RuleDelayed]", 
      RowBox[{
      "ServerBean", "[", 
-      "MathematicaSimpleServer`ConnectionHandler`Private`tag$590", "]"}]}], 
+      "MathematicaSimpleServer`ConnectionHandler`Private`tag$527", "]"}]}], 
     ",", 
     RowBox[{"\<\"ResponseGenerator\"\>", "\[RuleDelayed]", 
      RowBox[{
      "ResponseGenerator", "[", 
-      "MathematicaSimpleServer`ConnectionHandler`Private`tag$590", "]"}]}]}], 
+      "MathematicaSimpleServer`ConnectionHandler`Private`tag$527", "]"}]}]}], 
    "}"}], "]"}]], "Output",
  CellChangeTimes->{
   3.6942760154059687`*^9, 3.6942762260658703`*^9, 3.6942764555975847`*^9, 
    3.694276672974259*^9, 3.694276751469322*^9, 3.6942770736298523`*^9, 
-   3.6942771443605175`*^9, {3.6942777573242025`*^9, 3.69427777196264*^9}}]
+   3.6942771443605175`*^9, {3.6942777573242025`*^9, 3.69427777196264*^9}, 
+   3.69436768772268*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -382,7 +386,7 @@ Cell[BoxData[
  CellChangeTimes->{
   3.694276046117955*^9, 3.6942762275203075`*^9, 3.694276674874357*^9, 
    3.6942767514983435`*^9, 3.6942770736598735`*^9, 3.6942771443875413`*^9, {
-   3.6942777573420696`*^9, 3.69427777196264*^9}}]
+   3.6942777573420696`*^9, 3.69427777196264*^9}, 3.694367689428872*^9}]
 }, Open  ]],
 
 Cell["\:0410 \:0432\:043e\:0442 \:0442\:0430\:043a \:0435\:0433\:043e \:043c\
@@ -444,25 +448,25 @@ Cell[8304, 217, 321, 5, 63, "Section"],
 Cell[8628, 224, 257, 3, 30, "Text"],
 Cell[CellGroupData[{
 Cell[8910, 231, 1312, 31, 447, "Code"],
-Cell[10225, 264, 574, 12, 50, "Output"],
-Cell[10802, 278, 472, 10, 30, "Output"],
-Cell[11277, 290, 469, 10, 30, "Output"]
+Cell[10225, 264, 602, 13, 50, "Output"],
+Cell[10830, 279, 500, 11, 30, "Output"],
+Cell[11333, 292, 497, 11, 30, "Output"]
 }, Open  ]],
-Cell[11761, 303, 240, 3, 30, "Text"],
+Cell[11845, 306, 240, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[12026, 310, 246, 5, 50, "Code"],
-Cell[12275, 317, 1016, 24, 107, "Output"]
+Cell[12110, 313, 246, 5, 50, "Code"],
+Cell[12359, 320, 1041, 25, 107, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13340, 347, 243, 4, 63, "Section"],
-Cell[13586, 353, 232, 3, 30, "Text"],
+Cell[13449, 351, 243, 4, 63, "Section"],
+Cell[13695, 357, 232, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[13843, 360, 227, 4, 50, "Code"],
-Cell[14073, 366, 761, 18, 33, "Output"]
+Cell[13952, 364, 227, 4, 50, "Code"],
+Cell[14182, 370, 783, 18, 33, "Output"]
 }, Open  ]],
-Cell[14849, 387, 243, 3, 30, "Text"],
-Cell[15095, 392, 234, 5, 50, "Code"]
+Cell[14980, 391, 243, 3, 30, "Text"],
+Cell[15226, 396, 234, 5, 50, "Code"]
 }, Open  ]]
 }, Open  ]]
 }
