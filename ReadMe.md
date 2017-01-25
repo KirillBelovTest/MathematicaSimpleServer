@@ -33,7 +33,7 @@ Simple http-server based on the Wolfram Language
 
 ---
 
-# Простой Сервера в Mathematica
+# Простой Сервер в Mathematica
 
 ## Описание
 
