@@ -39,3 +39,8 @@ ConnectionHndler[][{in_InputStream, out_OutputStream}] :=
   Close[out];
 ); 
 ```
+
+После выполнения кода выше можно открыть браузер по адресу http://localhost:8888/
+окно браузера отобразит слово test
+
+![](./Images/test.png)
