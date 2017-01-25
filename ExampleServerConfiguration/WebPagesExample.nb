@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2604,         86]
-NotebookOptionsPosition[      2182,         67]
-NotebookOutlinePosition[      2530,         82]
-CellTagsIndexPosition[      2487,         79]
+NotebookDataLength[      2997,         96]
+NotebookOptionsPosition[      2540,         76]
+NotebookOutlinePosition[      2888,         91]
+CellTagsIndexPosition[      2845,         88]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,8 +40,10 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"WebPages", "[", "8888", "]"}]], "Input",
- CellChangeTimes->{{3.6943262019557543`*^9, 3.69432620543866*^9}}],
+ RowBox[{"server", " ", "=", " ", 
+  RowBox[{"WebPages", "[", "8888", "]"}]}]], "Code",
+ CellChangeTimes->{{3.6943262019557543`*^9, 3.69432620543866*^9}, {
+  3.6943277033936267`*^9, 3.694327704667089*^9}}],
 
 Cell[BoxData[
  RowBox[{"\<\"Server\"\>", "[", 
@@ -62,11 +64,18 @@ Cell[BoxData[
   3.694326219041463*^9, 3.694326380303111*^9, {3.6943265202961206`*^9, 
    3.694326529468178*^9}, 3.694326703110201*^9, 3.6943267717060623`*^9, 
    3.6943269454061575`*^9, 3.69432706767267*^9, 3.6943271690870895`*^9, 
-   3.69432749275648*^9}]
-}, Open  ]]
+   3.69432749275648*^9, 3.694327640222209*^9, 3.6943277422388353`*^9, 
+   3.6943278360217624`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"MathematicaSimpleServerClose", "[", "server", "]"}], " ", 
+  "*)"}]], "Code",
+ CellChangeTimes->{{3.6943278664578733`*^9, 3.6943278837300806`*^9}}]
 },
 WindowSize->{775, 872},
-WindowMargins->{{564, Automatic}, {Automatic, 54}},
+WindowMargins->{{Automatic, 374}, {Automatic, 18}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -85,9 +94,10 @@ Cell[558, 20, 353, 9, 50, "Code"],
 Cell[914, 31, 137, 2, 50, "Code"],
 Cell[1054, 35, 147, 2, 50, "Code"],
 Cell[CellGroupData[{
-Cell[1226, 41, 131, 2, 30, "Input"],
-Cell[1360, 45, 806, 19, 33, "Output"]
-}, Open  ]]
+Cell[1226, 41, 219, 4, 50, "Code"],
+Cell[1448, 47, 880, 20, 33, "Output"]
+}, Open  ]],
+Cell[2343, 70, 193, 4, 50, "Code"]
 }
 ]
 *)

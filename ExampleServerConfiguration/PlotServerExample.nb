@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2886,         90]
-NotebookOptionsPosition[      2464,         71]
-NotebookOutlinePosition[      2812,         86]
-CellTagsIndexPosition[      2769,         83]
+NotebookDataLength[      3205,         99]
+NotebookOptionsPosition[      2747,         79]
+NotebookOutlinePosition[      3095,         94]
+CellTagsIndexPosition[      3052,         91]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,8 +43,10 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"PlotServer", "[", "8888", "]"}]], "Code",
- CellChangeTimes->{{3.694316907829974*^9, 3.694316912185313*^9}}],
+ RowBox[{"server", " ", "=", " ", 
+  RowBox[{"PlotServer", "[", "8888", "]"}]}]], "Code",
+ CellChangeTimes->{{3.694316907829974*^9, 3.694316912185313*^9}, {
+  3.6943279132419953`*^9, 3.694327916289647*^9}}],
 
 Cell[BoxData[
  RowBox[{"\<\"Server\"\>", "[", 
@@ -67,7 +69,13 @@ Cell[BoxData[
   3.694320136204753*^9, 3.69432038248664*^9, 3.6943206113157763`*^9, 
   3.694320717161102*^9, 3.6943214019613214`*^9, 3.694321943688055*^9, 
   3.69432315444919*^9, 3.6943235787502823`*^9, 3.694324414884985*^9}]
-}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"MathematicaSimpleServerClose", "[", "server", "]"}], " ", 
+  "*)"}]], "Code",
+ CellChangeTimes->{{3.6943279291697407`*^9, 3.694327938297699*^9}}]
 },
 WindowSize->{775, 872},
 WindowMargins->{{Automatic, 230}, {Automatic, 52}},
@@ -89,9 +97,10 @@ Cell[558, 20, 429, 11, 50, "Code"],
 Cell[990, 33, 135, 2, 50, "Code"],
 Cell[1128, 37, 200, 3, 50, "Code"],
 Cell[CellGroupData[{
-Cell[1353, 44, 131, 2, 50, "Code"],
-Cell[1487, 48, 961, 20, 33, "Output"]
-}, Open  ]]
+Cell[1353, 44, 220, 4, 50, "Code"],
+Cell[1576, 50, 961, 20, 33, "Output"]
+}, Open  ]],
+Cell[2552, 73, 191, 4, 50, "Code"]
 }
 ]
 *)

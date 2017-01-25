@@ -35,7 +35,7 @@ FileNameJoin[
 	{
 		$ResourcesPath, 
 		
-		First[
+		If[# == "/", "/Index.html", #]& @ First[
 			StringCases[
 				First[StringSplit[request, "\r\n"]], 
 				"GET " ~~ address__ ~~ " HTTP/1.1" :> address
