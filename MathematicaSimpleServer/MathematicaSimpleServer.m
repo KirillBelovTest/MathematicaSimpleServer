@@ -42,7 +42,7 @@ Part[
 (* server constructors *)
 MathematicaSimpleServerCreate[port_Integer, handler_ConnectionHandler] := 
 	Module[{tag, socket, asynchronousserver}, 
-		
+
 		tag = Unique[]; 
 		socket = CreateServerSocket[port]; 
 		asynchronousserver = CreateAsynchronousServer[socket, handler]; 
