@@ -10,14 +10,60 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2370,         76]
-NotebookOptionsPosition[      1986,         58]
-NotebookOutlinePosition[      2334,         73]
-CellTagsIndexPosition[      2291,         70]
+NotebookDataLength[      4610,        126]
+NotebookOptionsPosition[      4114,        104]
+NotebookOutlinePosition[      4462,        119]
+CellTagsIndexPosition[      4419,        116]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"$Path", "=", 
+  RowBox[{"Append", "[", 
+   RowBox[{"$Path", ",", " ", 
+    RowBox[{"DirectoryName", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.694323530383399*^9, 3.6943235607247367`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\
+\\\\SystemFiles\\\\Links\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Kirill Belov\\\\AppData\\\\Roaming\\\\Mathematica\
+\\\\Kernel\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Kirill Belov\\\\AppData\\\\Roaming\\\\Mathematica\
+\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Kirill Belov\\\\AppData\\\\Roaming\\\\Mathematica\
+\\\\Applications\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Kernel\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Applications\"\>", 
+   ",", "\<\".\"\>", ",", "\<\"C:\\\\Users\\\\Kirill Belov\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\Packages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\Applications\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\AddOns\\\\ExtraPackages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Kernel\\\\Packages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\Documentation\\\\English\\\\System\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\11.0\\\
+\\SystemFiles\\\\Data\\\\ICC\"\>", 
+   ",", "\<\"E:\\\\Test Items\\\\Wolfram \
+Language\\\\Mathematica\\\\Projects\\\\MathematicaSimpleServer\\\\\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.6943235625380473`*^9}]
+}, Open  ]],
+
 Cell[BoxData[
  RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
  CellChangeTimes->{{3.694316866093218*^9, 3.6943168716014276`*^9}}],
@@ -53,7 +99,7 @@ Cell[BoxData[
   3.694319463333088*^9, 3.6943196508841352`*^9, 3.69431986732386*^9, 
   3.694320136204753*^9, 3.69432038248664*^9, 3.6943206113157763`*^9, 
   3.694320717161102*^9, 3.6943214019613214`*^9, 3.694321943688055*^9, 
-  3.69432315444919*^9}]
+  3.69432315444919*^9, 3.6943235787502823`*^9}]
 }, Open  ]]
 },
 WindowSize->{775, 872},
@@ -72,11 +118,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 135, 2, 50, "Code"],
-Cell[696, 24, 200, 3, 50, "Code"],
 Cell[CellGroupData[{
-Cell[921, 31, 131, 2, 50, "Code"],
-Cell[1055, 35, 915, 20, 33, "Output"]
+Cell[580, 22, 271, 6, 33, "Input"],
+Cell[854, 30, 1793, 33, 297, "Output"]
+}, Open  ]],
+Cell[2662, 66, 135, 2, 50, "Code"],
+Cell[2800, 70, 200, 3, 50, "Code"],
+Cell[CellGroupData[{
+Cell[3025, 77, 131, 2, 50, "Code"],
+Cell[3159, 81, 939, 20, 33, "Output"]
 }, Open  ]]
 }
 ]
