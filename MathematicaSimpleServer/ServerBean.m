@@ -1,10 +1,20 @@
-(* Wolfram Language Package *)
+(* ::Package:: *)
+
+(* :Title: ServerBean *)
+(* :Context: MathematicaSimpleServer`ServerBean` *)
+
+(* :Author: Kirill Belov *)
+(* :Email: KirillBelovTest@gmail.com *)
+
+(* :Keywords: http-server; server bean *)
+(* :Version: 0.0.1 *)
 
 BeginPackage["MathematicaSimpleServer`ServerBean`"];
 (* Exported symbols added here with SymbolName::usage *)  
 
 ServerBean::usage = 
-"ServerBean[]"; 
+"ServerBean[{\"Key1\" -> BeanFunction1, \"Key2\" -> ..}]; \n" <> 
+"ServerBean[..][\"parsed request\"] >> <Content .. >"; 
 
 Begin["`Private`"]; (* Begin Private Context *) 
 
