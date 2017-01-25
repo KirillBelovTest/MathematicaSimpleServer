@@ -10,14 +10,60 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       769,         33]
-NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       909,         36]
-CellTagsIndexPosition[       866,         33]
+NotebookDataLength[      2604,         86]
+NotebookOptionsPosition[      2182,         67]
+NotebookOutlinePosition[      2530,         82]
+CellTagsIndexPosition[      2487,         79]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$Path", " ", "=", " ", 
+   RowBox[{"DeleteDuplicates", "[", 
+    RowBox[{"Append", "[", 
+     RowBox[{"$Path", ",", " ", 
+      RowBox[{"DirectoryName", "[", 
+       RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}], "]"}], "]"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.6943261113119574`*^9, 3.694326139392913*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
+ CellChangeTimes->{{3.6943261476632524`*^9, 3.6943261533597836`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "ExampleServerConfiguration`WebPages`"}]], "Code",
+ CellChangeTimes->{{3.6943261568376846`*^9, 3.694326198228145*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WebPages", "[", "8888", "]"}]], "Input",
+ CellChangeTimes->{{3.6943262019557543`*^9, 3.69432620543866*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\<\"Server\"\>", "[", 
+  TagBox[
+   ButtonBox[
+    PaneSelectorBox[{False->"\<\"http://localhost:8888/\"\>", True->
+     StyleBox["\<\"http://localhost:8888/\"\>", "HyperlinkActive"]}, Dynamic[
+      CurrentValue["MouseOver"]],
+     BaseStyle->{"Hyperlink"},
+     FrameMargins->0,
+     ImageSize->Automatic],
+    BaseStyle->"Hyperlink",
+    ButtonData->{
+      URL["http://localhost:8888/"], None},
+    ButtonNote->"http://localhost:8888/"],
+   Annotation[#, "http://localhost:8888/", "Hyperlink"]& ], "]"}]], "Output",
+ CellChangeTimes->{
+  3.694326219041463*^9, 3.694326380303111*^9, {3.6943265202961206`*^9, 
+   3.694326529468178*^9}, 3.694326703110201*^9, 3.6943267717060623`*^9, 
+   3.6943269454061575`*^9, 3.69432706767267*^9, 3.6943271690870895`*^9, 
+   3.69432749275648*^9}]
+}, Open  ]]
 },
 WindowSize->{775, 872},
 WindowMargins->{{564, Automatic}, {Automatic, 54}},
@@ -35,9 +81,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 353, 9, 50, "Code"],
+Cell[914, 31, 137, 2, 50, "Code"],
+Cell[1054, 35, 147, 2, 50, "Code"],
+Cell[CellGroupData[{
+Cell[1226, 41, 131, 2, 30, "Input"],
+Cell[1360, 45, 806, 19, 33, "Output"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
