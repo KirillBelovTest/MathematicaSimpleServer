@@ -39,7 +39,7 @@ ConnectionHandlerCreate[parser_RequestParser, bean_ServerBean, generator_Respons
 		ConnectionHandler[
 			{
 				"Tag" :> tag, 
-				"RequestParser" :> RequestParser[tag], 
+				"RequestParser" :> RequestParser[tag], 	
 				"ServerBean" :> ServerBean[tag], 
 				"ResponseGenerator" :> ResponseGenerator[tag]
 			}
@@ -111,72 +111,75 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 			response
 		}, 
 		
-		(* reading the request from client *)
-		request = 
-			Flatten[Last[Reap[
-				While[True, 
-					TimeConstrained[
-						Sow[BinaryRead[input]], 
-						0.01, Break[] 
+		Block[{$HistoryLength = 0},  
+		
+			(* reading the request from client *)
+			request = 
+				Flatten[Last[Reap[
+					While[True, 
+						TimeConstrained[
+							Sow[BinaryRead[input]], 
+							0.01, Break[] 
+						]
 					]
-				]
-			]]]; 
+				]]]; 
 			
-		(* close input stream of the socket after reading *)
-		Close[input]; 
+			(* close input stream of the socket after reading *)
+			Close[input]; 
 			
-		(* an initial check of the correctness of the request *)
-		If[Length[request] == 0, Print["Error:\r\nEmpty request"]; Return[]]; 
-		If[Length[request] < 16, Print["Error:\r\n", FromCharacterCode[request]]; Return[]]; 
+			(* an initial check of the correctness of the request *)
+			If[Length[request] == 0, Print["Error:\r\nEmpty request"]; Return[]]; 
+			If[Length[request] < 16, Print["Error:\r\n", FromCharacterCode[request]]; Return[]]; 
 		
-		(* converting a binary data to string and logging*)
-		requestString = FromCharacterCode[request]; 
-		Print[requestString]; 
+			(* converting a binary data to string and logging*)
+			requestString = FromCharacterCode[request]; 
+			Print[requestString]; 
 		
-		(* request verification *)
-		If[
-			Not[StringMatchQ[
-				First[StringSplit[requestString, "\r\n"]], 
-				__ ~~ " /" ~~ ___ ~~ "HTTP/" ~~ _ ~~ _ ~~ _
-			
-			]], 
-			Print["Error:\r\nIncorrect request:\r\n", requestString]; Return[]
-		]; 
-		
-		(* getting handler components *)
-		Check[
-			requestParser = handler[[Component["RequestParser"]]]; 
-			serverBean = handler[[Component["ServerBean"]]]; 
-			responseGenerator = handler[[Component["ResponseGenerator"]]];, 
-			
-			(* error logging *)
-			Print["Error during getting handler components"]; Return[]; 
-		]; 
-		
-		(* response creation *)
-		responseString = 
-			Check[
-				responseGenerator[serverBean[requestParser[requestString]]], 
+			(* request verification *)
+			If[
+				Not[StringMatchQ[
+					First[StringSplit[requestString, "\r\n"]], 
+					__ ~~ " /" ~~ ___ ~~ "HTTP/" ~~ _ ~~ _ ~~ _
 				
-				"HTTP 500 Internal Server Error\r\n" <> 
-				StringTemplate["Date: `date`\r\n"][<|"date" -> DateString[]|>] <> 
-				"Contetn-Length: 32\r\n" <> 
-				"Connection: close\r\n\r\n" <> 
-				
-				"Internal Server Error"; 
+				]], 
+				Print["Error:\r\nIncorrect request:\r\n", requestString]; Return[]
 			]; 
+		
+			(* getting handler components *)
+			Check[
+				requestParser = handler[[Component["RequestParser"]]]; 
+				serverBean = handler[[Component["ServerBean"]]]; 
+				responseGenerator = handler[[Component["ResponseGenerator"]]];, 
 			
-		(* loging *)
-		Print[responseString]; 
+				(* error logging *)
+				Print["Error during getting handler components"]; Return[]; 
+			]; 
+		
+			(* response creation *)
+			responseString = 
+				Check[
+					responseGenerator[serverBean[requestParser[requestString]]], 
+				
+					"HTTP 500 Internal Server Error\r\n" <> 
+					StringTemplate["Date: `date`\r\n"][<|"date" -> DateString[]|>] <> 
+					"Contetn-Length: 32\r\n" <> 
+					"Connection: close\r\n\r\n" <> 
+				
+					"Internal Server Error"; 
+				]; 
 			
-		(* 
-			converting response string to bynary data
-			write response to the output stream of the socket 
-			close ouptut stream
-		*)
-		response = ToCharacterCode[responseString]; 
-		BinaryWrite[output, response]; 
-		Close[output]; 
+			(* loging *)
+			Print[responseString]; 
+			
+			(* 
+				converting response string to bynary data
+				write response to the output stream of the socket 
+				close ouptut stream
+			*)
+			response = ToCharacterCode[responseString]; 
+			BinaryWrite[output, response]; 
+			Close[output]; 
+		]
 	];
 
 End[]; (* End Private Context *)
