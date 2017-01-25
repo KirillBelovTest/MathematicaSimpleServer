@@ -11,14 +11,14 @@
                 } 
 
 				h1 {
-					padding: 15px; 
+					padding: 20px;
 				}
 				
                 .bodybackground {
-                    background: #fffacc; /* Цвет фона */
+                    background: #f9fafe; /* Цвет фона */
                 }
 
-                .layer1 {
+                .mainlayer {
                     width: 800px; /* Ширина слоя в пикселах */
                     height: 600px; /* Высота слоя в пикселах */
                     background: #ffffff; /* Цвет фона*/
@@ -27,25 +27,64 @@
                     box-shadow: 0 0 25px rgba(0,0,0,0.5); /* Параметры тени */ 
                     margin: auto;
                 }
-				
+                
+                .tablestyle {
+                	width: 600px; 
+                	height: 480px; 
+                	padding-bottom: 100px; 
+                	padding-top: 80px; 
+                	padding-left: 60px; 
+                	padding-right: 60px; 
+                }
+                
+                .ref {
+                	padding-left: 10px; 
+                	padding-right: 10px; 
+                }
+                
+                .reflist {
+                	padding-bottom: 20px; 
+                	padding-top: 20px; 
+                	font-weight: 900; 
+                }
+		
 		</style>
 		
 	</head>
-	<body>
-		<h1 align="center">
-			Сервер построения графиков
-		</h1>
-		<div class = "layer1" align="center">
+	
+	<body class="bodybackground">	
+		
+		<div align="center">
+			<h1 align="center">Сервер построения графиков</h1>
+		</div>
+		
+		<div class = "mainlayer" align="center">
+			
 			Это приложение в состоянии построить любой простой 
 			график, </br>который может быть построен в Wolfram Mathematica 
 			с помощью функции Plot[]
 			
-			<div>
-				<frameset rows="80,*" cols="*">
-					<frame src="top.html">
-				<frameset cols="80,*">
+			<div>			
+				
+				<div>
+					<table class = "reflist">
+						<tr>
+							<td><a class = "ref" href = "/PlotServer?Sin@-4%4">Plot[Sin[x], {x, -4, 4}]</a></li>
+							<td><a class = "ref" href = "/PlotServer?Cos@-4%4">Plot[Cos[x], {x, -4, 4}]</a></li>
+							<td><a class = "ref" href = "/PlotServer?Exp@-4%4">Plot[Exp[x], {x, -4, 4}]</a></li>
+						</ul>
+					</table>
+				</div>
+				
+				<table  class = "tablestyle" align="center">
+					<tr>
+						<td>`image`</td>
+					</tr>
+				</table>
+				
 			</div>
 			
 		</div>
+		
 	</body>
 </html>
