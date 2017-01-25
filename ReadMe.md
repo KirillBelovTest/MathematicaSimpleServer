@@ -7,9 +7,10 @@ Simple http-server based on the Wolfram Language
 ## Installation
 
 #### Standard installation: 
-- 	Open `Installer.nb` file and run code   
+- Open `Installer.nb` file and run code   
+
 #### Using without installation
--	For current directory run code `$Path = Append[$Path, ]`
+-	For current directory (with PacletInf.m) run code `$Path = Append[$Path, <CurrentDirectory>]`
 
 ## Project overview
 
@@ -38,6 +39,14 @@ Simple http-server based on the Wolfram Language
 ## Описание
 
 Простой http-сервер на Wolfram Language
+
+## Установка
+
+#### Стандартная установка
+- Откройте файл `Installer.nb` и выполните находящийся там код
+
+#### Использование без установки
+-	Для этой директории (с файлом PacletInf.m) выполните код: `$Path = Append[$Path, <CurrentDirectory>]`
 
 ## Обзор проекта
 
