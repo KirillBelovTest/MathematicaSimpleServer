@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14569,        382]
-NotebookOptionsPosition[     13382,        341]
-NotebookOutlinePosition[     13730,        356]
-CellTagsIndexPosition[     13687,        353]
+NotebookDataLength[     14637,        383]
+NotebookOptionsPosition[     13450,        342]
+NotebookOutlinePosition[     13798,        357]
+CellTagsIndexPosition[     13755,        354]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,8 +23,9 @@ Cell["\:0417\:0430\:0433\:0440\:0443\:0437\:043a\:0430 \:043a\:043e\:043d\
  CellChangeTimes->{{3.694275152990738*^9, 3.6942751607369947`*^9}}],
 
 Cell[BoxData[
- RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
- CellChangeTimes->{{3.6941046910034914`*^9, 3.694104702950652*^9}}],
+ RowBox[{"Get", "[", "\"\<MathematicaSimpleServer`\>\"", "]"}]], "Code",
+ CellChangeTimes->{{3.6941046910034914`*^9, 3.694104702950652*^9}, {
+  3.694278251393407*^9, 3.694278257845332*^9}}],
 
 Cell["\:0421\:043e\:0437\:0434\:0430\:043d\:0438\:0435 \:0444\:0443\:043d\
 \:043a\:0446\:0438\:0438 \:0434\:043b\:044f \:043f\:0440\:043e\:0432\:0435\
@@ -356,34 +357,34 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 195, 2, 30, "Text"],
-Cell[756, 24, 135, 2, 50, "Code"],
-Cell[894, 28, 338, 4, 30, "Text"],
-Cell[1235, 34, 1867, 48, 214, "Code"],
-Cell[3105, 84, 313, 4, 30, "Text"],
-Cell[3421, 90, 1173, 26, 123, "Code"],
-Cell[4597, 118, 353, 4, 30, "Text"],
-Cell[4953, 124, 1052, 27, 502, "Code"],
-Cell[6008, 153, 336, 4, 30, "Text"],
-Cell[6347, 159, 607, 14, 123, "Code"],
-Cell[6957, 175, 257, 3, 30, "Text"],
+Cell[756, 24, 203, 3, 50, "Code"],
+Cell[962, 29, 338, 4, 30, "Text"],
+Cell[1303, 35, 1867, 48, 214, "Code"],
+Cell[3173, 85, 313, 4, 30, "Text"],
+Cell[3489, 91, 1173, 26, 123, "Code"],
+Cell[4665, 119, 353, 4, 30, "Text"],
+Cell[5021, 125, 1052, 27, 502, "Code"],
+Cell[6076, 154, 336, 4, 30, "Text"],
+Cell[6415, 160, 607, 14, 123, "Code"],
+Cell[7025, 176, 257, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[7239, 182, 1312, 31, 447, "Code"],
-Cell[8554, 215, 574, 12, 50, "Output"],
-Cell[9131, 229, 472, 10, 30, "Output"],
-Cell[9606, 241, 469, 10, 30, "Output"]
+Cell[7307, 183, 1312, 31, 447, "Code"],
+Cell[8622, 216, 574, 12, 50, "Output"],
+Cell[9199, 230, 472, 10, 30, "Output"],
+Cell[9674, 242, 469, 10, 30, "Output"]
 }, Open  ]],
-Cell[10090, 254, 240, 3, 30, "Text"],
+Cell[10158, 255, 240, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[10355, 261, 246, 5, 50, "Code"],
-Cell[10604, 268, 1016, 24, 107, "Output"]
+Cell[10423, 262, 246, 5, 50, "Code"],
+Cell[10672, 269, 1016, 24, 107, "Output"]
 }, Open  ]],
-Cell[11635, 295, 232, 3, 30, "Text"],
+Cell[11703, 296, 232, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[11892, 302, 227, 4, 50, "Code"],
-Cell[12122, 308, 761, 18, 33, "Output"]
+Cell[11960, 303, 227, 4, 50, "Code"],
+Cell[12190, 309, 761, 18, 33, "Output"]
 }, Open  ]],
-Cell[12898, 329, 243, 3, 30, "Text"],
-Cell[13144, 334, 234, 5, 50, "Code"]
+Cell[12966, 330, 243, 3, 30, "Text"],
+Cell[13212, 335, 234, 5, 50, "Code"]
 }
 ]
 *)

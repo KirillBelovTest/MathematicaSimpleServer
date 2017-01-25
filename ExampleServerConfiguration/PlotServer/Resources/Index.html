@@ -1,16 +1,51 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
-		<meta name="Content-Type" content="text/html; charset=UTF8" />
-		<title>Simple Plot Server</title>
+		<title>Plot Server - Index Page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<style type="text/css">
+               *{  
+                   margin:0; 
+                   padding:0; 
+                } 
+
+				h1 {
+					padding: 15px; 
+				}
+				
+                .bodybackground {
+                    background: #fffacc; /* Цвет фона */
+                }
+
+                .layer1 {
+                    width: 800px; /* Ширина слоя в пикселах */
+                    height: 600px; /* Высота слоя в пикселах */
+                    background: #ffffff; /* Цвет фона*/
+                    padding: 20px; /* Поля вокруг содержимого странички */
+                    overflow: auto; /* Добавление полосы прокрутки */
+                    box-shadow: 0 0 25px rgba(0,0,0,0.5); /* Параметры тени */ 
+                    margin: auto;
+                }
+				
+		</style>
+		
 	</head>
 	<body>
-		<h1>Simple Plot Server</h1>
-		<div>
-			<ul>
-				<li><h3><a href="/SimplePlotServer?Sin@-4%4">Plot[Sin[x], {x, -4, 4}]</a></h3></li>
-				<li><h3><a href="/SimplePlotServer?Function[x,Exp[-x^2]]@-4%4">Plot[Exp[-x^2], {x, -4, 4}]</a></h3></li>
-			</ul>
+		<h1 align="center">
+			Сервер построения графиков
+		</h1>
+		<div class = "layer1" align="center">
+			Это приложение в состоянии построить любой простой 
+			график, </br>который может быть построен в Wolfram Mathematica 
+			с помощью функции Plot[]
+			
+			<div>
+				<frameset rows="80,*" cols="*">
+					<frame src="top.html">
+				<frameset cols="80,*">
+			</div>
+			
 		</div>
 	</body>
 </html>
