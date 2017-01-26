@@ -45,7 +45,9 @@ If[
 				]
 			}
 		]
-	]
+	], 
+	
+	False
 ]; 
 
 RequestToCGIIndexQ[request_String] := 
@@ -54,10 +56,11 @@ Apply[
 	Map[
 		StringMatchQ[
 			request, 
-			"GET " <> # <> " HTTP/1.1"
+			"GET " <> # <> " HTTP/1.1", 
+			IgnoreCase -> True
 		]&, 
 		
-		{"/CGIServer", "/CGIServer/", "/CGIServer/Index", "/CGIServer/Index/"}
+		{"/", "/CGIServer", "/CGIServer/", "/CGIServer/Index", "/CGIServer/Index/"}
 	]
 ]; 
 
@@ -71,7 +74,7 @@ FileNameJoin[
 		First[
 			StringCases[
 				First[StringSplit[request, "\r\n"]], 
-				"GET /CGIServer/" ~~ filename__ ~~ " HTTP/1.1" :> filename, 
+				"GET /CGIServer" ~~ filename__ ~~ " HTTP/1.1" :> filename, 
 				IgnoreCase -> True
 			]
 		]
@@ -95,7 +98,7 @@ indexpage =
 		<ul>
 	</body>
 </html>
-" ; 
+"; 
 
 links = 
 StringJoin[
@@ -129,10 +132,10 @@ StringJoin[
 
 StringTemplate[indexpage][<|"links" -> links|>]
 
-]
+];
 
 BeanScriptRun[script_String] := 
-ExportString[Get[script], "HTML"]; 
+ToString[Get[script]]; 
 
 BeanErrorPage[_] := 
 "Error"; 
