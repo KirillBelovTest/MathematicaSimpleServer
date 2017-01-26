@@ -10,7 +10,7 @@ Simple http-server based on the Wolfram Language
 - Open `Installer.nb` file and run code   
 
 #### Using without installation
--	For current directory (with PacletInfo.m) run code `$Path = Append[$Path, <CurrentDirectory>]`
+-	For the project root directory (with `PacletInfo.m`) run code `$Path = Append[$Path, <ProjectRootDirectory>]`
 
 ## Documentation
 
@@ -60,7 +60,7 @@ Simple http-server based on the Wolfram Language
 - Откройте файл `Installer.nb` и выполните находящийся там код
 
 #### Использование без установки
--	Для этой директории (с файлом PacletInfo.m) выполните код: `$Path = Append[$Path, <CurrentDirectory>]`
+-	Для корневой директории проекта (с файлом `PacletInfo.m`) выполните код: `$Path = Append[$Path, <ProjectRootDirectory>]`
 
 ## Документация
 
