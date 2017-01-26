@@ -34,6 +34,10 @@ Simple http-server based on the Wolfram Language
 
 - [WebPages.m](./ExampleServerConfiguration/WebPages/WebPages.m)
 
+#### CGIServer
+
+- [CGIServer.m](./ExampleServerConfiguration/CGIServer/CGIServer.m)
+
 ### MathematicaSimpleServer
 
 - [MathematicaSimpleServer`](./MathematicaSimpleServer/MathematicaSimpleServer.m)
@@ -79,6 +83,10 @@ Simple http-server based on the Wolfram Language
 #### WebPages
 
 - [WebPages.m](./ExampleServerConfiguration/WebPages/WebPages.m)
+
+#### CGIServer
+
+- [CGIServer.m](./ExampleServerConfiguration/CGIServer/CGIServer.m)
 
 ### MathematicaSimpleServer
 
