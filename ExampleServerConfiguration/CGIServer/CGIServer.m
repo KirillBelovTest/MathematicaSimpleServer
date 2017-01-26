@@ -11,78 +11,69 @@
 CGIServer::usage = 
 "CGIServer[port]"; 
 
-CGIScriptOutput::usage = 
-"CGIScriptOutput[]"
+Begin["`CGIServer`"]; 
 
-Begin["`Private`"]; 
+$ResourcesPath = 
+FileNameJoin[{DirectoryName[$InputFileName], "Resources"}]; 
 
-$ResourcesPath = FileNameJoin[{DirectoryName[$InputFileName], "Resources"}]; 
-
-(* checkers and components of the request parser *)
-RequestToCGIScriptQ[request_String] := 
-If[
-	Apply[
-		Or, 
-		Map[
-			StringMatchQ[
-				request, 
-				"GET /CGIServer/" ~~ __ ~~ # <> " HTTP/1.1"
-			]&, 	
-			{".m", ".m/"}
-		]
-	], 
-	
-	FileExistsQ[
-		FileNameJoin[
-			{
-				$ResourcesPath, 
-				First[
-					StringCases[
-						First[StringSplit[request, "\r\n"]], 
-						"GET /CGIServer/" ~~ filename__ ~~ " HTTP/1.1" :> filename, 
-						IgnoreCase -> True
-					]
-				]
-			}
-		]
-	], 
-	
-	False
-]; 
-
+(* functions for the request parser *)
+(* checkers *)
 RequestToCGIIndexQ[request_String] := 
 Apply[
 	Or, 
 	Map[
 		StringMatchQ[
-			request, 
+			First[StringSplit[request, "\r\n"]], 
 			"GET " <> # <> " HTTP/1.1", 
 			IgnoreCase -> True
 		]&, 
-		
-		{"/", "/CGIServer", "/CGIServer/", "/CGIServer/Index", "/CGIServer/Index/"}
+		{
+			"/", "/CGIServer", "/CGIServer/", 
+			"/CGIServer/Index", "/CGIServer/Index/"
+		}
 	]
-]; 
+];
+
+RequestToCGIScriptQ[request_String] := 
+Check[
+	StringMatchQ[
+		First[StringSplit[request, "\r\n"]], 
+		"GET /CGIServer/" ~~ __ ~~ ".m* HTTP/1.1", 
+		IgnoreCase -> True
+	] && 
+	FileExistsQ[
+		FileNameJoin[
+			{
+				$ResourcesPath, 
+				StringReplace[
+					First[
+						StringCases[
+							First[StringSplit[request, "\r\n"]], 
+							"GET /CGIServer/" ~~ filename__ ~~ " HTTP/1.1" :> filename, 
+							IgnoreCase -> True
+						]
+					], "/" -> ""
+				]
+			}
+		]
+	], 
+	False
+];
 
 RequestErrorQ[request_String] := 
 Not[RequestToCGIIndexQ[request]] && Not[RequestToCGIScriptQ[request]]; 
 
+(* components *)
 RequestTakeAddress[request_String] := 
 FileNameJoin[
 	{
 		$ResourcesPath, 
-		First[
-			StringCases[
-				First[StringSplit[request, "\r\n"]], 
-				"GET /CGIServer" ~~ filename__ ~~ " HTTP/1.1" :> filename, 
-				IgnoreCase -> True
-			]
-		]
+		StringReplace[First[Rest[StringSplit[First[StringSplit[request, "\r\n"]], " "]]], {"/CGIServer/" -> "", "/" -> ""}]
 	}
 ]; 
 
 (* beans *)
-BeanIndexPageCreate[_] := 
+BeanIndexPageCreate[_String] := 
 Module[{links, indexpage}, 
 indexpage = 
 "
@@ -93,6 +84,7 @@ indexpage =
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 	</head>
 	<body>
+		<h1>Scripts</h1>
 		<ul>
 			`links`
 		<ul>
@@ -109,7 +101,7 @@ StringJoin[
 			StringReplace[
 				FileNameJoin[
 					{
-						"/SGIServer/", 
+						"/CGIServer/", 
 						filename
 					}
 				], 
@@ -117,7 +109,7 @@ StringJoin[
 			] <> 
 			"\" >" <> 
 			filename <> 
-			"</a>\n"][
+			"</a><br/>\n"][
 				StringReplace[
 					StringReplace[
 						file, 
@@ -181,4 +173,4 @@ MathematicaSimpleServerCreate[
 	]
 ];
 
-End[]; (*`Private`*)
+End[] (*`CGIServer`*)

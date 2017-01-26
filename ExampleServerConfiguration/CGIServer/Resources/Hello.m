@@ -1,2 +1,3 @@
 (* Wolfram Language package *)
-"Hello!"
+"Hello!!!!\n" <> 
+StringTemplate["`Date`"][<|"Date" -> DateString[]|>]

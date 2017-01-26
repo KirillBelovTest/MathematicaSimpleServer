@@ -10,32 +10,29 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13042,        380]
-NotebookOptionsPosition[     11560,        325]
-NotebookOutlinePosition[     12145,        348]
-CellTagsIndexPosition[     12059,        343]
+NotebookDataLength[      2743,         86]
+NotebookOptionsPosition[      2323,         67]
+NotebookOutlinePosition[      2670,         82]
+CellTagsIndexPosition[      2627,         79]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
- RowBox[{"Quit", "[", "]"}]], "Input",
- CellChangeTimes->{{3.694447589846592*^9, 3.6944475920157166`*^9}}],
-
-Cell[BoxData[
- RowBox[{"<<", "MathematicaSimpleServer`"}]], "Input",
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
  CellChangeTimes->{{3.69441098160225*^9, 3.6944109872324514`*^9}}],
 
 Cell[BoxData[
- RowBox[{"<<", "ExampleServerConfiguration`CGIServer`"}]], "Input",
+ RowBox[{"<<", "ExampleServerConfiguration`CGIServer`"}]], "Code",
  CellChangeTimes->{{3.694409431473184*^9, 3.694409448807438*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"server", " ", "=", " ", 
-  RowBox[{"CGIServer", "[", "8888", "]"}]}]], "Input",
- CellChangeTimes->{{3.694410966331002*^9, 3.6944109721445813`*^9}}],
+  RowBox[{"CGIServer", "[", "8888", "]"}]}]], "Code",
+ CellChangeTimes->{{3.694410966331002*^9, 3.6944109721445813`*^9}, {
+  3.6944508201409097`*^9, 3.694450821509556*^9}}],
 
 Cell[BoxData[
  RowBox[{"\<\"Server\"\>", "[", 
@@ -54,274 +51,19 @@ Cell[BoxData[
    Annotation[#, "http://localhost:8888/", "Hyperlink"]& ], "]"}]], "Output",
  CellChangeTimes->{
   3.694446474516431*^9, 3.6944467988957415`*^9, {3.6944470007032533`*^9, 
-   3.6944470099030867`*^9}, 3.6944475961106*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"?", "Global`Private`*"}]], "Input",
- CellChangeTimes->{{3.6944465385771885`*^9, 3.6944465506592364`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- DynamicModuleBox[{Typeset`open$$ = True}, 
-  PaneSelectorBox[{False->
-   RowBox[{
-    OpenerBox[Dynamic[Typeset`open$$],
-     ImageSize->Small], 
-    StyleBox["Global`Private`", "InfoHeading"]}], True->GridBox[{
-     {
-      RowBox[{
-       OpenerBox[Dynamic[Typeset`open$$],
-        ImageSize->Small], 
-       StyleBox["Global`Private`", "InfoHeading"]}]},
-     {GridBox[{
-        {
-         ButtonBox["BeanErrorPage",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"BeanErrorPage", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["indexpage",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"indexpage", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["RequestToCGIIndexQ",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {
-            "RequestToCGIIndexQ", "Global`Private`"}},
-          ButtonNote->"Global`Private`"]},
-        {
-         ButtonBox["BeanIndexPageCreate",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {
-            "BeanIndexPageCreate", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["links",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"links", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["RequestToCGIScriptQ",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {
-            "RequestToCGIScriptQ", "Global`Private`"}},
-          ButtonNote->"Global`Private`"]},
-        {
-         ButtonBox["BeanScriptRun",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"BeanScriptRun", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["port",
-          BaseStyle->"InformationLink",
-          ButtonData:>{"Info33694461200-4078583", {"port", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["ResponseError",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"ResponseError", "Global`Private`"}},
-          ButtonNote->"Global`Private`"]},
-        {
-         ButtonBox["body",
-          BaseStyle->"InformationLink",
-          ButtonData:>{"Info33694461200-4078583", {"body", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["request",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"request", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["ResponseFromCGIServer",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {
-            "ResponseFromCGIServer", "Global`Private`"}},
-          ButtonNote->"Global`Private`"]},
-        {
-         ButtonBox["file",
-          BaseStyle->"InformationLink",
-          ButtonData:>{"Info33694461200-4078583", {"file", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["RequestErrorQ",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"RequestErrorQ", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["script",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"script", "Global`Private`"}},
-          ButtonNote->"Global`Private`"]},
-        {
-         ButtonBox["filename",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"filename", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["RequestTakeAddress",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {
-            "RequestTakeAddress", "Global`Private`"}},
-          ButtonNote->"Global`Private`"], 
-         ButtonBox["$ResourcesPath",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info33694461200-4078583", {"$ResourcesPath", "Global`Private`"}},
-          ButtonNote->"Global`Private`"]}
-       },
-       DefaultBaseStyle->"InfoGrid",
-       GridBoxItemSize->{"Columns" -> {{
-            Scaled[0.31666666666666665`]}}}]}
-    },
-    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
-   Dynamic[Typeset`open$$],
-   ImageSize->Automatic]]], "Print", "InfoCell",
- CellChangeTimes->{3.694446800892768*^9}],
-
-Cell["Global`Private`ResponseFromCGIServer", "Print", "PrintUsage",
- CellTags->"Info33694461200-4078583"],
-
-Cell[BoxData[
- InterpretationBox[GridBox[{
-    {GridBox[{
-       {
-        RowBox[{
-         RowBox[{
-         "Global`Private`ResponseFromCGIServer", "[", 
-          "Global`Private`body_String", "]"}], ":=", 
-         RowBox[{"\<\"HTTP 200 OK\\r\\n\"\>", "<>", 
-          RowBox[{
-           RowBox[{"StringTemplate", "[", "\<\"Date: `date`\\r\\n\"\>", "]"}],
-            "[", 
-           RowBox[{"Association", "[", 
-            RowBox[{"\<\"date\"\>", "\[Rule]", 
-             RowBox[{"DateString", "[", "]"}]}], "]"}], "]"}], "<>", 
-          RowBox[{
-           RowBox[{
-           "StringTemplate", "[", "\<\"Content-Length: `length`\\r\\n\"\>", 
-            "]"}], "[", 
-           RowBox[{"Association", "[", 
-            RowBox[{"\<\"length\"\>", "\[Rule]", 
-             RowBox[{"StringLength", "[", "Global`Private`body", "]"}]}], 
-            "]"}], "]"}], "<>", "\<\"Connection: close\\r\\n\\r\\n\"\>", "<>",
-           "Global`Private`body"}]}]}
-      },
-      BaselinePosition->{Baseline, {1, 1}},
-      GridBoxAlignment->{
-       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-        "RowsIndexed" -> {}},
-      GridBoxItemSize->{"Columns" -> {{
-           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-        "RowsIndexed" -> {}}]}
-   },
-   BaselinePosition->{Baseline, {1, 1}},
-   GridBoxAlignment->{
-    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-     "RowsIndexed" -> {}}],
-  Definition[$CellContext`Private`ResponseFromCGIServer],
-  Editable->False]], "Print",
- CellTags->"Info33694461200-4078583"]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Global`Private`RequestToCGIIndexQ", "[", 
-  "\"\<GET /CGIServer/ HTTP/1.1\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.6944465983162613`*^9, 3.6944466126505513`*^9}, 
-   3.6944466875785594`*^9, 3.6944470619655733`*^9}],
-
-Cell[BoxData["True"], "Output",
- CellChangeTimes->{{3.6944466061894736`*^9, 3.694446613027523*^9}, 
-   3.6944466887275853`*^9, {3.694446783193965*^9, 3.694446801977257*^9}, 
-   3.6944470329021606`*^9, 3.6944470631380916`*^9}]
+   3.6944470099030867`*^9}, 3.6944475961106*^9, 3.694449956976532*^9, 
+   3.694450112183281*^9, 3.694450408645796*^9, 3.6944505494818363`*^9, 
+   3.6944506177774363`*^9, 3.694450696838768*^9, 3.6944508219781237`*^9, 
+   3.694450889810461*^9, 3.694450983541829*^9, 3.6944514681381927`*^9, 
+   3.6944515180734777`*^9, 3.69445176808955*^9, 3.6944518912381525`*^9, 
+   3.694451995634737*^9}]
 }, Open  ]],
 
 Cell[BoxData[
- RowBox[{"Global`Private`RequestToCGIScriptQ", "[", 
-  "\"\<GET /CGIServer/ HTTP/1.1\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.6944472749104223`*^9, 3.6944472814774513`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Global`Private`RequestTakeAddress", "[", 
-  "\"\<GET /CGIServer/ HTTP/1.1\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.6944470857423744`*^9, 3.6944470977761116`*^9}}],
-
-Cell[BoxData["\<\"E:\\\\Test Items\\\\Wolfram \
-Language\\\\Mathematica\\\\Projects\\\\MathematicaSimpleServer\\\\\
-ExampleServerConfiguration\\\\CGIServer\\\\Resources\"\>"], "Output",
- CellChangeTimes->{3.694447098256751*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Global`Private`BeanIndexPageCreate", "[", 
-  "\"\<GET /CGIServer/ HTTP/1.1\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.694447315848365*^9, 3.6944473234718847`*^9}}],
-
-Cell[BoxData["\<\"\\n<!DOCTYPE \
-html>\\n<html>\\n\\t<head>\\n\\t\\t<title>CGIServer - Index \
-Page</title>\\n\\t\\t<meta http-equiv=\\\"Content-Type\\\" \
-content=\\\"text/html; \
-charset=utf-8\\\">\\n\\t</head>\\n\\t<body>\\n\\t\\t<ul>\\n\\t\\t\\t<a href = \
-\\\"/SGIServer/Hello.m\\\" >/Hello.m</a>\\n<a href = \
-\\\"/SGIServer/Test.m\\\" >/Test.m</a>\\n\\n\\t\\t<ul>\\n\\t</body>\\n</html>\
-\\n\"\>"], "Output",
- CellChangeTimes->{3.6944473243816433`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Global`Private`ResponseFromCGIServer", "[", 
-  RowBox[{"Global`Private`BeanIndexPageCreate", "[", 
-   RowBox[{
-   "Global`Private`RequestTakeAddress", "[", 
-    "\"\<GET /CGIServer/ HTTP/1.1\>\"", "]"}], "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.69444734776571*^9, 3.694447384323469*^9}}],
-
-Cell[BoxData["\<\"HTTP 200 OK\\r\\nDate: Thu 26 Jan 2017 \
-23:23:05\\r\\nContent-Length: 282\\r\\nConnection: \
-close\\r\\n\\r\\n\\n<!DOCTYPE \
-html>\\n<html>\\n\\t<head>\\n\\t\\t<title>CGIServer - Index \
-Page</title>\\n\\t\\t<meta http-equiv=\\\"Content-Type\\\" \
-content=\\\"text/html; \
-charset=utf-8\\\">\\n\\t</head>\\n\\t<body>\\n\\t\\t<ul>\\n\\t\\t\\t<a href = \
-\\\"/SGIServer/Hello.m\\\" >/Hello.m</a>\\n<a href = \
-\\\"/SGIServer/Test.m\\\" >/Test.m</a>\\n\\n\\t\\t<ul>\\n\\t</body>\\n</html>\
-\\n\"\>"], "Output",
- CellChangeTimes->{{3.6944473700962515`*^9, 3.6944473856242905`*^9}}]
-}, Open  ]],
-
-Cell[BoxData["StringCases"], "Input",
- CellChangeTimes->{{3.6944477017782283`*^9, 3.694447704448852*^9}}]
+ RowBox[{"(*", " ", 
+  RowBox[{"MathematicaSimpleServerClose", "[", "server", "]"}], " ", 
+  "*)"}]], "Code",
+ CellChangeTimes->{{3.6944522027733*^9, 3.6944522129463787`*^9}}]
 },
 WindowSize->{775, 872},
 WindowMargins->{{Automatic, -5}, {-1, Automatic}},
@@ -332,56 +74,20 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{
- "Info33694461200-4078583"->{
-  Cell[6928, 203, 105, 1, 41, "Print",
-   CellTags->"Info33694461200-4078583"],
-  Cell[7036, 206, 1590, 39, 203, "Print",
-   CellTags->"Info33694461200-4078583"]}
- }
+CellTagsIndex->{}
 *)
 (*CellTagsIndex
-CellTagsIndex->{
- {"Info33694461200-4078583", 11872, 335}
- }
+CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 120, 2, 30, "Input"],
-Cell[681, 24, 135, 2, 30, "Input"],
-Cell[819, 28, 147, 2, 30, "Input"],
+Cell[558, 20, 134, 2, 50, "Code"],
+Cell[695, 24, 146, 2, 50, "Code"],
 Cell[CellGroupData[{
-Cell[991, 34, 171, 3, 30, "Input"],
-Cell[1165, 39, 686, 17, 33, "Output"]
+Cell[866, 30, 221, 4, 50, "Code"],
+Cell[1090, 36, 1025, 22, 33, "Output"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[1888, 61, 129, 2, 30, "Input"],
-Cell[CellGroupData[{
-Cell[2042, 67, 4883, 134, 171, "Print"],
-Cell[6928, 203, 105, 1, 41, "Print",
- CellTags->"Info33694461200-4078583"],
-Cell[7036, 206, 1590, 39, 203, "Print",
- CellTags->"Info33694461200-4078583"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8675, 251, 242, 4, 30, "Input"],
-Cell[8920, 257, 225, 3, 30, "Output"]
-}, Open  ]],
-Cell[9160, 263, 191, 3, 30, "Input"],
-Cell[CellGroupData[{
-Cell[9376, 270, 190, 3, 30, "Input"],
-Cell[9569, 275, 227, 3, 69, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[9833, 283, 189, 3, 30, "Input"],
-Cell[10025, 288, 459, 8, 316, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[10521, 301, 316, 6, 69, "Input"],
-Cell[10840, 309, 596, 10, 506, "Output"]
-}, Open  ]],
-Cell[11451, 322, 105, 1, 30, "Input"]
+Cell[2130, 61, 189, 4, 50, "Code"]
 }
 ]
 *)
