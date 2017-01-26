@@ -10,17 +10,326 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       769,         33]
-NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       909,         36]
-CellTagsIndexPosition[       866,         33]
+NotebookDataLength[     12887,        372]
+NotebookOptionsPosition[     11768,        330]
+NotebookOutlinePosition[     12355,        353]
+CellTagsIndexPosition[     12268,        348]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "MathematicaSimpleServer`"}]], "Input",
+ CellChangeTimes->{{3.69441098160225*^9, 3.6944109872324514`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "ExampleServerConfiguration`CGIServer`"}]], "Input",
+ CellChangeTimes->{{3.694409431473184*^9, 3.694409448807438*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Global`Private`*"}]], "Input",
+ CellChangeTimes->{{3.694409455278281*^9, 3.6944094745421004`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["Global`Private`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["Global`Private`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["BeanErrorPage",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"BeanErrorPage", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["request",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"request", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["BeanIndexPageCreate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "BeanIndexPageCreate", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["RequestErrorQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"RequestErrorQ", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["BeanScriptRun",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"BeanScriptRun", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["RequestParser",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"RequestParser", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["body",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"body", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["RequestTakeAddress",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "RequestTakeAddress", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["ConnectionHandlerCreate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "ConnectionHandlerCreate", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["RequestToCGIIndexQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "RequestToCGIIndexQ", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["file",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"file", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["RequestToCGIScriptQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "RequestToCGIScriptQ", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["filename",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"filename", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["ResponseError",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"ResponseError", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["filename$",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"filename$", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["ResponseFromCGIServer",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "ResponseFromCGIServer", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["indexpage",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"indexpage", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["ResponseGenerator",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "ResponseGenerator", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["links",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"links", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["script",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"script", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["MathematicaSimpleServerCreate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {
+            "MathematicaSimpleServerCreate", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["ServerBean",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"ServerBean", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]},
+        {
+         ButtonBox["port",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"port", "Global`Private`"}},
+          ButtonNote->"Global`Private`"], 
+         ButtonBox["$ResourcesPath",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info493694425390-5456976", {"$ResourcesPath", "Global`Private`"}},
+          ButtonNote->"Global`Private`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.475]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell",
+ CellChangeTimes->{3.694410990460971*^9}],
+
+Cell["Global`Private`BeanScriptRun", "Print", "PrintUsage",
+ CellTags->"Info493694425390-5456976"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{
+         "Global`Private`BeanScriptRun", "[", "Global`Private`script_String", 
+          "]"}], ":=", 
+         RowBox[{"ExportString", "[", 
+          RowBox[{
+           RowBox[{"Get", "[", "Global`Private`script", "]"}], 
+           ",", "\<\"HTML\"\>"}], "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`Private`BeanScriptRun],
+  Editable->False]], "Print",
+ CellTags->"Info493694425390-5456976"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"server", " ", "=", " ", 
+  RowBox[{"CGIServer", "[", "8888", "]"}]}]], "Input",
+ CellChangeTimes->{{3.694410966331002*^9, 3.6944109721445813`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\<\"Server\"\>", "[", 
+  TagBox[
+   ButtonBox[
+    PaneSelectorBox[{False->"\<\"http://localhost:8888/\"\>", True->
+     StyleBox["\<\"http://localhost:8888/\"\>", "HyperlinkActive"]}, Dynamic[
+      CurrentValue["MouseOver"]],
+     BaseStyle->{"Hyperlink"},
+     FrameMargins->0,
+     ImageSize->Automatic],
+    BaseStyle->"Hyperlink",
+    ButtonData->{
+      URL["http://localhost:8888/"], None},
+    ButtonNote->"http://localhost:8888/"],
+   Annotation[#, "http://localhost:8888/", "Hyperlink"]& ], "]"}]], "Output",
+ CellChangeTimes->{{3.6944109725991306`*^9, 3.694410991203025*^9}}]
+}, Open  ]],
+
+Cell[BoxData["\"\<GET /CGIServer/Hello.m HTTP/1.1\>\""], "Input",
+ CellChangeTimes->{{3.694411277879354*^9, 3.694411282874349*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Global`Private`BeanScriptRun", "[", 
+  RowBox[{
+  "Global`Private`RequestTakeAddress", "[", 
+   "\"\<GET /CGIServer/Hello.m HTTP/1.1\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.694411298769516*^9, 3.6944113209778633`*^9}, {
+  3.694411351409848*^9, 3.6944113696897383`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeleteDirectory","dirne",
+   "\"Directory \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\Kirill \
+Belov\\\\\\\\\\\\\\\\AppData\\\\\\\\\\\\\\\\Local\\\\\\\\\\\\\\\\Temp\\\\\\\\\
+\\\\\\\\HTMLFiles\\\\\\\"\\\"}]\\) not empty.\"",2,54,41,32411046720066324705,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.694411381851881*^9, 3.694411439737805*^9}],
+
+Cell[BoxData["\<\"<?xml version=\\\"1.0\\\" \
+encoding=\\\"UTF-8\\\"?>\\r\\n<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.1 \
+plus MathML 2.0//EN\\\"\\r\\n        \\\"HTMLFiles/xhtml-math11-f.dtd\\\">\\r\
+\\n\\r\\n<!-- Created with the Wolfram Language : www.wolfram.com \
+-->\\r\\n\\r\\n<html \
+xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\r\\n<head>\\r\\n <title>\\r\\n  \
+Untitled\\r\\n </title>\\r\\n <link \
+href=\\\"HTMLFiles/m-050d056e-1326-4a96-ad46-69be31dca3cb.css\\\" \
+rel=\\\"stylesheet\\\" type=\\\"text/css\\\" \
+/>\\r\\n</head>\\r\\n\\r\\n<body>\\r\\n\\r\\n<p class=\\\"Output\\\">\\r\\n \
+<img src=\\\"HTMLFiles/m-050d056e-1326-4a96-ad46-69be31dca3cb_1.gif\\\" \
+alt=\\\"m-050d056e-1326-4a96-ad46-69be31dca3cb_1.gif\\\" width=\\\"43\\\" \
+height=\\\"15\\\" style=\\\"vertical-align:middle\\\" \
+/>\\r\\n</p>\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n<div \
+style=\\\"font-family:Helvetica; font-size:11px; width:100%; border:1px none \
+#999999; border-top-style:solid; padding-top:2px; margin-top:20px;\\\">\\r\\n \
+<a href=\\\"http://www.wolfram.com/language/\\\" style=\\\"color:#000; \
+text-decoration:none;\\\">\\r\\n  <span style=\\\"color:#555555\\\">Created \
+with the Wolfram Language</span> \\r\\n \
+</a>\\r\\n</div>\\r\\n</body>\\r\\n\\r\\n</html>\\r\\n\"\>"], "Output",
+ CellChangeTimes->{{3.6944113040577793`*^9, 3.694411322538782*^9}, 
+   3.694411381868393*^9, 3.694411439755804*^9}]
+}, Open  ]]
 },
 WindowSize->{775, 872},
-WindowMargins->{{564, Automatic}, {Automatic, 54}},
+WindowMargins->{{Automatic, 110}, {Automatic, 52}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -28,16 +337,44 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "Info493694425390-5456976"->{
+  Cell[7515, 223, 98, 1, 41, "Print",
+   CellTags->"Info493694425390-5456976"],
+  Cell[7616, 226, 992, 27, 41, "Print",
+   CellTags->"Info493694425390-5456976"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"Info493694425390-5456976", 12082, 340}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 135, 2, 30, "Input"],
+Cell[696, 24, 147, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[868, 30, 127, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[1020, 36, 6492, 185, 309, "Print"],
+Cell[7515, 223, 98, 1, 41, "Print",
+ CellTags->"Info493694425390-5456976"],
+Cell[7616, 226, 992, 27, 41, "Print",
+ CellTags->"Info493694425390-5456976"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8657, 259, 171, 3, 30, "Input"],
+Cell[8831, 264, 611, 15, 33, "Output"]
+}, Open  ]],
+Cell[9457, 282, 131, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[9613, 287, 305, 6, 50, "Input"],
+Cell[9921, 295, 428, 9, 21, "Message"],
+Cell[10352, 306, 1400, 21, 1285, "Output"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

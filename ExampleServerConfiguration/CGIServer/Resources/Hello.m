@@ -1,0 +1,2 @@
+(* Wolfram Language package *)
+"Hello!"
