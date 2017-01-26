@@ -9,18 +9,22 @@
 (* :Email: KirillBelovTest@gmail.com *)
 
 BeginPackage["MathematicaSimpleServer`RequestParser`"]; 
-(* publick funcs and names *)
+(* public funcs and names *)
 
-RequestParser::usag = "RequestParser[]"; 
+RequestParser::usage = 
+"RequestParser[{key1 -> checker1 -> component1, key2 -> ...}]; \n" <>
+"RequestParser[...][request]; "; 
 
 Begin["`Private`"]; 
 (* private definitions *)
 
 (* internal name *)
-Checker::usage = "Checker[]"; 
+Checker::usage = 
+"RequestParser[{key -> checker -> component}][[Checker[key]]] >> checker; "; 
 
 (* internal name *)
-Component::usage = "Component[]";
+Component::usage = 
+"RequestParser[{key -> checker -> component}][[Component[key]]] >> component; ";
 
 RequestParser::empreq = 
 "Empty request or other error"; 
