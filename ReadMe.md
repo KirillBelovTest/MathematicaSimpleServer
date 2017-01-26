@@ -12,6 +12,16 @@ Simple http-server based on the Wolfram Language
 #### Using without installation
 -	For current directory (with PacletInfo.m) run code `$Path = Append[$Path, <CurrentDirectory>]`
 
+## Documentation
+
+- Guides
+  - Guide
+- Tutorials
+  - Installation
+  - Example of use
+- References
+  - `MathematicaSimpleServerCreate[]`
+
 ## Project overview
 
 ### ExampleServerConfiguration
@@ -47,6 +57,16 @@ Simple http-server based on the Wolfram Language
 
 #### Использование без установки
 -	Для этой директории (с файлом PacletInfo.m) выполните код: `$Path = Append[$Path, <CurrentDirectory>]`
+
+## Документация
+
+- Гиды
+  - [Гид](./MathematicaSimpleServer/Documentation/Russian/Guides/Guide.md)
+- Туториалы
+  - [Установка](./MathematicaSimpleServer/Documentation/Russian/Tutorials/Installation.md)
+  - [Примеры использования](./MathematicaSimpleServer/Documentation/Russian/Tutorials/ExampleOfUse.md)
+- Ссылки
+  - [`MathematicaSimpleServerCreate[]`](./MathematicaSimpleServer/Documentation/Russian/ReferencePages/Symbols/MathematicaSimpleServerCreate.md)
 
 ## Обзор проекта
 
