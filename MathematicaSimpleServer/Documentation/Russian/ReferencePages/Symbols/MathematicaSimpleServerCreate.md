@@ -17,7 +17,7 @@
 Если приложение установлено, то необходимо загрузить его: 
 
 ```mathematica
-Get["MathmeticaSimpleServer`"]
+Get["MathemeticaSimpleServer`"]
 ```
 
 Затем можно создать сервер с _неопределенным_ обработчиком: 
@@ -30,7 +30,7 @@ server = MathematicaSimpleServerCreate[port, handler]
 
 Обработчик `ConectionHandler[]` должен уметь читать  
 из потока ввода и записывать в поток вывода. 
-Реализовать это можно следующим образом: 
+Самый простой обработчик будет выглядеть следующим образом: 
 
 ```mathematica
 ConnectionHndler[][{in_InputStream, out_OutputStream}] := 
