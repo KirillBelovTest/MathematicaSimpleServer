@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2743,         86]
-NotebookOptionsPosition[      2323,         67]
-NotebookOutlinePosition[      2670,         82]
-CellTagsIndexPosition[      2627,         79]
+NotebookDataLength[      2816,         87]
+NotebookOptionsPosition[      2396,         68]
+NotebookOutlinePosition[      2743,         83]
+CellTagsIndexPosition[      2700,         80]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -56,7 +56,8 @@ Cell[BoxData[
    3.6944506177774363`*^9, 3.694450696838768*^9, 3.6944508219781237`*^9, 
    3.694450889810461*^9, 3.694450983541829*^9, 3.6944514681381927`*^9, 
    3.6944515180734777`*^9, 3.69445176808955*^9, 3.6944518912381525`*^9, 
-   3.694451995634737*^9}]
+   3.694451995634737*^9, 3.69449018190287*^9, 3.6945057119202976`*^9, 
+   3.6945069022763863`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -85,9 +86,9 @@ Cell[558, 20, 134, 2, 50, "Code"],
 Cell[695, 24, 146, 2, 50, "Code"],
 Cell[CellGroupData[{
 Cell[866, 30, 221, 4, 50, "Code"],
-Cell[1090, 36, 1025, 22, 33, "Output"]
+Cell[1090, 36, 1098, 23, 33, "Output"]
 }, Open  ]],
-Cell[2130, 61, 189, 4, 50, "Code"]
+Cell[2203, 62, 189, 4, 50, "Code"]
 }
 ]
 *)
