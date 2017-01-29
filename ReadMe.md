@@ -29,15 +29,15 @@ Simple http-server based on the Wolfram Language
 
 #### PlotServer
 
-- [PlotServer.m](./ExampleServerConfiguration/PlotServer/PlotServer.m)
+- [PlotServer](./ExampleServerConfiguration/PlotServer/PlotServer.m)
 
 #### WebPages
 
-- [WebPages.m](./ExampleServerConfiguration/WebPages/WebPages.m)
+- [WebPages](./ExampleServerConfiguration/WebPages/WebPages.m)
 
 #### CGIServer
 
-- [CGIServer.m](./ExampleServerConfiguration/CGIServer/CGIServer.m)
+- [CGIServer](./ExampleServerConfiguration/CGIServer/CGIServer.m)
 
 ### MathematicaSimpleServer
 
@@ -80,15 +80,15 @@ Simple http-server based on the Wolfram Language
 
 #### PlotServer
 
-- [PlotServer.m](./ExampleServerConfiguration/PlotServer/PlotServer.m)
+- [PlotServer](./ExampleServerConfiguration/PlotServer/PlotServer.m)
 
 #### WebPages
 
-- [WebPages.m](./ExampleServerConfiguration/WebPages/WebPages.m)
+- [WebPages](./ExampleServerConfiguration/WebPages/WebPages.m)
 
 #### CGIServer
 
-- [CGIServer.m](./ExampleServerConfiguration/CGIServer/CGIServer.m)
+- [CGIServer](./ExampleServerConfiguration/CGIServer/CGIServer.m)
 
 ### MathematicaSimpleServer
 
