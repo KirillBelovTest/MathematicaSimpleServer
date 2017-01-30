@@ -8,7 +8,7 @@
 
 ## Детали и опции
 
-- `MathematicaSimpleServerClose[server]` - останавливает запущенные сервер
+- `MathematicaSimpleServerClose[server]` - останавливает запущенный сервер
 - _server_ - объект типа `MathematicaSimpleServer[...]` 
 
 ## Примеры 
