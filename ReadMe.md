@@ -22,6 +22,7 @@ Simple http-server based on the Wolfram Language
   - Example of use
 - References
   - `MathematicaSimpleServerCreate[]`
+  - `MathematicaSimpleServerClose[]`
 
 ## Project overview
 
@@ -31,7 +32,7 @@ Simple http-server based on the Wolfram Language
 
 - [PlotServer](./ExampleServerConfiguration/PlotServer/PlotServer.m)
 
-#### WebPages
+t#### WebPages
 
 - [WebPages](./ExampleServerConfiguration/WebPages/WebPages.m)
 
@@ -73,6 +74,7 @@ Simple http-server based on the Wolfram Language
   - [Примеры использования](./MathematicaSimpleServer/Documentation/Russian/Tutorials/ExampleOfUse.md)
 - Ссылки
   - [`MathematicaSimpleServerCreate[]`](./MathematicaSimpleServer/Documentation/Russian/ReferencePages/Symbols/MathematicaSimpleServerCreate.md)
+  - [`MathematicaSimpleServerClose[]`](./MathematicaSimpleServer/Documentation/Russian/ReferencePages/Symbols/MathematicaSimpleServerClose.md)
 
 ## Обзор проекта
 
