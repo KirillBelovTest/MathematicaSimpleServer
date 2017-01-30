@@ -54,6 +54,12 @@ ConnectionHndler[][{in_InputStream, out_OutputStream}] :=
 
 ## Смотрите Также
 
+**[MathematicaSimpleServerClose](./MathematicaSimpleServerClose.md)**
+
 ## Туториалы
 
+- [Примеры использования](../../Tutorials/ExampleOfUse.md)
+
 ## Связанные Руководства
+
+- [Руководство](../../Guides/Guide.md)
