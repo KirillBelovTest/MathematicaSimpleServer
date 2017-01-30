@@ -44,8 +44,9 @@ ConnectionHndler[][{in_InputStream, out_OutputStream}] :=
 ); 
 ```
 
-Приложение позволяет создать такого рода определение для типа `ConnectionHandler[]`, потому что это 
-никаким образом не влияет на уже существующее определение в контексте `MathematicaSimpleServer\`ConnectionHandler\``  
+Приложение позволяет создать такого рода определение для типа 
+`ConnectionHandler[]`, потому что это никаким образом не влияет 
+на уже существующее определение в контексте ```MathematicaSimpleServer\`ConnectionHandler\````
 После выполнения кода выше можно открыть браузер по адресу [http://localhost:8888/](http://localhost:8888/) и окно браузера отобразит слово `test`
 
 ![](./Images/test.png)
