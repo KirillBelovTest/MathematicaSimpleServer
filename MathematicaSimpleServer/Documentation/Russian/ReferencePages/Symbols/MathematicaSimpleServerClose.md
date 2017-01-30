@@ -6,7 +6,7 @@
 
 ---
 
-## Детали и опции
+## Детали
 
 - `MathematicaSimpleServerClose[server]` - останавливает запущенный сервер
 - _server_ - объект типа `MathematicaSimpleServer[...]` 
@@ -26,3 +26,15 @@ server = MathematicaSimpleServerCreate[8888, ConnectionHandler[]]
 ```mathematica
 MathematicaSimpleServerClose[server]
 ```
+
+## Смотрите Также
+
+**[MathematicaSimpleServerCreate](./MathematicaSimpleServerCreate.md)**
+
+## Руководства
+
+- [Руководство](../../Guides/Guide.md)
+
+## Связанные Туториалы
+
+- [Примеры использования](../../Tutorials/ExampleOfUse.md)
