@@ -1,4 +1,4 @@
 # Простой сервер в Mathematica - Руководство
 
-## [Установка](../Tutorials/Installation.md)
-## [Примеры использования](../Tutorials/ExampleOfUse.md)
+[<h3>Установка</h3>](../Tutorials/Installation.md)
+[<h3>Примеры использования</h3>](../Tutorials/ExampleOfUse.md)
