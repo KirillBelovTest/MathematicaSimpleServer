@@ -67,7 +67,7 @@ Simple http-server based on the Wolfram Language
 
 ## Документация
 
-- Гиды
+- Руководства
   - [Руководство](./MathematicaSimpleServer/Documentation/Russian/Guides/Guide.md)
 - Туториалы
   - [Установка](./MathematicaSimpleServer/Documentation/Russian/Tutorials/Installation.md)
