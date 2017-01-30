@@ -32,7 +32,7 @@ Simple http-server based on the Wolfram Language
 
 - [PlotServer](./ExampleServerConfiguration/PlotServer/PlotServer.m)
 
-t#### WebPages
+#### WebPages
 
 - [WebPages](./ExampleServerConfiguration/WebPages/WebPages.m)
 
