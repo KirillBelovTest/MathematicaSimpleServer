@@ -1,14 +1,16 @@
 # MathematicaSimpleServerCreate[]
+
 ---
 
 **MathematicaSimpleServerCreate[**_port_, _handler_**]**
 
 ---
+
 ## Детали и опции
 
-- `MathmeticaSimpleServerCreate[..]` возвращает объект `MathmeaticaSimpleServer[..]`
+- `MathmeticaSimpleServerCreate[...]` возвращает объект `MathmeaticaSimpleServer[...]`
 - _port_ - целое числом больше 1024 и меньше 10000
-- _handler_ - обработчик соединения с сокетом, представляет собой объект типа `ConnectionHandler[..]`
+- _handler_ - обработчик соединения с сокетом, представляет собой объект типа `ConnectionHandler[...]`
 
 ## Примеры
 
