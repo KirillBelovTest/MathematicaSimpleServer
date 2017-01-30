@@ -1,4 +1,9 @@
+(* ::Package:: *)
+
 (* Wolfram Language Package *)
+
+(* :Title: ConnectionHandler *)
+(* :Condext: MathematicaSimpleServer`ConnectionHandler` *)
 
 BeginPackage["MathematicaSimpleServer`ConnectionHandler`", 
 	{
