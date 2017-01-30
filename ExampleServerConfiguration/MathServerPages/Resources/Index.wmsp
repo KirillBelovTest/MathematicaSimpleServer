@@ -1,0 +1,13 @@
+<!DOCTYPE .wmsp>
+<html>
+	<head>
+		<meta http-equiv="content-type" charset="utf-8">
+		<title>MathServerPages - Index</title>
+	</head>
+	<body>
+		<wmsp:eval>
+			DateString[]
+		</wmsp:eval>
+	</body>
+
+</html>
