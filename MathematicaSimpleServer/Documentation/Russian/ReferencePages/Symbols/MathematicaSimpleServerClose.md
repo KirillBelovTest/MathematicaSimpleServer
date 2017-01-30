@@ -18,11 +18,11 @@
 Сначала запустим сервер выполнив следующий код: 
 
 ```mathematica
-sever = MathematicaSimpleServerCreate[8888, ConnectionHandler[]]
+server = MathematicaSimpleServerCreate[8888, ConnectionHandler[]]
 ```
 
 Теперь его можно остановить так: 
 
 ```mathematica
-MathematicaSimpleServerClose[sever]
+MathematicaSimpleServerClose[server]
 ```
