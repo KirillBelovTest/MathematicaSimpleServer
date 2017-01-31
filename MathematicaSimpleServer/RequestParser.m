@@ -9,25 +9,35 @@
 (* :Email: KirillBelovTest@gmail.com *)
 
 BeginPackage["MathematicaSimpleServer`RequestParser`"]; 
-(* public funcs and names *)
 
+(* preparation *)
+Unprotect[RequestParser]; 
+
+(* messages block ... *)
 RequestParser::usage = 
-"RequestParser[{key1 -> checker1 -> component1, key2 -> ...}]; \n" <>
-"RequestParser[...][request]; "; 
+"RequestParser[{key1 -> checker1 -> component1, key2 -> ...}] - creating parser \n" <>
+"RequestParser[...][request] - request parsing "; 
 
-Begin["`Private`"]; 
+RequestParser::reqex = 
+"Exception during request "; 
+
 (* private definitions *)
+Begin["`Private`"]; 
 
-(* internal name *)
+(* internal names *)
+Unprotect[Checker]; 
+Unprotect[Component]; 
+
 Checker::usage = 
-"RequestParser[{key -> checker -> component}][[Checker[key]]] >> checker; "; 
+"Checker - internal name \n" <> 
+"RequestParser[{key -> checker -> component}][[Checker[key]]] >> checker "; 
 
-(* internal name *)
 Component::usage = 
-"RequestParser[{key -> checker -> component}][[Component[key]]] >> component; ";
+"Component - internal name \n" <> 
+"RequestParser[{key -> checker -> component}][[Component[key]]] >> component "; 
 
-RequestParser::empreq = 
-"Empty request or other error"; 
+Protect[Checker]; 
+Protect[Component]; 
 
 (* 
 	override Keys on the request parser type 
@@ -45,7 +55,7 @@ MatchQ[
 					(_Symbol | _Function), 
 					(_Symbol | _Function)
 				]
-			]..
+			] ..
 		}
 	]
 ] := requestParser[[1, All, 1]]; 
@@ -121,9 +131,11 @@ Check[
 	]]]], 
 
 	(* Error return *)
-	Message[RequestParser::empreq]; $Failed
+	Message[RequestParser::reqex]; $Failed
 ]; 
 
-End[]; (*`Private`*)
+End[]; (*`Private`*) 
 
-EndPackage[]; (*`RequestParser`*)
+Protect[RequestParser]; 
+
+EndPackage[]; (*`RequestParser`*) 
