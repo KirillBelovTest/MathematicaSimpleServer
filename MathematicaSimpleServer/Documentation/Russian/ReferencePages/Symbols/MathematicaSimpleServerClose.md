@@ -2,14 +2,13 @@
 
 ---
 
-**MathematicaSimpleServerClose[**_server_**]**
+**MathematicaSimpleServerClose[**_server_**]** - останавливает запущенный сервер
 
 ---
 
 ## Детали
 
-- **MathematicaSimpleServerClose[**_server_**]** - останавливает запущенный сервер
-- _server_ - объект типа `MathematicaSimpleServer[...]` 
+- _server_ - объект типа **MathematicaSimpleServer[...]**
 
 ## Примеры 
 
