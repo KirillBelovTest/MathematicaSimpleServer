@@ -2,21 +2,21 @@
 
 ---
 
-**MathematicaSimpleServerCreate[**_port_, _handler_**]**
+**MathematicaSimpleServerCreate[**_port_, _handler_**]** - создает сервер
 
 ---
 
 ## Детали
 
-- `MathmeticaSimpleServerCreate[...]` возвращает объект `MathmeaticaSimpleServer[...]`
-- _port_ - целое числом больше 1024 и меньше 10000
-- _handler_ - обработчик соединения с сокетом, представляет собой объект типа `ConnectionHandler[...]`
+- **MathmeticaSimpleServerCreate[...]** возвращает объект **MathmeaticaSimpleServer[...]**
+- _port_ - целое число больше 1024 и меньше 10000
+- _handler_ - обработчик соединения с сокетом, представляет собой объект типа **ConnectionHandler[...]**
 
 ## Примеры
 
 ### Основные Примеры
 
-Если приложение установлено, то необходимо загрузить его: 
+Если приложение установлено, то необходимо загрузить его выполнив: 
 
 ```mathematica
 Get["MathemeticaSimpleServer`"]
