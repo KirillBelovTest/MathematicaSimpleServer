@@ -56,6 +56,7 @@ ConnectionHndler[][{in_InputStream, out_OutputStream}] :=
 
 ## Туториалы
 
+- [Установка](../../Tutorials/Installation.md)
 - [Примеры использования](../../Tutorials/ExampleOfUse.md)
 
 ## Связанные Руководства
