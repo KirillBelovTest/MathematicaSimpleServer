@@ -11,11 +11,12 @@
 BeginPackage["MathematicaSimpleServer`RequestParser`"]; 
 
 (* preparation *)
-Unprotect[RequestParser]; 
+Unprotect["`*"]; 
+Clear["`*"]; 
 
-(* messages block ... *)
+(* messages block ... *) 
 RequestParser::usage = 
-"RequestParser[{key1 -> checker1 -> component1, key2 -> ...}] - creating parser \n" <>
+"RequestParser[{key1 -> checker1 -> component1, key2 -> ...}] - creating parser \n" <> 
 "RequestParser[...][request] - request parsing "; 
 
 RequestParser::reqex = 

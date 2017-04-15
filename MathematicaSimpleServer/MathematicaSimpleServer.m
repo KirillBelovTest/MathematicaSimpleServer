@@ -2,19 +2,19 @@
 
 (* :Title: MathematicaSimpleServer *)
 (* :Context: MathematicaSimpleServer` *)
-
 (* :Author: Kirill Belov *)
 (* :Email: KirillBelovTest@gmail.com *)
-
+(* :Version: v0.0.4 *)
+(* :Mathematica Version: 10.3+ *)
 (* :Keywords: Web Server; HTTP; Sockets *)
 
 BeginPackage["MathematicaSimpleServer`", {"SocketLink`", "MathematicaSimpleServer`ConnectionHandler`"}]; 
 
 MathematicaSimpleServerCreate::usage = 
-"MathematicaSimpleServerCreate[port, handler]"; 
+"MathematicaSimpleServerCreate[port, handler] returns the object MathematicaSimpleServer[]"; 
 
 MathematicaSimpleServerClose::usage = 
-"MathematicaSimpleServerClose[server]"; 
+"MathematicaSimpleServerClose[server] stops the server"; 
 
 Begin["`Private`"]; 
 

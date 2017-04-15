@@ -14,7 +14,7 @@ BeginPackage["MathematicaSimpleServer`ConnectionHandler`",
 ]; 
 (* Exported symbols added here with SymbolName::usage *)  
 
-(* You can create a handler with a single parser and generator *)
+(* You can create a handler with a single parser and generaor *)
 ConnectionHandlerCreate::usage = 
 "ConnectionHandlerCreate[]; \n" <> 
 "ConnectionHandlerCreate[RequestParser[..], ServerBean[], ResponseGenerator[..]]; "; 
