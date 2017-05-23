@@ -36,9 +36,13 @@ Component::usage =
 ConnectionHandlerCreate[parser_RequestParser, bean_ServerBean, generator_ResponseGenerator] := 
 	Module[{tag = Unique[]}, 
 		
+		Unprotect[RequestParser, ServerBean, ResponseGenerator]; 
+		
 		RequestParser[tag] := parser; 
 		ServerBean[tag] := bean; 
 		ResponseGenerator[tag] := generator; 
+		
+		Protect[RequestParser, ServerBean, ResponseGenerator]; 
 		
 		(* Return *)
 		ConnectionHandler[
@@ -65,7 +69,11 @@ Module[
 		tag = handler[[Component["Tag"]]]
 	}, 
 
+	Unprotect[Evaluate[Head[component]]]; 
+
 	Head[component][tag] := component; 
+	
+	Protect[Evaluate[Head[component]]]; 
 	
 	(* Return *)
 	handler
