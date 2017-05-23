@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3232,        100]
-NotebookOptionsPosition[      2774,         80]
-NotebookOutlinePosition[      3122,         95]
-CellTagsIndexPosition[      3079,         92]
+NotebookDataLength[      3926,        116]
+NotebookOptionsPosition[      3098,         90]
+NotebookOutlinePosition[      3442,        105]
+CellTagsIndexPosition[      3399,        102]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -29,16 +29,22 @@ Cell[BoxData[
         RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}], "]"}], "]"}]}], 
    ";"}], " "}]], "Code",
  CellChangeTimes->{{3.694323530383399*^9, 3.6943235607247367`*^9}, {
-  3.694324394065415*^9, 3.6943244027958384`*^9}}],
+  3.694324394065415*^9, 
+  3.6943244027958384`*^9}},ExpressionUUID->"885245c0-4fc2-4f66-afa0-\
+8405c5bdf9bc"],
 
 Cell[BoxData[
  RowBox[{"<<", "MathematicaSimpleServer`"}]], "Code",
- CellChangeTimes->{{3.694316866093218*^9, 3.6943168716014276`*^9}}],
+ CellChangeTimes->{{3.694316866093218*^9, 
+  3.6943168716014276`*^9}},ExpressionUUID->"132159cf-ea1b-429b-bdc8-\
+4f6d5ca9cde8"],
 
 Cell[BoxData[
  RowBox[{"<<", "ExampleServerConfiguration`PlotServer`"}]], "Code",
  CellChangeTimes->{{3.6943168736285563`*^9, 3.694316891280594*^9}, {
-  3.6943207149610815`*^9, 3.694320715992404*^9}}],
+  3.6943207149610815`*^9, 
+  3.694320715992404*^9}},ExpressionUUID->"e47372cf-00f3-4e6d-ad05-\
+5da6b77f4b9f"],
 
 Cell[CellGroupData[{
 
@@ -46,7 +52,9 @@ Cell[BoxData[
  RowBox[{"server", " ", "=", " ", 
   RowBox[{"PlotServer", "[", "8888", "]"}]}]], "Code",
  CellChangeTimes->{{3.694316907829974*^9, 3.694316912185313*^9}, {
-  3.6943279132419953`*^9, 3.694327916289647*^9}}],
+  3.6943279132419953`*^9, 
+  3.694327916289647*^9}},ExpressionUUID->"c9380ae0-f111-4cc2-a1bd-\
+fab0f95a47e4"],
 
 Cell[BoxData[
  RowBox[{"\<\"Server\"\>", "[", 
@@ -69,7 +77,9 @@ Cell[BoxData[
   3.694320136204753*^9, 3.69432038248664*^9, 3.6943206113157763`*^9, 
   3.694320717161102*^9, 3.6943214019613214`*^9, 3.694321943688055*^9, 
   3.69432315444919*^9, 3.6943235787502823`*^9, 3.694324414884985*^9, 
-  3.6943419254198723`*^9}]
+  3.6943419254198723`*^9, 
+  3.7045221454070606`*^9},ExpressionUUID->"71c67376-5e14-45f0-9809-\
+4f3773c3247e"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -80,7 +90,7 @@ Cell[BoxData[
 },
 WindowSize->{775, 872},
 WindowMargins->{{Automatic, 230}, {Automatic, 52}},
-FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -94,14 +104,20 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 429, 11, 50, "Code"],
-Cell[990, 33, 135, 2, 50, "Code"],
-Cell[1128, 37, 200, 3, 50, "Code"],
+Cell[558, 20, 489, 13, 50, "Code", "ExpressionUUID" -> \
+"885245c0-4fc2-4f66-afa0-8405c5bdf9bc"],
+Cell[1050, 35, 195, 4, 50, "Code", "ExpressionUUID" -> \
+"132159cf-ea1b-429b-bdc8-4f6d5ca9cde8"],
+Cell[1248, 41, 260, 5, 50, "Code", "ExpressionUUID" -> \
+"e47372cf-00f3-4e6d-ad05-5da6b77f4b9f"],
 Cell[CellGroupData[{
-Cell[1353, 44, 220, 4, 50, "Code"],
-Cell[1576, 50, 988, 21, 33, "Output"]
+Cell[1533, 50, 280, 6, 50, "Code", "ExpressionUUID" -> \
+"c9380ae0-f111-4cc2-a1bd-fab0f95a47e4"],
+Cell[1816, 58, 1072, 23, 33, "Output", "ExpressionUUID" -> \
+"71c67376-5e14-45f0-9809-4f3773c3247e"]
 }, Open  ]],
-Cell[2579, 74, 191, 4, 50, "Code"]
+Cell[2903, 84, 191, 4, 50, "Code", "ExpressionUUID" -> \
+"19bc03a4-989d-4621-bc9f-21984fb225b2"]
 }
 ]
 *)

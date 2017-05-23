@@ -10,25 +10,26 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9217,        246]
-NotebookOptionsPosition[      7469,        202]
-NotebookOutlinePosition[      7813,        217]
-CellTagsIndexPosition[      7770,        214]
+NotebookDataLength[      3760,        113]
+NotebookOptionsPosition[      2933,         87]
+NotebookOutlinePosition[      3277,        102]
+CellTagsIndexPosition[      3234,         99]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
  RowBox[{
-  RowBox[{"$Path", " ", "=", " ", 
-   RowBox[{"DeleteDuplicates", "[", 
-    RowBox[{"Append", "[", 
-     RowBox[{"$Path", ",", " ", 
-      RowBox[{"DirectoryName", "[", 
-       RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}], "]"}], "]"}]}], 
-  ";"}]], "Code",
- CellChangeTimes->{{3.6943261113119574`*^9, 
-  3.694326139392913*^9}},ExpressionUUID->"b828c990-720d-4df7-aca5-\
+  RowBox[{
+   RowBox[{"$Path", " ", "=", " ", 
+    RowBox[{"DeleteDuplicates", "[", 
+     RowBox[{"Append", "[", 
+      RowBox[{"$Path", ",", " ", 
+       RowBox[{"DirectoryName", "[", 
+        RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}], "]"}], "]"}]}], 
+   ";"}], " "}]], "Code",
+ CellChangeTimes->{{3.6943261113119574`*^9, 3.694326139392913*^9}, 
+   3.704522339559907*^9},ExpressionUUID->"b828c990-720d-4df7-aca5-\
 4cb757a4809e"],
 
 Cell[BoxData[
@@ -54,122 +55,6 @@ Cell[BoxData[
 b8cf0547bda1"],
 
 Cell[BoxData[
- TemplateBox[{
-  "SetDelayed","write",
-   "\"Tag \\!\\(\\*RowBox[{\\\"RequestParser\\\"}]\\) in \
-\\!\\(\\*RowBox[{\\\"RequestParser\\\", \\\"[\\\", \\\"$3\\\", \\\"]\\\"}]\\) \
-is Protected.\"",2,10,1,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.7008036089664135`*^9},ExpressionUUID->"1e38a496-3d85-467d-a264-\
-65df553c2a25"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Unset","norep",
-   "\"Assignment on \\!\\(\\*RowBox[{\\\"ActionMenu\\\"}]\\) for \
-\\!\\(\\*RowBox[{\\\"MakeBoxes\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"BoxForm`apat$\\\", \\\":\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"ActionMenu\\\", \
-\\\"[\\\", \\\"___\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\",\\\", \
-\\\"BoxForm`fpat$_\\\"}], \\\"]\\\"}]\\) not found.\"",2,10,2,
-   24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.7008036089889297`*^9},ExpressionUUID->"174a099a-687b-4572-b6e9-\
-d11e5af1b616"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Unset","norep",
-   "\"Assignment on \\!\\(\\*RowBox[{\\\"ActionMenuBox\\\"}]\\) for \
-\\!\\(\\*RowBox[{\\\"MakeBoxes\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"BoxForm`apat$\\\", \\\":\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"ActionMenuBox\\\", \
-\\\"[\\\", \\\"___\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\",\\\", \
-\\\"BoxForm`fpat$_\\\"}], \\\"]\\\"}]\\) not found.\"",2,10,3,
-   24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.700803609007443*^9},ExpressionUUID->"2d865a0d-120d-4350-a99c-\
-1f7b45feadbf"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Unset","norep",
-   "\"Assignment on \\!\\(\\*RowBox[{\\\"Animator\\\"}]\\) for \
-\\!\\(\\*RowBox[{\\\"MakeBoxes\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"BoxForm`apat$\\\", \\\":\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"Animator\\\", \\\"[\\\", \
-\\\"___\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\",\\\", \\\"BoxForm`fpat$_\\\"}], \
-\\\"]\\\"}]\\) not found.\"",2,10,4,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.7008036090234537`*^9},ExpressionUUID->"113a31ca-dc95-46bf-ae18-\
-7a2111f1ecf8"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Unset\\\", \\\"::\\\", \
-\\\"norep\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,10,5,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.7008036090399656`*^9},ExpressionUUID->"21f92eb7-6072-4b25-9626-\
-52f0e7c61453"],
-
-Cell[BoxData[
- TemplateBox[{
-  "TagUnset","norep",
-   "\"Assignment on \\!\\(\\*RowBox[{\\\"ActionMenuBox\\\"}]\\) for \
-\\!\\(\\*RowBox[{\\\"BoxForm`apat$\\\", \\\":\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"MakeExpression\\\", \\\"[\
-\\\", RowBox[{\\\"_ActionMenuBox\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\"}], \\\
-\"]\\\"}]}]\\) not found.\"",2,10,6,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.700803609055977*^9},ExpressionUUID->"a0a1eaca-f169-4011-bfb3-\
-c9bfe9b43a36"],
-
-Cell[BoxData[
- TemplateBox[{
-  "TagUnset","norep",
-   "\"Assignment on \\!\\(\\*RowBox[{\\\"AnimatorBox\\\"}]\\) for \
-\\!\\(\\*RowBox[{\\\"BoxForm`apat$\\\", \\\":\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"MakeExpression\\\", \\\"[\
-\\\", RowBox[{\\\"_AnimatorBox\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\"}], \
-\\\"]\\\"}]}]\\) not found.\"",2,10,7,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.700803609071988*^9},ExpressionUUID->"27c8d841-768a-4045-9fc4-\
-2fafd60d9c64"],
-
-Cell[BoxData[
- TemplateBox[{
-  "TagUnset","norep",
-   "\"Assignment on \\!\\(\\*RowBox[{\\\"ButtonBox\\\"}]\\) for \
-\\!\\(\\*RowBox[{\\\"BoxForm`apat$\\\", \\\":\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"MakeExpression\\\", \\\"[\
-\\\", RowBox[{\\\"_ButtonBox\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\"}], \
-\\\"]\\\"}]}]\\) not found.\"",2,10,8,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.7008036090879993`*^9},ExpressionUUID->"8429a580-9893-4a47-94e7-\
-7d004f35ff73"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"TagUnset\\\", \
-\\\"::\\\", \\\"norep\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"",2,10,9,24441599802485015144,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.7008036091040106`*^9},ExpressionUUID->"e5ede285-500e-430a-a15b-\
-1b9e59b8e3e1"],
-
-Cell[BoxData[
  RowBox[{"\<\"Server\"\>", "[", 
   TagBox[
    ButtonBox[
@@ -189,9 +74,9 @@ Cell[BoxData[
    3.694326529468178*^9}, 3.694326703110201*^9, 3.6943267717060623`*^9, 
    3.6943269454061575`*^9, 3.69432706767267*^9, 3.6943271690870895`*^9, 
    3.69432749275648*^9, 3.694327640222209*^9, 3.6943277422388353`*^9, 
-   3.6943278360217624`*^9, 
-   3.700803609106513*^9},ExpressionUUID->"b42e13ee-04d1-4058-b84e-\
-9d3e32e017a3"]
+   3.6943278360217624`*^9, 3.700803609106513*^9, 
+   3.704522344312206*^9},ExpressionUUID->"26986b7a-de58-46eb-b1f7-\
+6877b1306986"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -201,7 +86,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.6943278664578733`*^9, 3.6943278837300806`*^9}}]
 },
 WindowSize->{775, 872},
-WindowMargins->{{Automatic, 374}, {Automatic, 18}},
+WindowMargins->{{450, Automatic}, {39, Automatic}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -216,37 +101,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 413, 11, 50, "Code", "ExpressionUUID" -> \
+Cell[558, 20, 461, 12, 50, "Code", "ExpressionUUID" -> \
 "b828c990-720d-4df7-aca5-4cb757a4809e"],
-Cell[974, 33, 197, 4, 50, "Code", "ExpressionUUID" -> \
+Cell[1022, 34, 197, 4, 50, "Code", "ExpressionUUID" -> \
 "a0a730a3-2604-4151-989d-6ddc3f7e7b51"],
-Cell[1174, 39, 207, 4, 50, "Code", "ExpressionUUID" -> \
+Cell[1222, 40, 207, 4, 50, "Code", "ExpressionUUID" -> \
 "99dffd61-819e-44bf-afff-417b832971ab"],
 Cell[CellGroupData[{
-Cell[1406, 47, 279, 6, 50, "Code", "ExpressionUUID" -> \
+Cell[1454, 48, 279, 6, 50, "Code", "ExpressionUUID" -> \
 "cb3f4457-9a52-4c14-bdcd-b8cf0547bda1"],
-Cell[1688, 55, 391, 9, 21, "Message", "ExpressionUUID" -> \
-"1e38a496-3d85-467d-a264-65df553c2a25"],
-Cell[2082, 66, 592, 13, 39, "Message", "ExpressionUUID" -> \
-"174a099a-687b-4572-b6e9-d11e5af1b616"],
-Cell[2677, 81, 596, 13, 39, "Message", "ExpressionUUID" -> \
-"2d865a0d-120d-4350-a99c-1f7b45feadbf"],
-Cell[3276, 96, 584, 12, 21, "Message", "ExpressionUUID" -> \
-"113a31ca-dc95-46bf-ae18-7a2111f1ecf8"],
-Cell[3863, 110, 400, 9, 21, "Message", "ExpressionUUID" -> \
-"21f92eb7-6072-4b25-9626-52f0e7c61453"],
-Cell[4266, 121, 541, 11, 21, "Message", "ExpressionUUID" -> \
-"a0a1eaca-f169-4011-bfb3-c9bfe9b43a36"],
-Cell[4810, 134, 537, 11, 21, "Message", "ExpressionUUID" -> \
-"27c8d841-768a-4045-9fc4-2fafd60d9c64"],
-Cell[5350, 147, 535, 11, 21, "Message", "ExpressionUUID" -> \
-"8429a580-9893-4a47-94e7-7d004f35ff73"],
-Cell[5888, 160, 403, 9, 21, "Message", "ExpressionUUID" -> \
-"e5ede285-500e-430a-a15b-1b9e59b8e3e1"],
-Cell[6294, 171, 963, 22, 33, "Output", "ExpressionUUID" -> \
-"b42e13ee-04d1-4058-b84e-9d3e32e017a3"]
+Cell[1736, 56, 985, 22, 33, "Output", "ExpressionUUID" -> \
+"26986b7a-de58-46eb-b1f7-6877b1306986"]
 }, Open  ]],
-Cell[7272, 196, 193, 4, 50, "Code", "ExpressionUUID" -> \
+Cell[2736, 81, 193, 4, 50, "Code", "ExpressionUUID" -> \
 "502a3135-86d8-4442-9e13-6ccedaca76c6"]
 }
 ]
