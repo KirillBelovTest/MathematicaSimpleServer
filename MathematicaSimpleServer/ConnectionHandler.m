@@ -1,9 +1,9 @@
 (* ::Package:: *)
 
-(* Wolfram Language Package *)
-
 (* :Title: ConnectionHandler *)
 (* :Condext: MathematicaSimpleServer`ConnectionHandler` *)
+(* :Version: 0.0.3 *)
+(* :Author: Kirill Belov *)
 
 BeginPackage["MathematicaSimpleServer`ConnectionHandler`", 
 	{
@@ -12,7 +12,6 @@ BeginPackage["MathematicaSimpleServer`ConnectionHandler`",
 		"MathematicaSimpleServer`ResponseGenerator`"
 	}
 ]; 
-(* Exported symbols added here with SymbolName::usage *)  
 
 (* You can create a handler with a single parser and generaor *)
 ConnectionHandlerCreate::usage = 
@@ -48,7 +47,7 @@ ConnectionHandlerCreate[parser_RequestParser, bean_ServerBean, generator_Respons
 		ConnectionHandler[
 			{
 				"Tag" :> tag, 
-				"RequestParser" :> RequestParser[tag], 	
+				"RequestParser" :> RequestParser[tag], 
 				"ServerBean" :> ServerBean[tag], 
 				"ResponseGenerator" :> ResponseGenerator[tag]
 			}
@@ -63,7 +62,8 @@ ConnectionHandlerReplace[
 		_ServerBean | 
 		_ResponseGenerator 
 	)
-] := 
+] /; 
+StringMatchQ[name, "RequestParser" | "ServerBean" | "ResponseGenerator", IgnoreCase -> True] := 
 Module[
 	{
 		tag = handler[[Component["Tag"]]]
@@ -127,7 +127,7 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 		Block[{$HistoryLength = 0},  
 		
 			(* reading the request from client *)
-			request = 
+			Check[request = 
 				Flatten[Last[Reap[
 					While[True, 
 						TimeConstrained[
@@ -135,14 +135,14 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 							0.01, Break[] 
 						]
 					]
-				]]]; 
+				]]];, Close[input]; CLose[output]; Return[]]; 
 			
 			(* close input stream of the socket after reading *)
 			Close[input]; 
 			
 			(* an initial check of the correctness of the request *)
-			If[Length[request] == 0, Print["Error:\r\nEmpty request"]; Return[]]; 
-			If[Length[request] < 16, Print["Error:\r\n", FromCharacterCode[request]]; Return[]]; 
+			If[Length[request] == 0, Print["Error:\r\nEmpty request"]; Close[output]; Return[]]; 
+			If[Length[request] < 16, Print["Error:\r\n", FromCharacterCode[request]]; Close[output]; Return[]]; 
 		
 			(* converting a binary data to string and logging*)
 			requestString = FromCharacterCode[request]; 
@@ -155,7 +155,7 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 					__ ~~ " /" ~~ ___ ~~ "HTTP/" ~~ _ ~~ _ ~~ _
 				
 				]], 
-				Print["Error:\r\nIncorrect request:\r\n", requestString]; Return[]
+				Print["Error:\r\nIncorrect request:\r\n", requestString]; Close[output]; Return[]
 			]; 
 		
 			(* getting handler components *)
@@ -165,7 +165,7 @@ handler_ConnectionHandler[{input_InputStream, output_OutputStream}] :=
 				responseGenerator = handler[[Component["ResponseGenerator"]]];, 
 			
 				(* error logging *)
-				Print["Error during getting handler components"]; Return[]; 
+				Print["Error during getting handler components"]; Close[output]; Return[]; 
 			]; 
 		
 			(* response creation *)
