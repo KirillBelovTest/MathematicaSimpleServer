@@ -42,7 +42,7 @@ Simple http-server based on the Wolfram Language
 
 ### MathematicaSimpleServer
 
-- [MathematicaSimpleServer`](./MathematicaSimpleServer/MathematicaSimpleServer.m)
+- [MathematicaSimpleServer\`](./MathematicaSimpleServer/MathematicaSimpleServer.m)
 - 	[\`ConnectionHandler\`](./MathematicaSimpleServer/ConnectionHandler.m)
 - 	[\`RequestParser\`](./MathematicaSimpleServer/RequestParser.m)
 - 	[\`ServerBean\`](./MathematicaSimpleServer/ServerBean.m)
@@ -94,7 +94,7 @@ Simple http-server based on the Wolfram Language
 
 ### MathematicaSimpleServer
 
-- [MathematicaSimpleServer`](./MathematicaSimpleServer/MathematicaSimpleServer.m)
+- [MathematicaSimpleServer\`](./MathematicaSimpleServer/MathematicaSimpleServer.m)
 - 	[\`ConnectionHandler\`](./MathematicaSimpleServer/ConnectionHandler.m)
 - 	[\`RequestParser\`](./MathematicaSimpleServer/RequestParser.m)
 - 	[\`ServerBean\`](./MathematicaSimpleServer/ServerBean.m)

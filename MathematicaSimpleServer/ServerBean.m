@@ -26,8 +26,8 @@ ServerBean::srverr =
 
 (* 
 	override Keys on the request parser type 
-	Keys[ServerBean[{key1 -> component1, key2 -> ...}]] >> {key1, key2, ...}
-*)
+	Keys[ServerBean[{key1 -> component1, key2 -> ...}]] >> {key1, key2, ...} 
+*) 
 ServerBean /: 
 Keys[serverBean_ServerBean] /; 
 MatchQ[
@@ -37,13 +37,13 @@ MatchQ[
 			Rule[
 				_String, 
 				(_Symbol | _Function) 
-			] ..
-		}
-	]
+			] .. 
+		} 
+	] 
 
 ] := serverBean[[1, All, 1]]; 
 
-(*  *)
+(*  *) 
 ServerBean /: 
 Part[
 	ServerBean[
@@ -70,6 +70,6 @@ Check[
 
 serverBean_ServerBean[$Failed] := (Message[ServerBean::srverr]; $Failed); 
 
-End[]; (* End Private Context *)
+End[]; (* End Private Context *) 
 
-EndPackage[];
+EndPackage[]; 
